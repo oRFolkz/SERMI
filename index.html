@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERMI Auto peças | Landing Page</title>
+    <meta name="description" content="Landing page oficial da UNICA – conheça nossos modelos, linhas e diferenciais.">
+    <meta name="author" content="Nexgenius">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        :root {
+        --sarmi-red: #BA2C2F;
+        }
+
+        .red {
+            color: var(--sarmi-red);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header-category {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            padding: 20px 0;
+        }
+
+        .category-link {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero-background {
+            width: 100%;
+            position: relative;
+            background-image: url('/FOTO.png');
+            background-repeat: no-repeat;
+            background-position: -400px 0;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-background::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,.45);
+            pointer-events:none;
+            z-index:0;
+        }
+
+        .hero-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .hero-info {
+            width: 45%;
+            height: 800px;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: white;
+            font-weight: 800;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: white;
+            font-weight: 200;
+        }
+
+        .hero-button {
+            background: #2CBA52;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 16px 0;
+            width: 100%;
+            border: none;
+            box-shadow: 2px 2px 10px #2CBA52;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+            display: block;
+            transition: all 1s ease;
+        }
+
+        .hero-button:hover {
+            background-color: #2cba52c1;
+        }
+
+        .placeholder {
+            width: 40%;
+        }
+
+        /* === */
+
+        .vehicle-type-background {
+            background: linear-gradient(#BA2C2F, #6C0608);
+            padding: 50px 0;
+        }
+
+        .vehicle-type-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+            padding-left: 2rem;
+        }
+
+        .vehicle-type-title {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: white;
+            font-weight: 800;
+            padding-bottom: 50px;
+        }
+
+        .vehicle-type-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: white;
+            font-weight: 200;
+            padding-bottom: 50px;
+        }
+
+        .vehicle-block-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .vehicle-block-car {
+            width: 33%;
+            height: 200px;
+            background-image: url('https://i.postimg.cc/bNncYGRq/Card.png');
+            background-size: cover;
+            background-position: right;
+            padding: 30px 0 50px 40px;
+        }
+
+        .vehicle-block-van {
+            width: 33%;
+            height: 200px;
+            background-image: url('https://i.postimg.cc/N0df8yVW/Van.png');
+            background-size: cover;
+            background-position: right;
+            padding: 30px 0 50px 40px;
+        }
+
+        .vehicle-block-truck {
+            width: 33%;
+            height: 200px;
+            background-image: url('https://i.postimg.cc/fRjbLqvW/Caminhao.png');
+            background-size: cover;
+            background-position: right;
+            padding: 30px 0 50px 40px;
+        }
+
+        .vehicle-block-title-car {
+            color: white;
+            font-size: 2rem;
+        }
+        .vehicle-block-title-van {
+            color: black;
+            font-size: 2rem;
+        }
+        .vehicle-block-title-truck {
+            color: black;
+            font-size: 2rem;
+        }
+
+        @keyframes bounce {
+        0%   { transform: translateY(0);}
+        50%  { transform: translateY(-10px);}
+        100% { transform: translateY(0);}
+        }
+
+        .vehicle-bounce {
+        animation: bounce 0.6s cubic-bezier(.57,1.5,.56,1) 1;
+        }
+
+        .vehicle-block-button {
+            background: #2CBA52;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 0;
+            width: 70%;
+            border: none;
+            box-shadow: 2px 2px 10px #2CBA52;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+            display: block;
+            transition: all 1s ease;
+        }   
+
+        .vehicle-block-button:hover {
+            background-color: #16d048;
+        }
+        
+        .vehicle-block-car-active {
+            display: block;
+        }
+
+        .vehicle-block-car-active-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 30px 0;
+        }
+        .vehicle-category-car {
+            padding: 20px;
+            background-color:white;
+            border: none;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all .2s ease;
+        }
+
+        .vehicle-category-car:hover {
+            background-color:var(--sarmi-red);
+            color: white;
+            cursor: pointer;
+        }
+
+        .vehicle-category-car.active {
+            background-color:var(--sarmi-red);
+            color: white;
+        }
+
+
+        .vehicle-block-car-active-products {
+            display: none;
+            flex-wrap: wrap;
+            gap: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            margin: 0 10px;
+            padding: 50px;
+        }
+
+        .vehicle-block-car-active-products-block {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vehicle-block-car-active-products-block img{
+            width: 200px;
+            height: 150px;
+        }
+        .vehicle-block-car-active-products-block h3{
+            color: white;
+        }
+        .vehicle-block-car-active-products-block button{
+            background: #2CBA52;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 0;
+            width: 100%;
+            border: none;
+            box-shadow: 2px 2px 10px #2CBA52;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+            display: block;
+            transition: all 1s ease;
+        }
+
+        /* === */
+
+        .about-us-background {
+            background: linear-gradient(to left,#E89999, white);
+            padding: 50px 0;
+        }
+
+        .about-us-max-width {
+            max-width: 1500px;
+            margin: auto;
+            padding-left: 2rem;
+        }
+
+        .about-us-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .about-us-text {
+            width: 40%;
+        }
+
+        .about-us-text h3 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: #292929;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .about-us-text p {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: #292929;
+            font-weight: 300;
+            margin-right: 6rem;
+        }
+
+
+        .about-us-video {
+            width: 40%;
+            position: relative; 
+        }
+
+        /* === */
+
+        .places-background {
+            padding: 50px 0;
+            background: linear-gradient(to bottom,var(--sarmi-red),#5B0B0D);
+        }
+
+        .places-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .places-title {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+        
+        .places-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .places-carousel-container {
+            width: 1500px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .places-carousel {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+        }
+
+        .places-carousel::-webkit-scrollbar{
+            display: none;
+        }
+
+        .carousel-item {
+            min-width: 240px;
+            height: 140px;
+            background: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .places-blocks-container {
+            max-width: 500px;
+            flex: 0 0 400px;
+        }
+
+        .places-carousel-wrapper{
+            position:relative
+        }
+
+        .places-arrow{
+            position: absolute; 
+            top: 50%; 
+            translate: 0 -50%;
+            width: 60px; 
+            height: 60px; 
+            border: none; 
+            border-radius: 10px;
+            background: var(--sarmi-red);
+            font-size: 28px; 
+            line-height: 1; 
+            cursor: pointer; 
+            z-index: 5;
+        }
+
+        .places-arrow.left{
+            left:14px;
+        }
+
+        .places-arrow.right{
+            right:14px;
+        }
+
+        .places-arrow.left svg,
+        .places-arrow.right svg{
+            margin-top: .3rem;
+            height: 30px;
+        }
+
+        .places-arrow:hover{
+            opacity: 80%;
+        }
+
+        .places-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 50px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: white;
+        }
+
+        .title-place-name {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .svg p{
+            width: 80%;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+        .svg a{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .svg svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .google-maps {
+            align-self: center;
+        }
+
+        .places-button {
+            background: #2CBA52;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 0;
+            width: 100%;
+            border: none;
+            box-shadow: 2px 2px 10px #2CBA52;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            display: block;
+            transition: all 1s ease;
+        }
+
+        /* === */
+
+        .feedback-background {
+            padding: 50px 0;
+            background: linear-gradient(to left,#E89999, white);;
+        }
+
+        .feedback-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .feedback-title {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: #292929;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .feedback-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: #292929;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .feedback-carousel-container{
+            position: relative;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .feedback-carousel{
+            display: flex; 
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .feedback-carousel::-webkit-scrollbar{
+            display: none
+        }
+
+        .feedback-card{
+            flex: 0 0 400px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 4px;
+            color: white;
+            padding: 50px 24px 50px;
+        }
+
+        .feedback-card h4{
+            margin: 12px 0 8px;
+            font-weight: 600; 
+            font-size: 1.2rem;
+        }
+
+        .feedback-card p{
+            margin: 0; 
+            font-size: 1rem; 
+            line-height: 1.4; 
+            color: white;
+        }
+
+        .avatar{
+            width: 64px; 
+            height: 64px;
+            border-radius: 50%;
+            background: white;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .avatar svg{width:36px;height:36px}
+            .stars{display:flex;margin-bottom:12px}
+            .stars svg{
+            width:18px;height:18px;
+            fill:#f8b200; margin-right:4px;
+        }
+
+        .stars svg:last-child{
+            margin-right:0
+        }
+
+        /* === */
+
+        .FAQ-background {
+            padding: 50px 0;
+            background: linear-gradient(to bottom,#BA2C2F, #C25C5E);
+        }
+
+        .FAQ-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .FAQ-title {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .FAQ-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .faq-item{
+            border-bottom: 3px solid transparent;
+        }
+
+        .faq-question{
+            width:100%;
+            padding:16px 56px 16px 24px;
+            background:black;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: left;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question .arrow{
+            position: absolute;
+            right: 24px; 
+            top: 50%; 
+            translate: 0 -50%;
+            width: 14px; 
+            height: 14px;
+            border-right: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+            transform: rotate(45deg);
+            transition: transform .25s;
+        }
+
+        .faq-answer{
+            background:#404040;
+            color: white;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease, padding .35s ease;
+        }
+
+        .faq-item.open .faq-answer{
+            padding: 20px 24px 24px;
+            max-height: 700px;
+        }
+
+        .faq-item.open .arrow{
+            transform: rotate(-135deg);
+        }
+
+        .footer-background {
+            background-image: url(/CHAMADA.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 300px) 0;
+            padding: 50px 0;
+        }
+
+        .footer-maxwidth {
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-text {
+            width: 40%;
+        }
+
+        .footer-title  {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: #292929;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .footer-description {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: #292929;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .footer-button {
+            background: #2CBA52;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 0;
+            width: 100%;
+            border: none;
+            box-shadow: 2px 2px 10px #2CBA52;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+            display: block;
+            transition: all 1s ease;
+        }
+
+        .footer-socials-div p{
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: #292929;
+            font-weight: 300;
+            margin-top: 50px;
+        }
+
+        .footer-socials-div svg {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+
+        .footer-socials-div svg .youtube {
+            width: 120px;
+            height: 120px;
+        } 
+        .footer-placeholder {
+            width: 60%;
+        }
+
+    </style>
+<body>
+    <section class="header">
+        <div class="header-category">
+            <img src="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" alt="LOGO">
+            <a class="category-link" href="">CATEGORIA</a>
+            <a class="category-link" href="">CATEGORIA</a>
+            <a class="category-link" href="">CATEGORIA</a>
+            <a class="category-link" href="">CATEGORIA</a>
+        </div>
+        <div class="hero-background">
+                <div class="hero-maxwidth">
+                <div class="hero-info">
+                    <h1 class="hero-title">A peça certa para o seu veículo está na <span class="red"><br>Sermi Auto Peças!</span></h1>
+                    <p class="hero-description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão.</p>
+                    <button class="hero-button whatsapp-button"><a href="wa.me/5516">Fale com um consultor no WhatsApp</a></button>
+                </div>
+                <div class="placeholder"></div>
+            </div>
+        </div>
+    </section>
+    <section class="vehicle-type">
+        <div class="vehicle-type-background">
+            <div class="vehicle-type-maxwidth">
+                <h3 class="vehicle-type-title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa.</h3>
+                <p class="vehicle-type-description">Trabalhamos com produtos para automóveis, utilitários e caminhões. <br>Clique abaixo para falar conosco via WhatsApp.</p>
+                <div class="vehicle-block-flex">
+                    <div class="vehicle-block-car">
+                        <h4 class="vehicle-block-title-car">Automóveis</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('car')">Clique e confira os modelos</button>
+                    </div>
+                    <div class="vehicle-block-van">
+                        <h4 class="vehicle-block-title-van">Vans e Pickups</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('van')">Clique e confira os modelos</button>
+                    </div>
+                    <div class="vehicle-block-truck">
+                        <h4 class="vehicle-block-title-truck">Caminhões</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('truck')">Clique e confira os modelos</button>
+                    </div>
+                </div>
+                <div class="vehicle-block-car-active">
+                    <div class="vehicle-block-car-active-flex">
+                        <button class="vehicle-category-car active" onclick="activateCategory(1, this)">
+                            Correias e Tensionadores
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(2, this)">
+                            Filtros e Lubrificantes
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(3, this)">
+                            Freio e Suspensão
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(4, this)">
+                            Iluminação Elétrica
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(5, this)">
+                            Acessórios
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(6, this)">
+                            Motor e Transmissão
+                        </button>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-1" style="display: flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Correias Poly-V</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Correias de Alternador</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Correias de Distribuição</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Esticadores de Correia</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Tensor de Correia Dentada</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Tensionadores Hidráulicos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Correia</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Filtros de Ar</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Filtros de Óleo</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Filtros de Combustível</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Filtros de Cabine</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lubrificantes Sintéticos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Fluido de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Aditivos para Radiador</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Pastilhas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Discos de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Cilindros Mestre</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Coxins e Buchas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits Suspensão</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-4">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Embreagem</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Juntas e Retentores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Reparo de Câmbio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Bombas d'Água</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Válvulas Termostáticas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lâmpadas Automotivas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Motores de Partida</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Alternadores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Reguladores de voltagem</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Chicotes Elétricos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-block-car-active-products" id="products-car-6">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Palhetas Limpadoras</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Retrovisores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Travas e Fechaduras</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Macacos Hídráulicos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Triângulo de Segurança</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-us-background">
+            <div class="about-us-max-width">
+                <div class="about-us-flex">
+                    <div class="about-us-text">
+                        <h3>Conheça a Sermi Auto Peças</h3>
+                        <p>Com mais de 37 anos no mercado, a Sermi é referência em peças automotivas na região. 
+                        Atendemos oficinas, frotistas e consumidores finais com peças confiáveis, variedade em estoque e preços justos. 
+                        Estamos presentes em várias cidades com lojas físicas prontas para te atender.
+                        </p>
+                    </div>
+                    <div class="about-us-video">
+                        <iframe
+                            width="100%"
+                            height="340"
+                            src="https://www.youtube.com/embed/SOqKW7aLisA?enablejsapi=1&mute=1"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="places">
+        <div class="places-background">
+            <div class="places-maxwidth">
+                <h3 class="places-title">Encontre a Sermi mais perto de você!</h3>
+                <p class="places-description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo.<br> Clique na loja mais próxima e fale com um consultor.</p>
+                <div class="places-carousel-container">
+                    <section class="places-carousel-wrapper">
+                        <button class="places-arrow left"  aria-label="Anterior">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0z"></path></g></svg>
+                        </button>
+                        <div class="places-carousel">
+                            <div class="places-blocks-container Cravinhos">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 1 - Matriz Cravinhos </p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/5wvjjyurJRLcZKt56">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Hilário Pessarelo, N° 97</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="wa.me/5516994017495">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99401-7495</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja1@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja1@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d4ba8c9447%3A0x5c96b03421302439!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Cravinhos!5e0!3m2!1spt-BR!2sbr!4v1751049503339!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <button class="places-button"><a href="wa.me/5516994017495"></a>Falar com a Loja de Araraquara-SP</button>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container Araraquara">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 2 - Araraquara</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/xyc25rW6MVhYi2eZ7">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Maurício Galli, N° 3385 - Jardim Imperador</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="wa.me/5516994017930">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99401-7930</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja2@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja2@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d493816efb%3A0x9e8c73176e072126!2sSermi%20-%20Loja%20de%20Autope%C3%A7as%20em%20Araraquara%20-%20PitStop!5e0!3m2!1spt-BR!2sbr!4v1751049743813!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <button class="places-button"><a href="wa.me/5516994017930"></a>Falar com a Loja de Cravinhos-SP</button>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container Sertãozinho">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 6 - Sertãozinho </p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/veo1EwD9wLwy1xER6">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>Não achei o endereço</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="wa.me/5516991661772">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99166-1772</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja6@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja6@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31791811.201448027!2d-73.0634021869907!3d-13.422456123522103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b99994fa4a3c5b%3A0xac039d8f5fcab0b6!2sSermi%20-%20Auto%20Pe%C3%A7as%20em%20Sert%C3%A3ozinho!5e0!3m2!1spt-BR!2sbr!4v1751049902406!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <button class="places-button"><a href="wa.me/5516991661772"></a>Falar com a Loja de Sertãozinho-SP</button>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container Tambaú">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 3 - Tambaú</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/wUKtJwpSaHC3veFT7">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>Av. Jose Gatto, N° 1845</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="wa.me/5519991911812">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 19 99191-1812</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja3@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja3@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b7efbf2cfcffe7%3A0xf2eb844b5d77b8f5!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Tamba%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1751049944814!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <button class="places-button"><a href="wa.me/5519991911812"></a>Falar com a Loja de Tambaú-SP</button>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container Santa Rosa de Viterbo">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 4 - Santa Rosa de Viterbo</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/zh42xVsGGzRAUg5P6">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Luís Bigneli, N° 58 - Jardim Primavera</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="wa.me/5516991795794">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99179-5794</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja4@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja4@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b788d35bc4ed91%3A0xfe233888d6fb9825!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Santa%20Rosa%20de%20Viterbo!5e0!3m2!1spt-BR!2sbr!4v1751050139651!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <button class="places-button"><a href="wa.me/5516991795794"></a>Falar com a Loja de Santa Rosa de Viterbo-SP</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="places-arrow right" aria-label="Próximo">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0z"></path></g></svg>
+                        </button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="feedback-background">
+            <div class="feedback-maxwidth">
+                <h3 class="feedback-title">O que dizem os nossos clientes</h3>
+                <p class="feedback-description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade.</p>
+                <div class="feedback-carousel-container">
+                    <div class="feedback-carousel">
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXUfQLBD7B98Pk3yGSLHxjocbbOMDRAmjEyB0bluni5wkdUuDTb=w65-h65-p-rp-mo-ba4-br100">
+                            </div>
+                            <h4>Antônio Maria Coutinho</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Já é a terceira compra que faço a distância (resido em Santa Catarina) e foi atendida plenamente. O servico de atualização do pedido é constante de forma automática, nao precisamos ficar acessando site para checar. Muito bom recomendo.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjU9s5Ophazmu07unzWnGsNRtSiMzba-m02goxiOUkv79009LGYe=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>kenji kikunaga</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Recomendo a loja, entrega feita no prazo e produto ok. Voltarei a comprar peças futuramente.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWhdQJrFC3v1V0GVUoUE-TK-g583JI-dgeAZ4nZQrM9JyWVmNN7=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Marceloalberto Lemesdasilva</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Atendimento excelente muito prestativo e atenciosos, bons preços, produto de qualidade e boas condições de pagamento
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjUnMatM6t-gJtnHwM1twxWgGo-PhcqS4QegFOOm7zXsy45iptxy=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Ingrid Barreto</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Fui super bem atendida e a entrega foi surreal de tão rápida. Achei incrível!
+                                Nota 1000 para a entrega e o atendimento + para a disponibilidade dos produtos, toda vez que eu preciso de algo para meu caminhão acho aqui👍
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJpTz-FmbJqBRZWLYF377Hv5oCmLrduHeysgHUluZWAdy-khg=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>rita siqueira</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                otimo atendimento...entrega super rapida...acompanhamento pelo waths nota 10 tb...super recomendo e ja virei cliente
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVElPfX0AmyW9eXVTXtjsYoB7ykYqjJBTYDH_k8E6lqAd3l_Pg=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>Castelhanos Turismo .Ilhabela</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Ótimo atendimento e a entrega, tudo nos conformes.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW934awyvVXM21bVQ4GtEgWnM54KFk5hOPFlNhrWHinqG_nLIY=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Alger Brazil</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Excelente atendimento, profissionalismo, respeito e seriedade. Entrega perfeita e qualidade dos produtos. Super recomendo.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocLAJVb876d7I-3_-dcdWCcD2IO3XlD3sQXyZ86rnqlbC0PW2g=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>EB</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Compra online foi entregue conforme e no prazo
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJ_Y3_KQvvApP9gQdPHhb05yT4BVe1amAQmg_gPNHE31LnNMw=w72-h72-p-rp-mo-ba2-br100">
+                            </div>
+                            <h4>Ruberlei Pires Ferreira Pires</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Minha primeira compra atendimento nota 10 entrega no prazo muito satisfeito Sermi nota 1000
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJTGlEnuCYiS5EYx5An6NpgkV8DXhjPBs8ql0rpnnvODwnpyQ=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>Valmir de Menezes Costa</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Tanto o atendimento quanto o compromisso com o cliente e a eficiência na entrega merecem 05 estrelas
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW9iqY-IUw-D7To5vT7UYQHs-uTNC_Rpd3s0SVp__tuKGDv15WC_A=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>Vinicius Luz</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Ótima experiência  , comprei a peça na quinta feira após o almoço  sábado de manhã já estava na minha casa , fizeram um atendimento de primeira via whats app
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="FAQ">
+        <div class="FAQ-background">
+            <div class="FAQ-maxwidth">
+                <h3 class="FAQ-title">Dúvidas frequentes</h3>
+                <p class="FAQ-description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time.</p>
+                <div class="faq-dropdown" id="faq">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês têm as peças em estoque para pronta entrega?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Trabalhamos com uma grande variedade de peças disponíveis para pronta entrega nas nossas lojas físicas. Recomendamos sempre entrar em contato pelo WhatsApp para confirmar a disponibilidade antes de se deslocar.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês vendem peças originais ou são todas genéricas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Trabalhamos com peças originais e também com peças de reposição de alta qualidade, sempre com garantia e procedência. Na hora da compra, nossos consultores podem orientar sobre a melhor opção para o seu veículo.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês oferecem serviço de instalação das peças?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Não. A Sermi é especializada na venda de peças e acessórios. Recomendamos que você procure seu mecânico de confiança ou uma oficina de sua preferência para realizar a instalação.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Posso comprar no atacado para minha oficina?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Atendemos tanto consumidores finais quanto oficinas e profissionais da área. Temos condições especiais e descontos progressivos para compras em maior quantidade. Fale com a gente pelo WhatsApp e saiba mais.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quais são as formas de pagamento aceitas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Aceitamos diversas formas de pagamento: dinheiro, cartão de débito e PIX e parcelamento no cartão de crédito. Consulte nossas condições!
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Qual é o prazo para pagamento?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            O pagamento deve ser feito no ato de entrega das peças, seja no balcão da nossa loja ou na entrega através do nosso sistema de delivery.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como faço para ter certeza de que a peça é a correta para o meu veículo?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Nossos consultores são especialistas e podem ajudar você a identificar a peça certa com base na marca, modelo e ano do seu veículo. Basta entrar em contato pelo WhatsApp ou visitar uma de nossas lojas.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês fazem entrega em domicílio?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Conseguimos entregar na sua residência ou empresa! Você pode reservar o produto pelo WhatsApp e retirar em nossa loja ou solicitar entrega. Consulte-nos!</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês oferecem garantia nas peças vendidas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Todas as peças vendidas têm garantia contra defeitos de fabricação, conforme o fabricante. Nosso time está pronto para te ajudar com qualquer dúvida relacionada a garantias.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Tenho uma dúvida que não está aqui. Como faço para falar com vocês?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            É só clicar no botão de WhatsApp aqui na página e falar direto com um de nossos consultores! Estamos prontos para te ajudar a escolher a peça certa e garantir a melhor experiência de compra.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="footer-maxwidth">
+                <div class="footer-flex">
+                    <div class="footer-text">
+                        <h3 class="footer-title">Adquira suas peças com quem <br>entende do assunto</h3>
+                        <p class="footer-description">Atendimento imediato via WhatsApp, retirada rápida e produtos com garantia.</p>
+                        <p class="footer-description">Clique no botão abaixo e fale com nosso time!</p>
+                        <a href="http://wa.me/5516994017495">
+                            <button class="footer-button">Quero falar com a Sermi agora</button>
+                        </a>
+                        <div class="footer-socials">
+                            <div class="footer-socials-div">
+                                <p>Siga a SERMI nas redes</p>
+                                <a href="http://wa.me/5516994017495">
+                                    <svg fill="#BA2C2F" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"></path><path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"></path></g></svg>
+                                </a>
+                                <a href="https://www.instagram.com/sermiautopecas/">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#BA2C2F"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#BA2C2F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#BA2C2F"></path> </g></svg>
+                                </a>
+                                <a href="https://www.youtube.com/@sermipecassermi4620">
+                                    <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#BA2C2F" d="M6.6 0h-0.9l-0.6 2.3-0.6-2.3h-1c0.2 0.6 0.4 1.1 0.6 1.7 0.3 0.8 0.5 1.5 0.5 1.9v2.4h0.9v-2.4l1.1-3.6zM9 4.5v-1.5c0-0.5-0.1-0.8-0.3-1.1s-0.5-0.4-0.9-0.4c-0.4 0-0.7 0.2-0.9 0.5-0.2 0.2-0.3 0.5-0.3 1v1.6c0 0.5 0.1 0.8 0.3 1 0.2 0.3 0.5 0.4 0.9 0.4s0.7-0.2 0.9-0.5c0.2-0.1 0.3-0.5 0.3-1zM8.2 4.7c0 0.4-0.1 0.6-0.4 0.6s-0.4-0.2-0.4-0.6v-1.9c0-0.4 0.1-0.6 0.4-0.6s0.4 0.2 0.4 0.6v1.9zM12 6v-4.5h-0.8v3.4c-0.2 0.3-0.3 0.4-0.5 0.4-0.1 0-0.2-0.1-0.2-0.2 0 0 0-0.1 0-0.3v-3.3h-0.8v3.5c0 0.3 0 0.5 0.1 0.7 0 0.2 0.2 0.3 0.5 0.3s0.6-0.2 0.9-0.5v0.5h0.8z"></path> <path fill="#BA2C2F" d="M12.4 10.5c-0.3 0-0.4 0.2-0.4 0.6v0.4h0.8v-0.4c0-0.4-0.1-0.6-0.4-0.6z"></path> <path fill="#BA2C2F" d="M9.5 10.5c-0.1 0-0.3 0.1-0.4 0.2v2.7c0.1 0.1 0.3 0.2 0.4 0.2 0.2 0 0.3-0.2 0.3-0.6v-1.9c0-0.4-0.1-0.6-0.3-0.6z"></path> <path fill="#BA2C2F" d="M14.4 8.3c-0.2-0.7-0.8-1.3-1.4-1.3-1.6-0.2-3.3-0.2-5-0.2s-3.3 0-5 0.2c-0.6 0-1.2 0.6-1.4 1.3-0.2 1-0.2 2.1-0.2 3.1s0 2.1 0.2 3.1c0.2 0.7 0.7 1.2 1.4 1.3 1.7 0.2 3.3 0.2 5 0.2s3.3 0 5-0.2c0.7-0.1 1.3-0.6 1.4-1.3 0.2-1 0.2-2.1 0.2-3.1s0-2.1-0.2-3.1zM5.2 9.2h-1v5.1h-0.9v-5.1h-0.9v-0.9h2.8v0.9zM7.6 14.3h-0.8v-0.5c-0.3 0.4-0.6 0.5-0.9 0.5s-0.4-0.1-0.5-0.3c0-0.1-0.1-0.3-0.1-0.7v-3.5h0.8v3.2c0 0.2 0 0.3 0 0.3 0 0.1 0.1 0.2 0.2 0.2 0.2 0 0.3-0.1 0.5-0.4v-3.3h0.8v4.5zM10.6 12.9c0 0.4 0 0.7-0.1 0.9-0.1 0.3-0.3 0.5-0.6 0.5s-0.6-0.2-0.8-0.5v0.4h-0.8v-5.9h0.8v1.9c0.3-0.3 0.5-0.5 0.8-0.5s0.5 0.2 0.6 0.5c0.1 0.2 0.1 0.5 0.1 0.9v1.8zM13.6 12.2h-1.6v0.8c0 0.4 0.1 0.6 0.4 0.6 0.2 0 0.3-0.1 0.4-0.3 0 0 0-0.2 0-0.5h0.8v0.1c0 0.3 0 0.4 0 0.5 0 0.2-0.1 0.3-0.2 0.5-0.2 0.3-0.5 0.5-1 0.5-0.4 0-0.7-0.2-1-0.5-0.2-0.2-0.3-0.6-0.3-1v-1.5c0-0.5 0.1-0.8 0.2-1 0.2-0.3 0.5-0.5 1-0.5 0.4 0 0.7 0.2 0.9 0.5 0.2 0.2 0.2 0.6 0.2 1v0.8z"></path> </g></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    (() => {
+    /* ---------- FUNÇÕES GLOBAIS (cards de veículos) ---------- */
+    function carFunction(type){
+    const vehicles = {
+        car  : { block: document.querySelector('.vehicle-block-car'),
+                title: document.querySelector('.vehicle-block-title-car'),
+                image:"url('https://i.postimg.cc/bNncYGRq/Card.png')",
+                imageDefault:"url('https://i.postimg.cc/dtC3MVky/Carro.png')" },
+        van  : { block: document.querySelector('.vehicle-block-van'),
+                title: document.querySelector('.vehicle-block-title-van'),
+                image:"url('https://i.postimg.cc/G293XLn9/Van-ativo.png')",
+                imageDefault:"url('https://i.postimg.cc/N0df8yVW/Van.png')" },
+        truck: { block: document.querySelector('.vehicle-block-truck'),
+                title: document.querySelector('.vehicle-block-title-truck'),
+                image:"url('https://i.postimg.cc/xC7f7w95/Caminhao-ativo.png')",
+                imageDefault:"url('https://i.postimg.cc/fRjbLqvW/Caminhao.png')" }
+    };
+
+    Object.values(vehicles).forEach(v=>{
+        v.block.style.backgroundImage = v.imageDefault;
+        v.title.style.color           = 'black';
+        v.block.classList.remove('vehicle-bounce');
+    });
+
+    const v = vehicles[type];
+    v.block.style.backgroundImage = v.image;
+    v.title.style.color           = 'white';
+    void v.block.offsetWidth;               /* reinicia animação */
+    v.block.classList.add('vehicle-bounce');
+    }
+
+    function activateCategory(num, btn){
+    document.querySelectorAll('.vehicle-category-car')
+            .forEach(el=>el.classList.toggle('active', el===btn));
+
+    document.querySelectorAll('.vehicle-block-car-active-products')
+            .forEach(div=>div.style.display='none');
+
+    document.getElementById('products-car-'+num).style.display='flex';
+    }
+
+    /* exporta para usar em atributos HTML */
+    window.carFunction      = carFunction;
+    window.activateCategory = activateCategory;
+
+    /* ---------- UTILITÁRIO DE AUTO-CARROSSEL (reaproveitável) ---------- */
+    function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}){
+    let isPaused = false;
+
+    const loop = () =>{
+        if (!isPaused){
+        track.scrollLeft += speed;
+        if (track.scrollLeft >= track.scrollWidth - track.clientWidth){
+            track.scrollLeft = 0;
+        }
+        }
+        requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+
+    if (pauseOnHover){
+        ['mouseenter','focusin'].forEach(e=>track.addEventListener(e,()=>isPaused=true));
+        ['mouseleave','focusout' ].forEach(e=>track.addEventListener(e,()=>isPaused=false));
+    }
+    }
+
+    /* ========================================================= *
+    *     I N I C I A   C O M P O N E N T E S   D O   S I T E    *
+    * ========================================================= */
+    document.addEventListener('DOMContentLoaded', () => {
+
+    /* ===== CARROSSEL #1  – PLACES (setas, sem drag/hover-pause) ===== */
+    const wrapper = document.querySelector('.places-carousel-wrapper');
+    if (wrapper){
+        const track   = wrapper.querySelector('.places-carousel');
+        const btnPrev = wrapper.querySelector('.places-arrow.left');
+        const btnNext = wrapper.querySelector('.places-arrow.right');
+
+        const GAP  = parseInt(getComputedStyle(track).gap) || 0;
+        const CARD = track.querySelector('.places-blocks-container');
+        let STEP   = 0;
+
+        function calcStep(){
+        const cardW  = CARD.offsetWidth + GAP;
+        const visible = Math.floor(track.clientWidth / cardW) || 1;
+        STEP = cardW * visible;               /* rola um “bloco visível” */
+        }
+        calcStep();
+        window.addEventListener('resize', calcStep);
+
+        const maxScroll = () => track.scrollWidth - track.clientWidth;
+
+        btnNext.addEventListener('click', () => {
+        const atEnd = track.scrollLeft + STEP >= maxScroll() - 4;
+        track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + STEP,
+                        behavior:'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+        const atStart = track.scrollLeft <= 4;
+        track.scrollTo({ left: atStart ? maxScroll() : track.scrollLeft - STEP,
+                        behavior:'smooth' });
+        });
+    }
+
+    /* ===== CARROSSEL #2  – FEEDBACK (auto-scroll infinito) ===== */
+    const feedback = document.querySelector('.feedback-carousel');
+    if (feedback){
+        setupAutoCarousel(feedback, {speed:1.3});
+    }
+
+    /* ===== FAQ (abre/fecha um por vez) ===== */
+    const faq = document.querySelector('#faq');
+    if (faq){
+        faq.addEventListener('click', e=>{
+        const btn = e.target.closest('.faq-question');
+        if (!btn) return;
+
+        const item = btn.parentElement;              /* .faq-item */
+        const open = faq.querySelector('.faq-item.open');
+
+        if (open && open!==item) open.classList.remove('open');
+        item.classList.toggle('open');
+        });
+    }
+
+    });
+    })();   /* fim da IIFE */
+    </script>
+</body>
