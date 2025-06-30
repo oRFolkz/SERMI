@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" type="image/x-icon">
+    <link rel="icon" href="./img/logo.webp" type="image/x-icon">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -207,7 +207,7 @@
     .hero-background {
         width: 100%;
         position: relative;
-        background-image: url('/FOTO.png');
+        background-image: url('img/banner-desktop.png');
         background-repeat: no-repeat;
         background-position: -400px 0;
         background-size: cover;
@@ -365,6 +365,11 @@
         padding: 50px 0;
     }
 
+    .vehicle-type-background .title,
+    .vehicle-type-background .description {
+        margin-bottom: 50px;
+    }
+
     .vehicle-block-flex {
         display: flex;
         justify-content: center;
@@ -375,7 +380,7 @@
     .vehicle-block-car {
         width: 33%;
         height: 200px;
-        background-image: url('https://i.postimg.cc/bNncYGRq/Card.png');
+        background-image: url('/img/Carro-ativo.png');
         background-size: cover;
         background-position: right;
         padding: 30px 0 50px 40px;
@@ -384,7 +389,7 @@
     .vehicle-block-van {
         width: 33%;
         height: 200px;
-        background-image: url('https://i.postimg.cc/N0df8yVW/Van.png');
+        background-image: url('/img/Van.png');
         background-size: cover;
         background-position: right;
         padding: 30px 0 50px 40px;
@@ -393,7 +398,7 @@
     .vehicle-block-truck {
         width: 33%;
         height: 200px;
-        background-image: url('https://i.postimg.cc/fRjbLqvW/Caminhao.png');
+        background-image: url('/img/Caminhao.png');
         background-size: cover;
         background-position: right;
         padding: 30px 0 50px 40px;
@@ -662,6 +667,11 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
+    .places-placeholder {
+        max-width: 500px;
+        flex: 0 0 400px;
+    }
+
     .places-blocks-container {
         max-width: 500px;
         flex: 0 0 400px;
@@ -708,7 +718,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 0 50px;
+        padding: 0 38px;
         border: 1px solid white;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.2);
@@ -762,6 +772,12 @@
         transition: all 1s ease;
     }
     
+     @media (max-width: 580px) {
+        .places-placeholder {
+            display: none;
+        }
+    }
+
     @media (max-width: 580px) {
         .places-blocks-container {
             max-width: 300px;
@@ -1174,7 +1190,7 @@
 <body>
     <section id="header">
         <div class="header-category">
-            <img src="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" alt="LOGO">
+            <img src="img/logo.webp" alt="LOGO">
             <a class="category-link" href="#vehicle-type">Escolha seu veículo</a>
             <a class="category-link" href="#about-us">Sobre nós</a>
             <a class="category-link" href="#places">Lojas</a>
@@ -1244,13 +1260,13 @@
                             Freio e Suspensão
                         </button>
                         <button class="vehicle-category-car" onclick="activateCategory(4, this)">
-                            Iluminação Elétrica
+                            Motor e Transmissão
                         </button>
                         <button class="vehicle-category-car" onclick="activateCategory(5, this)">
-                            Acessórios
+                            Iluminação Elétrica
                         </button>
                         <button class="vehicle-category-car" onclick="activateCategory(6, this)">
-                            Motor e Transmissão
+                            Acessórios
                         </button>
                     </div>
                     <div class="vehicle-block-car-active-products" id="products-car-1" style="display: flex">
@@ -1475,7 +1491,7 @@
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
-                                <h3>Reguladores de voltagem</h3>
+                                <h3>Reguladores de Voltagem</h3>
                                 <button><a href="">Comprar via whatsapp</a></button>
                             </div>
                         </div>
@@ -1905,7 +1921,7 @@
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
-                                <h3>Alternadores/h3>
+                                <h3>Alternadores</h3>
                                 <button><a href="">Comprar via whatsapp</a></button>
                             </div>
                         </div>
@@ -2177,6 +2193,7 @@
                                     <a href="https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Santa Rosa-SP</a>
                                 </div>
                             </div>
+                            <div class="places-placeholder"></div>
                         </div>
                         <button class="places-arrow right" aria-label="Próximo">
                             <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0z"></path></g></svg>
@@ -2517,7 +2534,7 @@
                         </div>
                     </div>
                     <div class="footer-placeholder">
-                        <img src="./CHAMADA.png" alt="">
+                        <img src="img/celular.png" alt="">
                     </div>
                 </div>
             </div>
@@ -2530,16 +2547,16 @@
         const vehicles = {
             car  : { block: document.querySelector('.vehicle-block-car'),
                     title: document.querySelector('.vehicle-block-title-car'),
-                    image:"url('https://i.postimg.cc/bNncYGRq/Card.png')",
-                    imageDefault:"url('https://i.postimg.cc/dtC3MVky/Carro.png')" },
+                    image:"url('/img/Carro-ativo.png')",
+                    imageDefault:"url('/img/Carro.png')" },
             van  : { block: document.querySelector('.vehicle-block-van'),
                     title: document.querySelector('.vehicle-block-title-van'),
-                    image:"url('https://i.postimg.cc/G293XLn9/Van-ativo.png')",
-                    imageDefault:"url('https://i.postimg.cc/N0df8yVW/Van.png')" },
+                    image:"url('/img/Van-ativo.png')",
+                    imageDefault:"url('/img/Van.png')" },
             truck: { block: document.querySelector('.vehicle-block-truck'),
                     title: document.querySelector('.vehicle-block-title-truck'),
-                    image:"url('https://i.postimg.cc/xC7f7w95/Caminhao-ativo.png')",
-                    imageDefault:"url('https://i.postimg.cc/fRjbLqvW/Caminhao.png')" }
+                    image:"url('/img/Caminhao-ativo.png')",
+                    imageDefault:"url('/img/Caminhao.png')" }
             };
     /* 1 ▸ reseta os três cards */
         Object.values(vehicles).forEach(v=>{
