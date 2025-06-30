@@ -11,785 +11,1201 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" type="image/x-icon">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Montserrat", sans-serif;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+    }
 
-        :root {
-        --sarmi-red: #BA2C2F;
-        }
+    :root {
+    --sarmi-red: #BA2C2F;
+    }
 
-        .red {
-            color: var(--sarmi-red);
-        }
+    .red {
+        color: var(--sarmi-red);
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
+    /* LINKS */
+    /* LINKS */
+    /* LINKS */
+
+    .header-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 20px 0;
+        height: 100px;
+    }
+
+    .header-hamburger {
+        display: none;
+    }
+    
+    .burger-icon-open {
+        display: none;
+    }
+
+    .header-category img{
+        cursor: pointer;
+    }
+
+    .category-link {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .category-link:hover {
+        color: var(--sarmi-red);
+    }
+
+    @media (max-width: 1440px){
         .header-category {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 100px;
-            padding: 20px 0;
+            gap: 50px;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 1200px){
+        .header-category {
+            gap: 40px;
+        }
+
+        .header-category img{
+            width: 200px;
+            height: 100px;
         }
 
         .category-link {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 1060px){
+        .header-category {
+            gap: 40px;
         }
 
-        .hero-background {
-            width: 100%;
-            position: relative;
-            background-image: url('/FOTO.png');
-            background-repeat: no-repeat;
-            background-position: -400px 0;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .header-category img{
+            width: 100px;
+            height: 50px;
         }
 
-        .hero-background::before{
-            content:"";
-            position:absolute;
-            inset:0;
-            background:rgba(0,0,0,.45);
-            pointer-events:none;
-            z-index:0;
-        }
-
-        .hero-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-        }
-
-        .hero-info {
-            width: 45%;
-            height: 800px;
-            background-color: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: white;
-            font-weight: 800;
-        }
-
-        .hero-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: white;
-            font-weight: 200;
-        }
-
-        .hero-button {
-            background: #2CBA52;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 700;
-            padding: 16px 0;
-            width: 100%;
-            border: none;
-            box-shadow: 2px 2px 10px #2CBA52;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 25px;
-            letter-spacing: 0.5px;
-            display: block;
-            transition: all 1s ease;
-        }
-
-        .hero-button:hover {
-            background-color: #2cba52c1;
-        }
-
-        .placeholder {
-            width: 40%;
-        }
-
-        /* === */
-
-        .vehicle-type-background {
-            background: linear-gradient(#BA2C2F, #6C0608);
-            padding: 50px 0;
-        }
-
-        .vehicle-type-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-            padding-left: 2rem;
-        }
-
-        .vehicle-type-title {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: white;
-            font-weight: 800;
-            padding-bottom: 50px;
-        }
-
-        .vehicle-type-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: white;
-            font-weight: 200;
-            padding-bottom: 50px;
-        }
-
-        .vehicle-block-flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .vehicle-block-car {
-            width: 33%;
-            height: 200px;
-            background-image: url('https://i.postimg.cc/bNncYGRq/Card.png');
-            background-size: cover;
-            background-position: right;
-            padding: 30px 0 50px 40px;
-        }
-
-        .vehicle-block-van {
-            width: 33%;
-            height: 200px;
-            background-image: url('https://i.postimg.cc/N0df8yVW/Van.png');
-            background-size: cover;
-            background-position: right;
-            padding: 30px 0 50px 40px;
-        }
-
-        .vehicle-block-truck {
-            width: 33%;
-            height: 200px;
-            background-image: url('https://i.postimg.cc/fRjbLqvW/Caminhao.png');
-            background-size: cover;
-            background-position: right;
-            padding: 30px 0 50px 40px;
-        }
-
-        .vehicle-block-title-car {
-            color: white;
-            font-size: 2rem;
-        }
-        .vehicle-block-title-van {
-            color: black;
-            font-size: 2rem;
-        }
-        .vehicle-block-title-truck {
-            color: black;
-            font-size: 2rem;
-        }
-
-        @keyframes bounce {
-        0%   { transform: translateY(0);}
-        50%  { transform: translateY(-10px);}
-        100% { transform: translateY(0);}
-        }
-
-        .vehicle-bounce {
-        animation: bounce 0.6s cubic-bezier(.57,1.5,.56,1) 1;
-        }
-
-        .vehicle-block-button {
-            background: #2CBA52;
-            color: white;
+        .category-link {
             font-size: 1rem;
-            font-weight: 700;
-            padding: 16px 0;
-            width: 70%;
-            border: none;
-            box-shadow: 2px 2px 10px #2CBA52;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 25px;
-            letter-spacing: 0.5px;
-            display: block;
-            transition: all 1s ease;
-        }   
-
-        .vehicle-block-button:hover {
-            background-color: #16d048;
         }
-        
-        .vehicle-block-car-active {
-            display: block;
-        }
+    }
 
-        .vehicle-block-car-active-flex {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 30px 0;
-        }
-        .vehicle-category-car {
-            padding: 20px;
-            background-color:white;
-            border: none;
-            color: black;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all .2s ease;
-        }
-
-        .vehicle-category-car:hover {
-            background-color:var(--sarmi-red);
-            color: white;
-            cursor: pointer;
-        }
-
-        .vehicle-category-car.active {
-            background-color:var(--sarmi-red);
-            color: white;
-        }
-
-
-        .vehicle-block-car-active-products {
-            display: none;
-            flex-wrap: wrap;
-            gap: 50px;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            border-radius: 10px;
-            margin: 0 10px;
-            padding: 50px;
-        }
-
-        .vehicle-block-car-active-products-block {
-            width: 30%;
-            display: flex;
-            align-items: center;
+    @media (max-width: 800px){
+        .header-category {
             gap: 20px;
         }
 
-        .vehicle-block-car-active-products-block img{
-            width: 200px;
-            height: 150px;
-        }
-        .vehicle-block-car-active-products-block h3{
-            color: white;
-        }
-        .vehicle-block-car-active-products-block button{
-            background: #2CBA52;
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 16px 0;
-            width: 100%;
-            border: none;
-            box-shadow: 2px 2px 10px #2CBA52;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 25px;
-            letter-spacing: 0.5px;
-            display: block;
-            transition: all 1s ease;
+        .header-category img{
+            width: 100px;
+            height: 50px;
         }
 
-        /* === */
-
-        .about-us-background {
-            background: linear-gradient(to left,#E89999, white);
-            padding: 50px 0;
+        .category-link {
+            font-size: .8rem;
         }
-
-        .about-us-max-width {
-            max-width: 1500px;
-            margin: auto;
-            padding-left: 2rem;
-        }
-
-        .about-us-flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .about-us-text {
-            width: 40%;
-        }
-
-        .about-us-text h3 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: #292929;
-            font-weight: 800;
-            margin-bottom: 50px;
-        }
-
-        .about-us-text p {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: #292929;
-            font-weight: 300;
-            margin-right: 6rem;
-        }
+    }
 
 
-        .about-us-video {
-            width: 40%;
-            position: relative; 
-        }
-
-        /* === */
-
-        .places-background {
-            padding: 50px 0;
-            background: linear-gradient(to bottom,var(--sarmi-red),#5B0B0D);
-        }
-
-        .places-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-        }
-
-        .places-title {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: white;
-            font-weight: 800;
-            margin-bottom: 50px;
-        }
-        
-        .places-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: white;
-            font-weight: 300;
-            margin-bottom: 50px;
-        }
-
-        .places-carousel-container {
-            width: 1500px;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .places-carousel {
-            display: flex;
-            gap: 24px;
-            overflow-x: auto;
-        }
-
-        .places-carousel::-webkit-scrollbar{
+    @media (max-width:650px){
+        .header-category {
             display: none;
         }
 
-        .carousel-item {
-            min-width: 240px;
-            height: 140px;
-            background: #eee;
-            border-radius: 8px;
+        .burger-icon-open {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: fixed;
+            top: 15px;
+            left: 25px;
+            z-index: 200;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
         }
 
-        .places-blocks-container {
-            max-width: 500px;
-            flex: 0 0 400px;
+        .close-burger {
+            border: none;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: inherit;
         }
 
-        .places-carousel-wrapper{
-            position:relative
+        .close-burger svg{
+            width: 25px;
+            height: 25px;
         }
 
-        .places-arrow{
-            position: absolute; 
-            top: 50%; 
-            translate: 0 -50%;
-            width: 60px; 
-            height: 60px; 
-            border: none; 
-            border-radius: 10px;
-            background: var(--sarmi-red);
-            font-size: 28px; 
-            line-height: 1; 
-            cursor: pointer; 
-            z-index: 5;
-        }
-
-        .places-arrow.left{
-            left:14px;
-        }
-
-        .places-arrow.right{
-            right:14px;
-        }
-
-        .places-arrow.left svg,
-        .places-arrow.right svg{
-            margin-top: .3rem;
-            height: 30px;
-        }
-
-        .places-arrow:hover{
-            opacity: 80%;
-        }
-
-        .places-card {
+        .header-hamburger{
+            position: fixed;     
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding: 0 50px;
-            border: 1px solid white;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            width: 100%;
-            color: white;
-        }
-
-        .title-place-name {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .svg p{
+            top: 0;
+            left: 0;
             width: 80%;
-            letter-spacing: 2px;
-            font-size: 1.2rem;
+            padding-left: 20px;
+            padding-top: 20px;
+            max-width: 180px;
+            height: 100%;
+            box-shadow: 10px 10px 20px black;
+            background: #fff;
+            transform: translateX(-100%);
+            transition: transform .35s ease, opacity .35s ease;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2000;
         }
 
-        .svg a{
+        .header-hamburger.active{
+            transform:translateX(0);
+            opacity:1;
+            pointer-events:auto;
+        }
+
+        .burger-icon-open,
+        .close-burger{
+            transition:opacity .3s ease;
+        }
+
+        .burger-icon-open.hidden,
+        .close-burger.hidden{
+            opacity:0;
+            pointer-events:none;
+        }
+
+        .header-hamburger .nav-links {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 15px;
         }
 
-        .svg svg {
-            width: 50px;
-            height: 50px;
-        }
-
-        .google-maps {
-            align-self: center;
-        }
-
-        .places-button {
-            background: #2CBA52;
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 16px 0;
-            width: 100%;
-            border: none;
-            box-shadow: 2px 2px 10px #2CBA52;
-            cursor: pointer;
-            text-align: center;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-            display: block;
-            transition: all 1s ease;
-        }
-
-        /* === */
-
-        .feedback-background {
-            padding: 50px 0;
-            background: linear-gradient(to left,#E89999, white);;
-        }
-
-        .feedback-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-        }
-
-        .feedback-title {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: #292929;
-            font-weight: 800;
-            margin-bottom: 50px;
-        }
-
-        .feedback-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: #292929;
-            font-weight: 300;
-            margin-bottom: 50px;
-        }
-
-        .feedback-carousel-container{
-            position: relative;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .feedback-carousel{
-            display: flex; 
-            gap: 24px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .feedback-carousel::-webkit-scrollbar{
-            display: none
-        }
-
-        .feedback-card{
-            flex: 0 0 400px;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            border-radius: 4px;
-            color: white;
-            padding: 50px 24px 50px;
-        }
-
-        .feedback-card h4{
-            margin: 12px 0 8px;
-            font-weight: 600; 
-            font-size: 1.2rem;
-        }
-
-        .feedback-card p{
-            margin: 0; 
-            font-size: 1rem; 
-            line-height: 1.4; 
-            color: white;
-        }
-
-        .avatar{
-            width: 64px; 
-            height: 64px;
-            border-radius: 50%;
-            background: white;
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .avatar svg{width:36px;height:36px}
-            .stars{display:flex;margin-bottom:12px}
-            .stars svg{
-            width:18px;height:18px;
-            fill:#f8b200; margin-right:4px;
-        }
-
-        .stars svg:last-child{
-            margin-right:0
-        }
-
-        /* === */
-
-        .FAQ-background {
-            padding: 50px 0;
-            background: linear-gradient(to bottom,#BA2C2F, #C25C5E);
-        }
-
-        .FAQ-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-        }
-
-        .FAQ-title {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: white;
-            font-weight: 800;
-            margin-bottom: 50px;
-        }
-
-        .FAQ-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: white;
-            font-weight: 300;
-            margin-bottom: 50px;
-        }
-
-        .faq-item{
-            border-bottom: 3px solid transparent;
-        }
-
-        .faq-question{
-            width:100%;
-            padding:16px 56px 16px 24px;
-            background:black;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 500;
-            text-align: left;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .faq-question .arrow{
-            position: absolute;
-            right: 24px; 
-            top: 50%; 
-            translate: 0 -50%;
-            width: 14px; 
-            height: 14px;
-            border-right: 3px solid #fff;
-            border-bottom: 3px solid #fff;
-            transform: rotate(45deg);
-            transition: transform .25s;
-        }
-
-        .faq-answer{
-            background:#404040;
-            color: white;
-            font-size: 1rem;
-            line-height: 1.5;
-            padding: 0 24px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .35s ease, padding .35s ease;
-        }
-
-        .faq-item.open .faq-answer{
-            padding: 20px 24px 24px;
-            max-height: 700px;
-        }
-
-        .faq-item.open .arrow{
-            transform: rotate(-135deg);
-        }
-
-        .footer-background {
-            background-image: url(/CHAMADA.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: calc(100% - 300px) 0;
-            padding: 50px 0;
-        }
-
-        .footer-maxwidth {
-            max-width: 1500px;
-            margin: auto;
-        }
-
-        .footer-flex {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .footer-text {
-            width: 40%;
-        }
-
-        .footer-title  {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: #292929;
-            font-weight: 800;
-            margin-bottom: 50px;
-        }
-
-        .footer-description {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: #292929;
-            font-weight: 300;
-            margin-bottom: 50px;
-        }
-
-        .footer-button {
-            background: #2CBA52;
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 16px 0;
-            width: 100%;
-            border: none;
-            box-shadow: 2px 2px 10px #2CBA52;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 25px;
-            letter-spacing: 0.5px;
-            display: block;
-            transition: all 1s ease;
-        }
-
-        .footer-socials-div p{
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            line-height: 35px;
-            color: #292929;
-            font-weight: 300;
-            margin-top: 50px;
-        }
-
-        .footer-socials-div svg {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
-            margin-top: 30px;
-        }
-
-        .footer-socials-div svg .youtube {
-            width: 120px;
-            height: 120px;
-        } 
-        .footer-placeholder {
+        .header-hamburger img{
             width: 60%;
         }
 
-    </style>
+    }
+
+    /* HERO */
+    /* HERO */
+    /* HERO */
+
+    .hero-background {
+        width: 100%;
+        position: relative;
+        background-image: url('/FOTO.png');
+        background-repeat: no-repeat;
+        background-position: -400px 0;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-background::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,.45);
+        pointer-events:none;
+        z-index:0;
+    }
+
+    .maxwidth {
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    .hero-info {
+        width: 45%;
+        height: 800px;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        color: white;
+        font-weight: 800;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        line-height: 35px;
+        color: white;
+        font-weight: 200;
+    }
+
+    .hero-button {
+        background: #2CBA52;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 16px 0;
+        width: 100%;
+        border: none;
+        box-shadow: 2px 2px 10px #2CBA52;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }
+
+    .hero-button:hover {
+        background-color: #2cba52c1;
+    }
+
+    .placeholder {
+        width: 40%;
+    }
+
+    @media (max-width:1500px){
+        .maxwidth {
+            max-width: 90%;
+        }
+        .hero-info {
+            width: 50%;
+        }
+        .placeholder {
+            width: 50%;
+        }
+    }
+
+    @media (max-width:1100px){
+        .hero-info {
+            width: 70%;
+        }
+        .placeholder {
+            width: 30%;
+        }
+    }
+
+    @media (max-width:780px){
+        .hero-info {
+            width: 70%;
+        }
+        .placeholder {
+            width: 30%;
+        }
+        .title {
+            font-size: 2.3rem;
+        }
+        .description {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width:600px){
+        .hero-info {
+            height: auto;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .title {
+            font-size: 1.5rem;
+        }
+        .description {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width:430px){
+        .maxwidth {
+            max-width: 100%;
+        }
+        .title {
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: white;
+            font-weight: 800;
+        }
+        .description {
+            font-size: .8rem;
+            letter-spacing: 2px;
+            line-height: 20px;
+            color: white;
+            font-weight: 200;
+        }
+        .hero-button {
+            font-size: .7rem;
+        }
+    }
+
+    /* TIPOS DE VEÍCULOS */
+    /* TIPOS DE VEÍCULOS */
+    /* TIPOS DE VEÍCULOS */
+
+    .vehicle-type-background {
+        background: linear-gradient(#BA2C2F, #6C0608);
+        padding: 50px 0;
+    }
+
+    .vehicle-block-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .vehicle-block-car {
+        width: 33%;
+        height: 200px;
+        background-image: url('https://i.postimg.cc/bNncYGRq/Card.png');
+        background-size: cover;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-van {
+        width: 33%;
+        height: 200px;
+        background-image: url('https://i.postimg.cc/N0df8yVW/Van.png');
+        background-size: cover;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-truck {
+        width: 33%;
+        height: 200px;
+        background-image: url('https://i.postimg.cc/fRjbLqvW/Caminhao.png');
+        background-size: cover;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-title-car {
+        color: white;
+        font-size: 2rem;
+    }
+    .vehicle-block-title-van {
+        color: black;
+        font-size: 2rem;
+    }
+    .vehicle-block-title-truck {
+        color: black;
+        font-size: 2rem;
+    }
+
+    @keyframes bounce {
+    0%   { transform: translateY(0);}
+    50%  { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+    }
+
+    .vehicle-bounce {
+    animation: bounce 0.6s cubic-bezier(.57,1.5,.56,1) 1;
+    }
+
+    .vehicle-block-button {
+        background: #2CBA52;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 0;
+        width: 70%;
+        border: none;
+        box-shadow: 2px 2px 10px #2CBA52;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }   
+
+    .vehicle-block-button:hover {
+        background-color: #16d048;
+    }
+    
+    .vehicle-block-car-active, 
+    .vehicle-block-van-active, 
+    .vehicle-block-truck-active {
+        display: block;
+    }
+
+    .vehicle-block-car-active-flex, 
+    .vehicle-block-van-active-flex,
+    .vehicle-block-truck-active-flex {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));  /* cada item vira 1 fr – preenche toda a linha */
+        gap: 15px;                    /* espaçamento uniforme entre eles   */
+        padding: 30px 0;
+    }
+
+    .vehicle-category-car,
+    .vehicle-category-van,
+    .vehicle-category-truck {
+        padding: 20px;
+        background-color:white;
+        border: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all .2s ease;
+    }
+
+    .vehicle-category-car:hover,
+    .vehicle-category-van:hover,
+    .vehicle-category-truck:hover {
+        background-color:var(--sarmi-red);
+        color: white;
+        cursor: pointer;
+    }
+
+    .vehicle-category-car.active,
+    .vehicle-category-van.active,
+    .vehicle-category-truck.active {
+        background-color:var(--sarmi-red);
+        color: white;
+    }
+
+
+    .vehicle-block-car-active-products,
+    .vehicle-block-van-active-products,
+    .vehicle-block-truck-active-products {
+        display: none;
+        flex-wrap: wrap;
+        gap: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        margin: 0 10px;
+        padding: 50px;
+    }
+
+    .vehicle-block-car-active-products-block,
+    .vehicle-block-van-active-products-block,
+    .vehicle-block-truck-active-products-block {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .vehicle-block-car-active-products-block img,
+    .vehicle-block-van-active-products-block img,
+    .vehicle-block-truck-active-products-block img{
+        width: 200px;
+        height: 150px;
+    }
+    .vehicle-block-car-active-products-block h3,
+    .vehicle-block-van-active-products-block h3,
+    .vehicle-block-truck-active-products-block h3{
+        color: white;
+    }
+    .vehicle-block-car-active-products-block button,
+    .vehicle-block-van-active-products-block button,
+    .vehicle-block-truck-active-products-block button{
+        background: #2CBA52;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 0;
+        width: 100%;
+        border: none;
+        box-shadow: 2px 2px 10px #2CBA52;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }
+
+    /* ABOUT-US */
+    /* ABOUT-US */
+    /* ABOUT-US */
+
+    .about-us-background {
+        background: linear-gradient(to left,#E89999, white);
+        padding: 50px 0;
+    }
+
+    .maxwidth {
+        max-width: 1500px;
+        margin: auto;
+        padding-left: 2rem;
+    }
+
+    .about-us-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .about-us-text {
+        width: 40%;
+    }
+
+    .about-us-text .title,
+    .about-us-text .description {
+        margin-bottom: 50px;
+    }
+
+    .about-us-text h3, 
+    .about-us-text p {
+        color: #404040;
+    }
+
+    .about-us-video {
+        width: 40%;
+        position: relative; 
+    }
+
+    @media (max-width: 1025px) {
+        .about-us-text {
+             width: 90%;
+        }
+
+        .about-us-video {
+             width: 90%;
+        }
+
+        .about-us-video iframe{
+            width: 100%;
+            height: 500px;
+        }
+
+        .about-us-flex {
+            align-items: start;
+            flex-direction: column;
+        }
+
+    }
+
+    @media (max-width: 425px) {
+        .about-us-flex {
+            align-items: start;
+            flex-direction: column;
+        }
+
+        .about-us-text .title,
+        .about-us-text .description {
+            margin-bottom: 20px;
+        }
+
+        .about-us-video iframe{
+            height: 200px;
+        }
+    }
+
+    /* LOJAS */
+    /* LOJAS */
+    /* LOJAS */
+
+    .places-background {
+        padding: 50px 0;
+        background: linear-gradient(to bottom,var(--sarmi-red),#5B0B0D);
+    }
+
+    .places-background .title,
+    .places-background .description {
+        margin-bottom: 50px;
+    }
+
+    .places-carousel-container {
+        width: 1500px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .places-carousel {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+    }
+
+    .places-carousel::-webkit-scrollbar{
+        display: none;
+    }
+
+    .carousel-item {
+        min-width: 240px;
+        height: 140px;
+        background: #eee;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .places-blocks-container {
+        max-width: 500px;
+        flex: 0 0 400px;
+    }
+
+    .places-carousel-wrapper{
+        position:relative
+    }
+
+    .places-arrow{
+        position: absolute; 
+        top: 50%; 
+        translate: 0 -50%;
+        width: 60px; 
+        height: 60px; 
+        border: none; 
+        border-radius: 10px;
+        background: var(--sarmi-red);
+        font-size: 28px; 
+        line-height: 1; 
+        cursor: pointer; 
+        z-index: 5;
+    }
+
+    .places-arrow.left{
+        left:14px;
+    }
+
+    .places-arrow.right{
+        right:14px;
+    }
+
+    .places-arrow.left svg,
+    .places-arrow.right svg{
+        margin-top: .3rem;
+        height: 30px;
+    }
+
+    .places-arrow:hover{
+        opacity: 80%;
+    }
+
+    .places-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 50px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        width: 100%;
+        color: white;
+    }
+
+    .title-place-name {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .svg p{
+        width: 80%;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+
+    .svg a{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .svg svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .google-maps {
+        align-self: center;
+    }
+
+    .places-button {
+        background: #2CBA52;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 0;
+        width: 100%;
+        border: none;
+        box-shadow: 2px 2px 10px #2CBA52;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }
+    
+    @media (max-width: 580px) {
+        .places-blocks-container {
+            max-width: 300px;
+        }
+
+        .places-card {
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .svg svg{
+            width: 30px;
+            height: 30px;
+        }
+
+        .svg p{
+            font-size: .8rem;
+        }
+
+        .places-card iframe {
+            width: 100%;
+        }
+
+        .places-button {
+            font-size: .7rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .places-background .title,
+        .places-background .description {
+            margin-right: 2rem;
+        }
+
+        .places-background .title,
+        .places-background .description {
+            margin-bottom: 20px;
+    }
+    }
+
+    /* FEEDBACK */
+    /* FEEDBACK */
+    /* FEEDBACK */
+
+    .feedback-background {
+        padding: 50px 0;
+        background: linear-gradient(to left,#E89999, white);;
+    }
+
+    .feedback-background .title,
+    .feedback-background .description {
+        margin-bottom: 50px;
+    }
+
+    .feedback-background .title,
+    .feedback-background .description {
+        color: #404040;
+    }
+
+    .feedback-carousel-container{
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .feedback-carousel{
+        display: flex; 
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .feedback-carousel::-webkit-scrollbar{
+        display: none
+    }
+
+    .feedback-card{
+        flex: 0 0 400px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        border-radius: 4px;
+        color: white;
+        padding: 50px 24px 50px;
+    }
+
+    .feedback-card h4{
+        margin: 12px 0 8px;
+        font-weight: 600; 
+        font-size: 1.2rem;
+    }
+
+    .feedback-card p{
+        margin: 0; 
+        font-size: 1rem; 
+        line-height: 1.4; 
+        color: white;
+    }
+
+    .avatar{
+        width: 64px; 
+        height: 64px;
+        border-radius: 50%;
+        background: white;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .avatar svg{width:36px;height:36px}
+        .stars{display:flex;margin-bottom:12px}
+        .stars svg{
+        width:18px;height:18px;
+        fill:#f8b200; margin-right:4px;
+    }
+
+    .stars svg:last-child{
+        margin-right:0
+    }
+
+    @media (max-width: 425px) {
+        .feedback-card {
+            flex: 0 0 300px;
+        }
+
+        .feedback-background .title,
+        .feedback-background .description {
+            margin-bottom: 20px;
+            margin-right: 20px;
+    }
+    }
+
+    /* === */
+
+    .FAQ-background {
+        padding: 50px 0;
+        background: linear-gradient(to bottom,#BA2C2F, #C25C5E);
+    }
+
+    .FAQ-background .title,
+    .FAQ-background .description {
+            margin-bottom: 50px;
+    }
+
+    .faq-item{
+        border-bottom: 3px solid transparent;
+    }
+
+    .faq-question{
+        width:100%;
+        padding:16px 56px 16px 24px;
+        background:black;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+        border: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .faq-question .arrow{
+        position: absolute;
+        right: 24px; 
+        top: 50%; 
+        translate: 0 -50%;
+        width: 14px; 
+        height: 14px;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        transform: rotate(45deg);
+        transition: transform .25s;
+    }
+
+    .faq-answer{
+        background:#404040;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease, padding .35s ease;
+    }
+
+    .faq-item.open .faq-answer{
+        padding: 20px 24px 24px;
+        max-height: 700px;
+    }
+
+    .faq-item.open .arrow{
+        transform: rotate(-135deg);
+    }
+
+    @media (max-width: 1500px) {
+        .faq-question,
+        .faq-answer {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .faq-question {
+            font-size: 1rem;
+        }
+        .faq-answer {
+            font-size: .8rem;
+            line-height: 25px;
+        }
+        .FAQ-background .title,
+        .FAQ-background .description {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* FOOTER */
+    /* FOOTER */
+    /* FOOTER */
+
+    .footer-background {
+        background-color: white;
+        padding: 50px 0 0 0;
+    }
+    
+    .footer-text .title, 
+    .footer-text .description {
+        color: #404040;
+        margin-bottom: 50px;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .footer-text {
+        width: 50%;
+    }
+
+    .footer-button {
+        background: #2CBA52;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 0;
+        width: 100%;
+        border: none;
+        box-shadow: 2px 2px 10px #2CBA52;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }
+
+    .footer-socials-div p{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        line-height: 35px;
+        color: #292929;
+        font-weight: 300;
+        margin-top: 50px;
+    }
+
+    .footer-socials-div svg {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+
+    .footer-socials-div svg .youtube {
+        width: 120px;
+        height: 120px;
+    } 
+
+    .footer-placeholder{
+        width: 30%;
+    }
+
+    .footer-placeholder img{
+        width: 100%;
+    }
+
+    @media (max-width: 1450px) {
+        .footer-placeholder img{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-flex {
+            flex-direction: column;
+            padding-bottom: 100px;
+        }
+
+        .footer-text {
+            width: 80%;
+        }
+
+        .footer-placeholder {
+            display: none;
+        }
+
+        .footer-button {
+            font-size: .8rem;
+        }
+        .footer-text .title, 
+        .footer-text .description {
+            margin-bottom: 20px;
+        }
+
+        .footer-socials-div .description {
+            font-size: 1.2rem;
+        }
+    }
+
+    /* BOTÕES */
+    /* BOTÕES */
+    /* BOTÕES */
+
+    .whatsapp-float{
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        width:80px;
+        height:80px;
+        background:#25D366;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:0 5px 10px #25d36596;
+        z-index:1000;
+    }
+
+    .whatsapp-float img{
+        width:42px;
+        height:42px;
+        filter:invert(1);
+        pointer-events:none;
+    }
+
+    @keyframes buzz {
+        0%,85%  { transform:translate(0); }
+        88%,94% { transform:translate(-2px,0); }
+        91%,97% { transform:translate( 2px,0); }
+        100%    { transform:translate(0); }
+    }
+
+    .whatsapp-float{
+        animation:buzz 3s infinite;
+        cursor:pointer;
+    }
+
+    .scroll-top{
+        position:fixed;
+        bottom:20px;
+        left:20px;
+        width:60px;
+        height:60px;
+        background:rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:1000;
+        color: white;
+        transition:transform .25s;
+        cursor:pointer;
+
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .3s, transform .25s;
+    }
+
+    .scroll-top:hover{ 
+        transform:scale(1.05); 
+    }
+
+    @media (max-width: 425px) {
+        .whatsapp-float {
+            width: 60px;
+            height: 60px;
+        }
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+            filter: invert(1);
+            pointer-events: none;
+        }
+        .scroll-top {
+            width: 50px;
+            height: 50px;
+        } 
+   }
+
+</style>
 <body>
-    <section class="header">
+    <section id="header">
         <div class="header-category">
             <img src="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png" alt="LOGO">
-            <a class="category-link" href="">CATEGORIA</a>
-            <a class="category-link" href="">CATEGORIA</a>
-            <a class="category-link" href="">CATEGORIA</a>
-            <a class="category-link" href="">CATEGORIA</a>
+            <a class="category-link" href="#vehicle-type">Escolha seu veículo</a>
+            <a class="category-link" href="#about-us">Sobre nós</a>
+            <a class="category-link" href="#places">Lojas</a>
+            <a class="category-link" href="#feedback">Depoimentos</a>
+            <a class="category-link" href="#FAQ">Perguntas e respostas</a>
         </div>
-        <div class="hero-background">
-                <div class="hero-maxwidth">
+        <div class="burger-icon-open" aria-label="Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M3 12h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M3 18h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="header-hamburger">
+            <div class="close-burger" aria-label="Abrir menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11083)"> <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11083"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>
+            </div>
+            <img src="https://img.irroba.com.br/filters:format(webp):fill(transparent):quality(80)/sermicom/catalog/logos/servi20191120105128.png"
+                alt="LOGO" class="logo">
+            <nav class="nav-links">
+                <a class="category-link" href="#vehicle-type">Escolha seu veículo</a>
+                <a class="category-link" href="#about-us">Sobre nós</a>
+                <a class="category-link" href="#places">Lojas</a>
+                <a class="category-link" href="#feedback">Depoimentos</a>
+                <a class="category-link" href="#faq">Perguntas e respostas</a>
+            </nav>
+        </div>
+         <div class="hero-background">
+                <div class="maxwidth">
                 <div class="hero-info">
-                    <h1 class="hero-title">A peça certa para o seu veículo está na <span class="red"><br>Sermi Auto Peças!</span></h1>
-                    <p class="hero-description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão.</p>
-                    <button class="hero-button whatsapp-button"><a href="wa.me/5516">Fale com um consultor no WhatsApp</a></button>
+                    <h1 class="title">A peça certa para o seu veículo está na <span class="red"><br>Sermi Auto Peças!</span></h1>
+                    <p class="description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="hero-button">Fale com um consultor no WhatsApp</a>
                 </div>
                 <div class="placeholder"></div>
             </div>
         </div>
     </section>
-    <section class="vehicle-type">
+<!--     <section id="vehicle-type">
         <div class="vehicle-type-background">
-            <div class="vehicle-type-maxwidth">
-                <h3 class="vehicle-type-title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa.</h3>
-                <p class="vehicle-type-description">Trabalhamos com produtos para automóveis, utilitários e caminhões. <br>Clique abaixo para falar conosco via WhatsApp.</p>
+            <div class="maxwidth">
+                <h3 class="title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa.</h3>
+                <p class="description">Trabalhamos com produtos para automóveis, utilitários e caminhões. <br>Clique abaixo para falar conosco via WhatsApp.</p>
                 <div class="vehicle-block-flex">
                     <div class="vehicle-block-car">
                         <h4 class="vehicle-block-title-car">Automóveis</h4>
@@ -804,7 +1220,7 @@
                         <button class="vehicle-block-button" onclick="carFunction('truck')">Clique e confira os modelos</button>
                     </div>
                 </div>
-                <div class="vehicle-block-car-active">
+                <div class="vehicle-block-car-active" style="display: block;">
                     <div class="vehicle-block-car-active-flex">
                         <button class="vehicle-category-car active" onclick="activateCategory(1, this)">
                             Correias e Tensionadores
@@ -825,7 +1241,6 @@
                             Motor e Transmissão
                         </button>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-1" style="display: flex">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -877,7 +1292,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-2">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -929,7 +1343,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-3">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -981,7 +1394,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-4">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -1026,7 +1438,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-5">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -1064,7 +1475,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="vehicle-block-car-active-products" id="products-car-6">
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
@@ -1102,18 +1512,505 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="vehicle-block-van-active" style="display: none">
+                <div class="vehicle-block-van-active-flex">
+                    <button class="vehicle-category-van active" onclick="activateCategory(1, this)">
+                        Freios e Rodagem
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(2, this)">
+                        Suspensão e Direção
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(3, this)">
+                        Sistema de Transmissão
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(4, this)">
+                        Motor
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(5, this)">
+                        Elétrica
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(6, this)">
+                        Acessórios e Segurança
+                    </button>
+                </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-1" style="display:flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Sapatas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Câmaras de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Rolamento de Roda</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Engraxadeiras</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Barras de Direção</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Pivôs de Suspensão</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Coxins de Motor</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Buchas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Embreagem</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Eixo Cardan</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Engrenagens</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Reparo de Caixa</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Retentores de Eixo</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-4">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Juntas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Válvulas e Balancins</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Bombas de Óleo</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Bombas de Água</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Alternadores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Motores de Partida</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Reguladores de Voltagem</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lanternas e Faróis</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Chicotes Elétricos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-6">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Palhetas de Para-brisa</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Retrovisores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Extintores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Triângulo de Segurança</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Engates Rápidos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle-block-truck-active" style="display: none">
+                <div class="vehicle-block-truck-active-flex">
+                    <button class="vehicle-category-truck active" onclick="activateCategory(1, this)">
+                        Sistema de Freio
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(2, this)">
+                        Transmissão e Eixo
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(3, this)">
+                        Motor
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(4, this)">
+                        Elétrica
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(5, this)">
+                        Suspensão e Direção
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(6, this)">
+                        Acessórios e Segurança
+                    </button>
+                </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-1" style="display: flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Sapatas de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Válvulas de Freio a Ar</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Câmaras de Freio</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Engraxadeiras</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Embreagem</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Cruzetas e Cardans</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Engrenagens</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Retentores de Eixo</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Reparação de Caixa</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Juntas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Bombas de Combustível</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Válvulas Termostáticas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Turbina</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-4">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Alternadores/h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Motores de Partida</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Faróis e Lanternas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Buzinas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Chicotes e Conexões</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Buchas</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Barras de Direção</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Kits de Suspensão</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Coxins de Motor</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-6">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Palhetas de Para-brisa</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Retrovisores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Extintores</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Macacos Hidráulicos</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="https://placehold.co/200x150" alt="">
+                            <div>
+                                <h3>Triângulo de Segurança</h3>
+                                <button><a href="">Comprar via whatsapp</a></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="about-us">
+    </section> -->
+    <section id="about-us">
         <div class="about-us-background">
-            <div class="about-us-max-width">
+            <div class="maxwidth">
                 <div class="about-us-flex">
                     <div class="about-us-text">
-                        <h3>Conheça a Sermi Auto Peças</h3>
-                        <p>Com mais de 37 anos no mercado, a Sermi é referência em peças automotivas na região. 
+                        <h3 class="title">Conheça a Sermi Auto Peças</h3>
+                        <p class="description">Com mais de 37 anos no mercado, a Sermi é referência em peças automotivas na região. 
                         Atendemos oficinas, frotistas e consumidores finais com peças confiáveis, variedade em estoque e preços justos. 
                         Estamos presentes em várias cidades com lojas físicas prontas para te atender.
                         </p>
@@ -1132,11 +2029,11 @@
             </div>
         </div>
     </section>
-    <section class="places">
+    <section id="places">
         <div class="places-background">
-            <div class="places-maxwidth">
-                <h3 class="places-title">Encontre a Sermi mais perto de você!</h3>
-                <p class="places-description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo.<br> Clique na loja mais próxima e fale com um consultor.</p>
+            <div class="maxwidth">
+                <h3 class="title">Encontre a Sermi mais perto de você!</h3>
+                <p class="description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo.<br> Clique na loja mais próxima e fale com um consultor.</p>
                 <div class="places-carousel-container">
                     <section class="places-carousel-wrapper">
                         <button class="places-arrow left"  aria-label="Anterior">
@@ -1145,7 +2042,7 @@
                         <div class="places-carousel">
                             <div class="places-blocks-container Cravinhos">
                                 <div class="places-card">
-                                    <p class="title-place-name">LOJA 1 - Matriz Cravinhos </p>
+                                    <p class="title-place-name">LOJA 1 - Cravinhos</p>
                                     <div class="svg"> 
                                         <a href="https://maps.app.goo.gl/5wvjjyurJRLcZKt56">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -1153,7 +2050,7 @@
                                         </a>
                                     </div>
                                     <div class="svg">
-                                        <a href="wa.me/5516994017495">
+                                        <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                                             <p>(55) 16 99401-7495</p>
                                         </a>
@@ -1165,7 +2062,7 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d4ba8c9447%3A0x5c96b03421302439!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Cravinhos!5e0!3m2!1spt-BR!2sbr!4v1751049503339!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <button class="places-button"><a href="wa.me/5516994017495"></a>Falar com a Loja de Araraquara-SP</button>
+                                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Cravinhos-SP</a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Araraquara">
@@ -1178,7 +2075,7 @@
                                         </a>
                                     </div>
                                     <div class="svg">
-                                        <a href="wa.me/5516994017930">
+                                        <a href="https://api.whatsapp.com/send?phone=5516994017930&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                                             <p>(55) 16 99401-7930</p>
                                         </a>
@@ -1190,12 +2087,12 @@
                                         </a>
                                     </div>
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d493816efb%3A0x9e8c73176e072126!2sSermi%20-%20Loja%20de%20Autope%C3%A7as%20em%20Araraquara%20-%20PitStop!5e0!3m2!1spt-BR!2sbr!4v1751049743813!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <button class="places-button"><a href="wa.me/5516994017930"></a>Falar com a Loja de Cravinhos-SP</button>
+                                <a href="https://api.whatsapp.com/send?phone=5516994017930&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Araraquara-SP</a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Sertãozinho">
                                 <div class="places-card">
-                                    <p class="title-place-name">LOJA 6 - Sertãozinho </p>
+                                    <p class="title-place-name">LOJA 3 - Sertãozinho</p>
                                     <div class="svg"> 
                                         <a href="https://maps.app.goo.gl/veo1EwD9wLwy1xER6">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -1203,7 +2100,7 @@
                                         </a>
                                     </div>
                                     <div class="svg">
-                                        <a href="wa.me/5516991661772">
+                                        <a href="https://api.whatsapp.com/send?phone=5516991661772&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                                             <p>(55) 16 99166-1772</p>
                                         </a>
@@ -1215,12 +2112,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31791811.201448027!2d-73.0634021869907!3d-13.422456123522103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b99994fa4a3c5b%3A0xac039d8f5fcab0b6!2sSermi%20-%20Auto%20Pe%C3%A7as%20em%20Sert%C3%A3ozinho!5e0!3m2!1spt-BR!2sbr!4v1751049902406!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <button class="places-button"><a href="wa.me/5516991661772"></a>Falar com a Loja de Sertãozinho-SP</button>
+                                    <a href="https://api.whatsapp.com/send?phone=5516991661772&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Sertãozinho-SP</a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Tambaú">
                                 <div class="places-card">
-                                    <p class="title-place-name">LOJA 3 - Tambaú</p>
+                                    <p class="title-place-name">LOJA 4 - Tambaú</p>
                                     <div class="svg"> 
                                         <a href="https://maps.app.goo.gl/wUKtJwpSaHC3veFT7">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -1228,7 +2125,7 @@
                                         </a>
                                     </div>
                                     <div class="svg">
-                                        <a href="wa.me/5519991911812">
+                                        <a href="https://api.whatsapp.com/send?phone=5519991911812&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                                             <p>(55) 19 99191-1812</p>
                                         </a>
@@ -1240,12 +2137,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b7efbf2cfcffe7%3A0xf2eb844b5d77b8f5!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Tamba%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1751049944814!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <button class="places-button"><a href="wa.me/5519991911812"></a>Falar com a Loja de Tambaú-SP</button>
+                                    <a href="https://api.whatsapp.com/send?phone=5519991911812&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Tambaú-SP</a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Santa Rosa de Viterbo">
                                 <div class="places-card">
-                                    <p class="title-place-name">LOJA 4 - Santa Rosa de Viterbo</p>
+                                    <p class="title-place-name">LOJA 5 - Santa Rosa de Viterbo</p>
                                     <div class="svg"> 
                                         <a href="https://maps.app.goo.gl/zh42xVsGGzRAUg5P6">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -1253,7 +2150,7 @@
                                         </a>
                                     </div>
                                     <div class="svg">
-                                        <a href="wa.me/5516991795794">
+                                        <a href="https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                                             <p>(55) 16 99179-5794</p>
                                         </a>
@@ -1265,7 +2162,7 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b788d35bc4ed91%3A0xfe233888d6fb9825!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Santa%20Rosa%20de%20Viterbo!5e0!3m2!1spt-BR!2sbr!4v1751050139651!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <button class="places-button"><a href="wa.me/5516991795794"></a>Falar com a Loja de Santa Rosa de Viterbo-SP</button>
+                                    <a href="https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Santa Rosa-SP</a>
                                 </div>
                             </div>
                         </div>
@@ -1277,11 +2174,11 @@
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <section id="feedback">
         <div class="feedback-background">
-            <div class="feedback-maxwidth">
-                <h3 class="feedback-title">O que dizem os nossos clientes</h3>
-                <p class="feedback-description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade.</p>
+            <div class="maxwidth">
+                <h3 class="title">O que dizem os nossos clientes</h3>
+                <p class="description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade.</p>
                 <div class="feedback-carousel-container">
                     <div class="feedback-carousel">
                         <div class="feedback-card">
@@ -1466,13 +2363,13 @@
             </div>
         </div>
     </section>
-    <section class="FAQ">
+    <section id="FAQ">
         <div class="FAQ-background">
-            <div class="FAQ-maxwidth">
-                <h3 class="FAQ-title">Dúvidas frequentes</h3>
-                <p class="FAQ-description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time.</p>
+            <div class="maxwidth">
+                <h3 class="title">Dúvidas frequentes</h3>
+                <p class="description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time.</p>
                 <div class="faq-dropdown" id="faq">
-                    <div class="faq-item">
+                    <div class="faq-item open">
                         <button class="faq-question">
                             Vocês têm as peças em estoque para pronta entrega?
                         <span class="arrow"></span>
@@ -1541,7 +2438,7 @@
                         <span class="arrow"></span>
                         </button>
                         <div class="faq-answer">
-                            Conseguimos entregar na sua residência ou empresa! Você pode reservar o produto pelo WhatsApp e retirar em nossa loja ou solicitar entrega. Consulte-nos!</div>
+                            Conseguimos entregar na sua residência ou empresa! Você pode reservar o produto pelo WhatsApp e retirar em nossa loja ou solicitar entrega. Consulte-nos!
                         </div>
                     </div>
                     <div class="faq-item">
@@ -1565,20 +2462,36 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <section id="fixed-buttons">
+        <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento"
+            class="whatsapp-float"
+            target="_blank"
+            rel="noopener"
+            aria-label="Fale conosco no WhatsApp">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                alt=""
+                aria-hidden="true">
+        </a>
+        <a href="#" class="scroll-top" aria-label="Voltar ao topo">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" fill="currentColor"/>
+            </svg>
+        </a>
+    </section>
+    <footer id="footer">
         <div class="footer-background">
-            <div class="footer-maxwidth">
+            <div class="maxwidth">
                 <div class="footer-flex">
                     <div class="footer-text">
-                        <h3 class="footer-title">Adquira suas peças com quem <br>entende do assunto</h3>
-                        <p class="footer-description">Atendimento imediato via WhatsApp, retirada rápida e produtos com garantia.</p>
-                        <p class="footer-description">Clique no botão abaixo e fale com nosso time!</p>
-                        <a href="http://wa.me/5516994017495">
+                        <h3 class="title">Adquira suas peças com quem <br>entende do assunto</h3>
+                        <p class="description">Atendimento imediato via WhatsApp, retirada rápida e produtos com garantia.</p>
+                        <p class="description">Clique no botão abaixo e fale com nosso time!</p>
+                        <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
                             <button class="footer-button">Quero falar com a Sermi agora</button>
                         </a>
                         <div class="footer-socials">
                             <div class="footer-socials-div">
-                                <p>Siga a SERMI nas redes</p>
+                                <p class="description">Siga a SERMI nas redes</p>
                                 <a href="http://wa.me/5516994017495">
                                     <svg fill="#BA2C2F" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"></path><path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"></path></g></svg>
                                 </a>
@@ -1591,7 +2504,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer-placeholder"></div>
+                    <div class="footer-placeholder">
+                        <img src="./CHAMADA.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1599,131 +2514,213 @@
     <script>
     (() => {
     /* ---------- FUNÇÕES GLOBAIS (cards de veículos) ---------- */
-    function carFunction(type){
-    const vehicles = {
-        car  : { block: document.querySelector('.vehicle-block-car'),
-                title: document.querySelector('.vehicle-block-title-car'),
-                image:"url('https://i.postimg.cc/bNncYGRq/Card.png')",
-                imageDefault:"url('https://i.postimg.cc/dtC3MVky/Carro.png')" },
-        van  : { block: document.querySelector('.vehicle-block-van'),
-                title: document.querySelector('.vehicle-block-title-van'),
-                image:"url('https://i.postimg.cc/G293XLn9/Van-ativo.png')",
-                imageDefault:"url('https://i.postimg.cc/N0df8yVW/Van.png')" },
-        truck: { block: document.querySelector('.vehicle-block-truck'),
-                title: document.querySelector('.vehicle-block-title-truck'),
-                image:"url('https://i.postimg.cc/xC7f7w95/Caminhao-ativo.png')",
-                imageDefault:"url('https://i.postimg.cc/fRjbLqvW/Caminhao.png')" }
-    };
+        function carFunction(type){                         // 'car' | 'van' | 'truck'
+        const vehicles = {
+            car  : { block: document.querySelector('.vehicle-block-car'),
+                    title: document.querySelector('.vehicle-block-title-car'),
+                    image:"url('https://i.postimg.cc/bNncYGRq/Card.png')",
+                    imageDefault:"url('https://i.postimg.cc/dtC3MVky/Carro.png')" },
+            van  : { block: document.querySelector('.vehicle-block-van'),
+                    title: document.querySelector('.vehicle-block-title-van'),
+                    image:"url('https://i.postimg.cc/G293XLn9/Van-ativo.png')",
+                    imageDefault:"url('https://i.postimg.cc/N0df8yVW/Van.png')" },
+            truck: { block: document.querySelector('.vehicle-block-truck'),
+                    title: document.querySelector('.vehicle-block-title-truck'),
+                    image:"url('https://i.postimg.cc/xC7f7w95/Caminhao-ativo.png')",
+                    imageDefault:"url('https://i.postimg.cc/fRjbLqvW/Caminhao.png')" }
+            };
+    /* 1 ▸ reseta os três cards */
+        Object.values(vehicles).forEach(v=>{
+            v.block.style.backgroundImage = v.imageDefault;
+            v.title.style.color           = 'black';
+            v.block.classList.remove('vehicle-bounce');
+        });
 
-    Object.values(vehicles).forEach(v=>{
-        v.block.style.backgroundImage = v.imageDefault;
-        v.title.style.color           = 'black';
-        v.block.classList.remove('vehicle-bounce');
-    });
+    /* 2 ▸ ativa o card escolhido */
+        const v = vehicles[type];
+        v.block.style.backgroundImage = v.image;
+        v.title.style.color           = 'white';
+        void v.block.offsetWidth;            // reinicia animação CSS
+        v.block.classList.add('vehicle-bounce');
 
-    const v = vehicles[type];
-    v.block.style.backgroundImage = v.image;
-    v.title.style.color           = 'white';
-    void v.block.offsetWidth;               /* reinicia animação */
-    v.block.classList.add('vehicle-bounce');
-    }
+    /* 3 ▸ mostra apenas o container de produtos do veículo selecionado */
+        document.querySelectorAll(
+            '.vehicle-block-car-active, .vehicle-block-van-active, .vehicle-block-truck-active'
+        ).forEach(sec => sec.style.display = 'none');
 
-    function activateCategory(num, btn){
-    document.querySelectorAll('.vehicle-category-car')
-            .forEach(el=>el.classList.toggle('active', el===btn));
+        const activeSec = document.querySelector(`.vehicle-block-${type}-active`);
+        if (activeSec) activeSec.style.display = 'block';
+        }
 
-    document.querySelectorAll('.vehicle-block-car-active-products')
-            .forEach(div=>div.style.display='none');
+    /* ---------- FILTROS DE PRODUTOS (genérico) ---------- */
+    /* Ex. onclick="activateCategory(2, this)" (classe define o veículo)       */
+        function activateCategory(num, btn){
+    /* 1 ▸ identifica se é car, van ou truck pela classe do botão */
+        const vClass  = [...btn.classList].find(c => c.startsWith('vehicle-category-'));
+        if (!vClass) return;                                  // segurança
+        const vehicle = vClass.replace('vehicle-category-',''); // 'car' | 'van' | 'truck'
 
-    document.getElementById('products-car-'+num).style.display='flex';
-    }
+    /* 2 ▸ highlight apenas no botão atual */
+        document.querySelectorAll('.vehicle-category-' + vehicle)
+                .forEach(el => el.classList.toggle('active', el === btn));
+
+    /* 3 ▸ oculta todos os grids do mesmo veículo */
+        document.querySelectorAll('.vehicle-block-' + vehicle + '-active-products')
+                .forEach(div => div.style.display = 'none');
+
+    /* 4 ▸ exibe o grid correspondente */
+        const target = document.getElementById(`products-${vehicle}-${num}`);
+        if (target) target.style.display = 'flex';
+        }
 
     /* exporta para usar em atributos HTML */
-    window.carFunction      = carFunction;
-    window.activateCategory = activateCategory;
+        window.carFunction      = carFunction;
+        window.activateCategory = activateCategory;
 
     /* ---------- UTILITÁRIO DE AUTO-CARROSSEL (reaproveitável) ---------- */
-    function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}){
-    let isPaused = false;
+        function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}){
+        let isPaused = false;
 
-    const loop = () =>{
-        if (!isPaused){
-        track.scrollLeft += speed;
-        if (track.scrollLeft >= track.scrollWidth - track.clientWidth){
-            track.scrollLeft = 0;
-        }
-        }
+        const loop = () =>{
+            if (!isPaused){
+            track.scrollLeft += speed;
+            if (track.scrollLeft >= track.scrollWidth - track.clientWidth){
+                track.scrollLeft = 0;
+            }
+            }
+            requestAnimationFrame(loop);
+        };
         requestAnimationFrame(loop);
-    };
-    requestAnimationFrame(loop);
 
-    if (pauseOnHover){
-        ['mouseenter','focusin'].forEach(e=>track.addEventListener(e,()=>isPaused=true));
-        ['mouseleave','focusout' ].forEach(e=>track.addEventListener(e,()=>isPaused=false));
-    }
-    }
+        if (pauseOnHover){
+            ['mouseenter','focusin'].forEach(e=>track.addEventListener(e,()=>isPaused=true));
+            ['mouseleave','focusout' ].forEach(e=>track.addEventListener(e,()=>isPaused=false));
+        }
+        }
 
     /* ========================================================= *
     *     I N I C I A   C O M P O N E N T E S   D O   S I T E    *
     * ========================================================= */
-    document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
+
+    /* ===== HAMBURGER ===== */
+        const burgerOpen  = document.querySelector('.burger-icon-open');
+        const burgerClose = document.querySelector('.close-burger');
+        const header      = document.querySelector('.header-hamburger');
+
+    /* abrir */
+        burgerOpen.addEventListener('click', () => {
+            header.classList.add('active');
+            burgerOpen.classList.add('hidden');     // fade-out ≡
+            setTimeout(()=> burgerClose.classList.remove('hidden'), 200);
+        });
+
+    /* fechar */
+        burgerClose.addEventListener('click', () => {
+            header.classList.remove('active');
+            burgerClose.classList.add('hidden');    // fade-out X
+            setTimeout(()=> burgerOpen.classList.remove('hidden'), 200);
+        });
 
     /* ===== CARROSSEL #1  – PLACES (setas, sem drag/hover-pause) ===== */
-    const wrapper = document.querySelector('.places-carousel-wrapper');
-    if (wrapper){
-        const track   = wrapper.querySelector('.places-carousel');
-        const btnPrev = wrapper.querySelector('.places-arrow.left');
-        const btnNext = wrapper.querySelector('.places-arrow.right');
+        const wrapper = document.querySelector('.places-carousel-wrapper');
+        if (wrapper){
+            const track   = wrapper.querySelector('.places-carousel');
+            const btnPrev = wrapper.querySelector('.places-arrow.left');
+            const btnNext = wrapper.querySelector('.places-arrow.right');
 
-        const GAP  = parseInt(getComputedStyle(track).gap) || 0;
-        const CARD = track.querySelector('.places-blocks-container');
-        let STEP   = 0;
+            const GAP  = parseInt(getComputedStyle(track).gap) || 0;
+            const CARD = track.querySelector('.places-blocks-container');
+            let STEP   = 0;
 
-        function calcStep(){
-        const cardW  = CARD.offsetWidth + GAP;
-        const visible = Math.floor(track.clientWidth / cardW) || 1;
-        STEP = cardW * visible;               /* rola um “bloco visível” */
+            function calcStep(){
+            const cardW  = CARD.offsetWidth + GAP;
+            const visible = Math.floor(track.clientWidth / cardW) || 1;
+            STEP = cardW * visible;               /* rola um “bloco visível” */
+            }
+            calcStep();
+            window.addEventListener('resize', calcStep);
+
+            const maxScroll = () => track.scrollWidth - track.clientWidth;
+
+            btnNext.addEventListener('click', () => {
+            const atEnd = track.scrollLeft + STEP >= maxScroll() - 4;
+            track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + STEP,
+                            behavior:'smooth' });
+            });
+
+            btnPrev.addEventListener('click', () => {
+            const atStart = track.scrollLeft <= 4;
+            track.scrollTo({ left: atStart ? maxScroll() : track.scrollLeft - STEP,
+                            behavior:'smooth' });
+            });
         }
-        calcStep();
-        window.addEventListener('resize', calcStep);
-
-        const maxScroll = () => track.scrollWidth - track.clientWidth;
-
-        btnNext.addEventListener('click', () => {
-        const atEnd = track.scrollLeft + STEP >= maxScroll() - 4;
-        track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + STEP,
-                        behavior:'smooth' });
-        });
-
-        btnPrev.addEventListener('click', () => {
-        const atStart = track.scrollLeft <= 4;
-        track.scrollTo({ left: atStart ? maxScroll() : track.scrollLeft - STEP,
-                        behavior:'smooth' });
-        });
-    }
 
     /* ===== CARROSSEL #2  – FEEDBACK (auto-scroll infinito) ===== */
-    const feedback = document.querySelector('.feedback-carousel');
-    if (feedback){
-        setupAutoCarousel(feedback, {speed:1.3});
-    }
+        const feedback = document.querySelector('.feedback-carousel');
+        if (feedback){
+            setupAutoCarousel(feedback, {speed:1.3});
+        }
 
     /* ===== FAQ (abre/fecha um por vez) ===== */
-    const faq = document.querySelector('#faq');
-    if (faq){
-        faq.addEventListener('click', e=>{
-        const btn = e.target.closest('.faq-question');
-        if (!btn) return;
+        const faq = document.querySelector('#faq');
+        if (faq){
+            faq.addEventListener('click', e=>{
+            const btn = e.target.closest('.faq-question');
+            if (!btn) return;
 
-        const item = btn.parentElement;              /* .faq-item */
-        const open = faq.querySelector('.faq-item.open');
+            const item = btn.parentElement;              /* .faq-item */
+            const open = faq.querySelector('.faq-item.open');
 
-        if (open && open!==item) open.classList.remove('open');
-        item.classList.toggle('open');
+            if (open && open!==item) open.classList.remove('open');
+            item.classList.toggle('open');
+            });
+        }
+
         });
-    }
 
-    });
-    })();   /* fim da IIFE */
+    /* Scroll suave ao topo */
+        document.querySelector('.scroll-top').addEventListener('click', e=>{
+            e.preventDefault();
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+
+    /* -------------------- MOSTRA/ESCONDE DEPENDENDO DA ROLAGEM -------------------- */
+        const scrollBtn  = document.querySelector('.scroll-top');
+        const root       = document.documentElement;
+
+        function toggleScrollBtn(){
+            const scrolled  = root.scrollTop || document.body.scrollTop;  
+            const total     = root.scrollHeight - root.clientHeight;      
+            const halfway   = total / 6;                                  
+
+            if (scrolled > halfway){
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.pointerEvents = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', toggleScrollBtn);
+        toggleScrollBtn();
+    
+        document.querySelectorAll('.category-link').forEach(link=>{
+            link.addEventListener('click', e=>{
+                /* impede o salto instantâneo do navegador */
+                e.preventDefault();
+
+                /* id de destino vem do hash (#about-us, #places …) */
+                const targetId = link.hash.slice(1);           // remove o “#”
+                const targetEl = document.getElementById(targetId);
+
+                /* se existir, faz scroll suave */
+                if (targetEl){
+                targetEl.scrollIntoView({behavior:'smooth'});
+                }
+            });
+        });
+    })();
     </script>
 </body>
