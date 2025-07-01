@@ -21,6 +21,10 @@
         font-family: "Montserrat", sans-serif;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     :root {
     --sarmi-red: #BA2C2F;
     }
@@ -216,6 +220,11 @@
         align-items: center;
     }
 
+    .maxwidth {
+        max-width: 1500px;
+        margin: auto;
+    }
+
     .hero-background::before{
         content:"";
         position:absolute;
@@ -223,11 +232,6 @@
         background:rgba(0,0,0,.45);
         pointer-events:none;
         z-index:0;
-    }
-
-    .maxwidth {
-        max-width: 1500px;
-        margin: auto;
     }
 
     .hero-info {
@@ -249,6 +253,7 @@
         letter-spacing: 2px;
         color: white;
         font-weight: 800;
+        text-align: center;
     }
 
     .description {
@@ -256,7 +261,8 @@
         letter-spacing: 2px;
         line-height: 35px;
         color: white;
-        font-weight: 200;
+        font-weight: 300;
+        text-align: center;
     }
 
     .hero-button {
@@ -264,7 +270,7 @@
         color: white;
         font-size: 1.2rem;
         font-weight: 700;
-        padding: 16px 0;
+        padding: 16px 15px;
         width: 100%;
         border: none;
         box-shadow: 2px 2px 10px #2CBA52;
@@ -274,6 +280,18 @@
         letter-spacing: 0.5px;
         display: block;
         transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .whatsapp-img {
+        width: 32px;
+        height: 32px;
+        filter: invert(1);
+        pointer-events: none;
     }
 
     .hero-button:hover {
@@ -286,7 +304,7 @@
 
     @media (max-width:1500px){
         .maxwidth {
-            max-width: 90%;
+            max-width: 95%;
         }
         .hero-info {
             width: 50%;
@@ -336,10 +354,10 @@
 
     @media (max-width:430px){
         .maxwidth {
-            max-width: 100%;
+            max-width: 95%;
         }
         .title {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             letter-spacing: 2px;
             color: white;
             font-weight: 800;
@@ -349,10 +367,10 @@
             letter-spacing: 2px;
             line-height: 20px;
             color: white;
-            font-weight: 200;
+            font-weight: 400;
         }
         .hero-button {
-            font-size: .7rem;
+            font-size: .8rem;
         }
     }
 
@@ -375,10 +393,12 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+        overflow: hidden;
     }
 
     .vehicle-block-car {
         width: 33%;
+        min-width: 380px;
         height: 200px;
         background-image: url('/img/Carro-ativo.png');
         background-size: cover;
@@ -388,6 +408,7 @@
 
     .vehicle-block-van {
         width: 33%;
+        min-width: 380px;
         height: 200px;
         background-image: url('/img/Van.png');
         background-size: cover;
@@ -397,6 +418,7 @@
 
     .vehicle-block-truck {
         width: 33%;
+        min-width: 380px;
         height: 200px;
         background-image: url('/img/Caminhao.png');
         background-size: cover;
@@ -432,7 +454,7 @@
         color: white;
         font-size: 1rem;
         font-weight: 700;
-        padding: 16px 0;
+        padding: 16px 15px;
         width: 70%;
         border: none;
         box-shadow: 2px 2px 10px #2CBA52;
@@ -443,6 +465,10 @@
         display: block;
         transition: all 1s ease;
     }   
+
+    .vehicle-block-button a{
+        pointer-events: auto;
+    }
 
     .vehicle-block-button:hover {
         background-color: #16d048;
@@ -458,8 +484,8 @@
     .vehicle-block-van-active-flex,
     .vehicle-block-truck-active-flex {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));  /* cada item vira 1 fr – preenche toda a linha */
-        gap: 15px;                    /* espaçamento uniforme entre eles   */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
         padding: 30px 0;
     }
 
@@ -495,6 +521,7 @@
     .vehicle-block-van-active-products,
     .vehicle-block-truck-active-products {
         display: none;
+        justify-content: start;
         flex-wrap: wrap;
         gap: 50px;
         background-color: rgba(0, 0, 0, 0.8);
@@ -508,6 +535,7 @@
     .vehicle-block-van-active-products-block,
     .vehicle-block-truck-active-products-block {
         width: 30%;
+        min-width: 330px;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -531,7 +559,7 @@
         color: white;
         font-size: 1rem;
         font-weight: 700;
-        padding: 16px 0;
+        padding: 16px 15px;
         width: 100%;
         border: none;
         box-shadow: 2px 2px 10px #2CBA52;
@@ -541,7 +569,170 @@
         letter-spacing: 0.5px;
         display: block;
         transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
     }
+
+    button .whatsapp-img {
+        width: 32px;
+        height: 32px;
+        filter: invert(1);
+        pointer-events: none;
+    }
+
+    @media (max-width: 1500px) {
+        .vehicle-block-car-active-products-block h3 {
+            font-size: 1rem;
+        }
+        .vehicle-block-car-active-products-block button {
+            font-size: .8rem;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .vehicle-block-flex {
+            gap: 20px
+        }
+        
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            min-width: 300px;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .vehicle-block-flex {
+            justify-content: start;
+        }
+        
+        .vehicle-block-car, 
+        .vehicle-block-van, 
+        .vehicle-block-truck {
+            min-width: 250px;
+        }
+
+        .vehicle-block-title-car,
+        .vehicle-block-title-van,
+        .vehicle-block-title-truck {
+            font-size: 1.5rem;
+        }
+    
+        .vehicle-block-button {
+            font-size: .8rem;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            min-width: 100%;
+            padding: 50px;
+        }
+
+        .vehicle-block-button {
+            width: 50%;
+        }
+
+        .vehicle-block-button a{
+            pointer-events: default;
+        }
+
+        .vehicle-block-flex {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .vehicle-block-flex{
+            gap: 10px;
+        }
+        .vehicle-type-background .title,
+        .vehicle-type-background .description {
+            margin-right: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 20px;
+        }
+        .vehicle-block-car-active-flex, 
+        .vehicle-block-van-active-flex,
+        .vehicle-block-truck-active-flex {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            margin-right: 0;
+        }
+
+        .vehicle-category-car, 
+        .vehicle-category-van, 
+        .vehicle-category-truck {
+            font-size: .8rem;
+        }
+
+        .vehicle-block-car-active-products, 
+        .vehicle-block-van-active-products, 
+        .vehicle-block-truck-active-products {
+            margin: 0;
+        }
+        
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            padding: 30px;
+        }
+
+        .vehicle-block-title-car,
+        .vehicle-block-title-van,
+        .vehicle-block-title-truck {
+            font-size: 1.8rem;
+        }
+    }
+
+        @media (max-width: 500px) {
+            .vehicle-block-car-active-products-block, 
+            .vehicle-block-van-active-products-block, 
+            .vehicle-block-truck-active-products-block {
+                flex-direction: column;
+                margin: auto;
+            }
+
+            .vehicle-block-car-active-products-block div, 
+            .vehicle-block-van-active-products-block div, 
+            .vehicle-block-truck-active-products-block div{
+                width: 200px;
+                margin: auto;
+            }
+            .vehicle-block-car-active-products, 
+            .vehicle-block-van-active-products, 
+            .vehicle-block-truck-active-products {
+                padding: 50px 0;
+            }
+
+            .vehicle-block-car-active-products-block a, 
+            .vehicle-block-van-active-products-block a, 
+            .vehicle-block-truck-active-products-block a{
+                padding: 0 20px;
+            }
+
+            .vehicle-block-car,
+            .vehicle-block-van,
+            .vehicle-block-truck {
+                padding: 50px 30px 0 30px;
+            }
+            .vehicle-block-title-car,
+            .vehicle-block-title-van,
+            .vehicle-block-title-truck {
+                font-size: 1.5rem;
+            }
+            .vehicle-block-button {
+                font-size: .6rem;
+                width: 80%;
+            }
+    }
+
 
     /* ABOUT-US */
     /* ABOUT-US */
@@ -552,25 +743,20 @@
         padding: 50px 0;
     }
 
-    .maxwidth {
-        max-width: 1500px;
-        margin: auto;
-        padding-left: 2rem;
-    }
-
     .about-us-flex {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .about-us-text {
-        width: 40%;
+        width: 50%;
     }
 
     .about-us-text .title,
     .about-us-text .description {
         margin-bottom: 50px;
+        text-align: start;
     }
 
     .about-us-text h3, 
@@ -585,11 +771,17 @@
 
     @media (max-width: 1025px) {
         .about-us-text {
-             width: 90%;
+             width: 100%;
+        }
+
+        .about-us-text .title, 
+        .about-us-text .description {
+            text-align: center;
         }
 
         .about-us-video {
-             width: 90%;
+             width: 95%;
+             margin: auto;
         }
 
         .about-us-video iframe{
@@ -613,10 +805,6 @@
         .about-us-text .title,
         .about-us-text .description {
             margin-bottom: 20px;
-        }
-
-        .about-us-text .description {
-            font-weight: 300;
         }
 
         .about-us-video iframe{
@@ -730,7 +918,7 @@
     .title-place-name {
         text-align: center;
         padding-top: 30px;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         font-weight: 700;
     }
 
@@ -760,7 +948,7 @@
         color: white;
         font-size: 1rem;
         font-weight: 700;
-        padding: 16px 0;
+        padding: 16px 15px;
         width: 100%;
         border: none;
         box-shadow: 2px 2px 10px #2CBA52;
@@ -770,6 +958,11 @@
         letter-spacing: 0.5px;
         display: block;
         transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     
      @media (max-width: 580px) {
@@ -819,7 +1012,11 @@
         .places-background .title,
         .places-background .description {
             margin-bottom: 20px;
-    }
+        }
+
+        p.title-place-name {
+            margin-right: 1rem;
+        }
     }
 
     /* FEEDBACK */
@@ -984,7 +1181,7 @@
     @media (max-width: 1500px) {
         .faq-question,
         .faq-answer {
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -1008,22 +1205,44 @@
 
     .footer-background {
         background-color: white;
-        padding: 50px 0 0 0;
+    }
+
+    .footer-maxwidth {
+        max-width: 1500px;
+        margin: auto;
+        background-image: url('./img/Loja.jpeg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+    }
+
+    .footer-maxwidth:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, rgb(255, 255, 255) 40%, transparent);
+        width: 100%;
+        height: 100%;
     }
     
     .footer-text .title, 
     .footer-text .description {
         color: #404040;
         margin-bottom: 50px;
+        text-align: start;
     }
 
     .footer-flex {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: start;
     }
 
     .footer-text {
-        width: 50%;
+        z-index: 100;
+        width: 70%;
+        padding: 50px 0 0 0;
     }
 
     .footer-button {
@@ -1031,8 +1250,9 @@
         color: white;
         font-size: 1rem;
         font-weight: 700;
-        padding: 16px 0;
+        padding: 16px ;
         width: 100%;
+        max-width: 500px;
         border: none;
         box-shadow: 2px 2px 10px #2CBA52;
         cursor: pointer;
@@ -1041,6 +1261,11 @@
         letter-spacing: 0.5px;
         display: block;
         transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .footer-socials-div p{
@@ -1065,16 +1290,36 @@
     } 
 
     .footer-placeholder{
-        width: 30%;
+        width: 50%;
     }
 
-    .footer-placeholder img{
-        width: 100%;
+    
+    @media (max-width:1500px){
+        .footer-maxwidth {
+            max-width: 100%;
+        }
+        .footer-maxwidth {
+            background-size: cover;
+            margin-left: 3%;
+        }
     }
 
-    @media (max-width: 1450px) {
-        .footer-placeholder img{
-            width: 100%;
+    @media (max-width: 1025px){
+        .footer-maxwidth:before {
+            background: linear-gradient(to right, rgb(255, 255, 255) 60%, transparent);
+        }
+        .footer-maxwidth {
+           background-position: -250px 0;
+        }
+    }
+
+    @media (max-width: 900px){
+        .footer-socials-div .description {
+            margin-bottom: 0;
+        }
+
+        .footer-socials-div svg {
+            margin-bottom: 120px;
         }
     }
 
@@ -1088,10 +1333,6 @@
             width: 80%;
         }
 
-        .footer-placeholder {
-            display: none;
-        }
-
         .footer-button {
             font-size: .8rem;
         }
@@ -1102,6 +1343,17 @@
 
         .footer-socials-div .description {
             font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .footer-maxwidth:before {
+            background: linear-gradient(to right, rgb(255, 255, 255) 100%, transparent);
+        }
+
+        .footer-maxwidth {
+            background-size: cover;
+            margin-left: 4%;
         }
     }
 
@@ -1191,7 +1443,7 @@
     <section id="header">
         <div class="header-category">
             <img src="img/logo.webp" alt="LOGO">
-            <a class="category-link" href="#vehicle-type">Escolha seu veículo</a>
+            <a class="category-link" href="#vehicle-type">Escolha sua peça</a>
             <a class="category-link" href="#about-us">Sobre nós</a>
             <a class="category-link" href="#places">Lojas</a>
             <a class="category-link" href="#feedback">Depoimentos</a>
@@ -1222,8 +1474,12 @@
                 <div class="maxwidth">
                 <div class="hero-info">
                     <h1 class="title">A peça certa para o seu veículo está na <span class="red"><br>Sermi Auto Peças!</span></h1>
-                    <p class="description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="hero-button">Fale com um consultor no WhatsApp</a>
+                    <p class="description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão</p>
+                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="hero-button">
+                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                    alt=""
+                    aria-hidden="true">
+                    Fale com um consultor no WhatsApp</a>
                 </div>
                 <div class="placeholder"></div>
             </div>
@@ -1232,24 +1488,30 @@
     <section id="vehicle-type">
         <div class="vehicle-type-background">
             <div class="maxwidth">
-                <h3 class="title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa.</h3>
-                <p class="description">Trabalhamos com produtos para automóveis, utilitários e caminhões. <br>Clique abaixo para falar conosco via WhatsApp.</p>
+                <h3 class="title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa</h3>
+                <p class="description">Trabalhamos com produtos para automóveis, utilitários e caminhões<br>Clique abaixo para falar conosco via WhatsApp</p>
                 <div class="vehicle-block-flex">
                     <div class="vehicle-block-car">
                         <h4 class="vehicle-block-title-car">Automóveis</h4>
-                        <button class="vehicle-block-button" onclick="carFunction('car')">Clique e confira os modelos</button>
+                        <button class="vehicle-block-button" onclick="carFunction('car')">
+                            <a  href="#mobile-ancora-car">Clique e confira os modelos</a>
+                        </button>
                     </div>
                     <div class="vehicle-block-van">
                         <h4 class="vehicle-block-title-van">Vans e Pickups</h4>
-                        <button class="vehicle-block-button" onclick="carFunction('van')">Clique e confira os modelos</button>
+                        <button class="vehicle-block-button" onclick="carFunction('van')">
+                            <a  href="#mobile-ancora-van">Clique e confira os modelos</a>
+                        </button>
                     </div>
                     <div class="vehicle-block-truck">
                         <h4 class="vehicle-block-title-truck">Caminhões</h4>
-                        <button class="vehicle-block-button" onclick="carFunction('truck')">Clique e confira os modelos</button>
+                        <button class="vehicle-block-button" onclick="carFunction('truck')">
+                            <a  href="#mobile-ancora-truck">Clique e confira os modelos</a>
+                        </button>
                     </div>
                 </div>
                 <div class="vehicle-block-car-active" style="display: block;">
-                    <div class="vehicle-block-car-active-flex">
+                    <div class="vehicle-block-car-active-flex" id="mobile-ancora-car">
                         <button class="vehicle-category-car active" onclick="activateCategory(1, this)">
                             Correias e Tensionadores
                         </button>
@@ -1265,7 +1527,7 @@
                         <button class="vehicle-category-car" onclick="activateCategory(5, this)">
                             Iluminação Elétrica
                         </button>
-                        <button class="vehicle-category-car" onclick="activateCategory(6, this)">
+                        <button class="vehicle-category-car" onclick="activateCategory(6, this)" >
                             Acessórios
                         </button>
                     </div>
@@ -1274,49 +1536,84 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Correias Poly-V</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Correias de Alternador</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Correias de Distribuição</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Esticadores de Correia</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Tensor de Correia Dentada</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Tensionadores Hidráulicos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Correia</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1325,49 +1622,84 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Filtros de Ar</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Filtros de Óleo</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Filtros de Combustível</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Filtros de Cabine</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lubrificantes Sintéticos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Fluido de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Aditivos para Radiador</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1376,49 +1708,84 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Pastilhas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Discos de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lonas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Cilindros Mestre</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Amortecedores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Coxins e Buchas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits Suspensão</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1427,42 +1794,72 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Embreagem</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Juntas e Retentores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Pistões e Anéis</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Reparo de Câmbio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Bombas d'Água</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Válvulas Termostáticas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1471,35 +1868,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lâmpadas Automotivas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Motores de Partida</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Alternadores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Reguladores de Voltagem</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Chicotes Elétricos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1508,41 +1930,66 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Palhetas Limpadoras</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Retrovisores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Travas e Fechaduras</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Macacos Hídráulicos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Triângulo de Segurança</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="vehicle-block-van-active" style="display: none">
-                <div class="vehicle-block-van-active-flex">
+                <div class="vehicle-block-van-active-flex" id="mobile-ancora-van">
                     <button class="vehicle-category-van active" onclick="activateCategory(1, this)">
                         Freios e Rodagem
                     </button>
@@ -1567,35 +2014,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lonas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Sapatas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Câmaras de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Rolamento de Roda</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Engraxadeiras</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1604,35 +2076,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Barras de Direção</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Pivôs de Suspensão</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Coxins de Motor</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Buchas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Amortecedores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1641,35 +2138,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Embreagem</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Eixo Cardan</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Engrenagens</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Reparo de Caixa</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Retentores de Eixo</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1678,35 +2200,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Pistões e Anéis</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Juntas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Válvulas e Balancins</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Bombas de Óleo</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Bombas de Água</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1715,35 +2262,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Alternadores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Motores de Partida</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Reguladores de Voltagem</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lanternas e Faróis</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Chicotes Elétricos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1752,41 +2324,66 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Palhetas de Para-brisa</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Retrovisores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Extintores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Triângulo de Segurança</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Engates Rápidos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="vehicle-block-truck-active" style="display: none">
-                <div class="vehicle-block-truck-active-flex">
+                <div class="vehicle-block-truck-active-flex" id="mobile-ancora-truck">
                     <button class="vehicle-category-truck active" onclick="activateCategory(1, this)">
                         Sistema de Freio
                     </button>
@@ -1811,35 +2408,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Lonas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Sapatas de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Válvulas de Freio a Ar</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Câmaras de Freio</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Engraxadeiras</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1848,35 +2470,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Embreagem</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Cruzetas e Cardans</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Engrenagens</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Retentores de Eixo</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Reparação de Caixa</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1885,35 +2532,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Pistões e Anéis</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Juntas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Bombas de Combustível</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Válvulas Termostáticas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Turbina</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1922,35 +2594,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Alternadores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Motores de Partida</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Faróis e Lanternas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Buzinas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Chicotes e Conexões</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1959,35 +2656,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Buchas</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Amortecedores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Barras de Direção</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Kits de Suspensão</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Coxins de Motor</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1996,35 +2718,60 @@
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Palhetas de Para-brisa</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Retrovisores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Extintores</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Macacos Hidráulicos</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                         <div class='vehicle-block-car-active-products-block'>
                             <img src="https://placehold.co/200x150" alt="">
                             <div>
                                 <h3>Triângulo de Segurança</h3>
-                                <button><a href="">Comprar via whatsapp</a></button>
+                                <button>
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt=""
+                                    aria-hidden="true">
+                                    <a href="">Comprar via whatsapp</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -2040,7 +2787,7 @@
                         <h3 class="title">Conheça a Sermi Auto Peças</h3>
                         <p class="description">Com mais de 37 anos no mercado, a Sermi é referência em peças automotivas na região. 
                         Atendemos oficinas, frotistas e consumidores finais com peças confiáveis, variedade em estoque e preços justos. 
-                        Estamos presentes em várias cidades com lojas físicas prontas para te atender.
+                        Estamos presentes em várias cidades com lojas físicas prontas para te atender
                         </p>
                     </div>
                     <div class="about-us-video">
@@ -2061,7 +2808,7 @@
         <div class="places-background">
             <div class="maxwidth">
                 <h3 class="title">Encontre a Sermi mais perto de você!</h3>
-                <p class="description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo.<br> Clique na loja mais próxima e fale com um consultor.</p>
+                <p class="description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo<br> Clique na loja mais próxima e fale com um consultor</p>
                 <div class="places-carousel-container">
                     <section class="places-carousel-wrapper">
                         <button class="places-arrow left"  aria-label="Anterior">
@@ -2090,7 +2837,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d4ba8c9447%3A0x5c96b03421302439!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Cravinhos!5e0!3m2!1spt-BR!2sbr!4v1751049503339!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Cravinhos-SP</a>
+                                    <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt=""
+                                        aria-hidden="true">
+                                        Falar com a Loja de Cravinhos-SP
+                                    </a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Araraquara">
@@ -2114,8 +2866,13 @@
                                             <p>sermiloja2@sermi.com.br</p>
                                         </a>
                                     </div>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d493816efb%3A0x9e8c73176e072126!2sSermi%20-%20Loja%20de%20Autope%C3%A7as%20em%20Araraquara%20-%20PitStop!5e0!3m2!1spt-BR!2sbr!4v1751049743813!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <a href="https://api.whatsapp.com/send?phone=5516994017930&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Araraquara-SP</a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d493816efb%3A0x9e8c73176e072126!2sSermi%20-%20Loja%20de%20Autope%C3%A7as%20em%20Araraquara%20-%20PitStop!5e0!3m2!1spt-BR!2sbr!4v1751049743813!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="https://api.whatsapp.com/send?phone=5516994017930&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt=""
+                                        aria-hidden="true">
+                                        Falar com a Loja de Araraquara-SP
+                                    </a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Sertãozinho">
@@ -2140,7 +2897,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31791811.201448027!2d-73.0634021869907!3d-13.422456123522103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b99994fa4a3c5b%3A0xac039d8f5fcab0b6!2sSermi%20-%20Auto%20Pe%C3%A7as%20em%20Sert%C3%A3ozinho!5e0!3m2!1spt-BR!2sbr!4v1751049902406!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <a href="https://api.whatsapp.com/send?phone=5516991661772&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Sertãozinho-SP</a>
+                                    <a href="https://api.whatsapp.com/send?phone=5516991661772&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt=""
+                                        aria-hidden="true">
+                                        Falar com a Loja de Sertãozinho-SP
+                                    </a>
                                 </div>
                             </div>
                             <div class="places-blocks-container Tambaú">
@@ -2165,7 +2927,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b7efbf2cfcffe7%3A0xf2eb844b5d77b8f5!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Tamba%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1751049944814!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <a href="https://api.whatsapp.com/send?phone=5519991911812&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Tambaú-SP</a>
+                                    <a href="https://api.whatsapp.com/send?phone=5519991911812&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt=""
+                                        aria-hidden="true">
+                                        Falar com a Loja de Tambaú-SP
+                                    </a>
                                 </div>
                             </div>
                             <div class="places-blocks-container santa-rosa">
@@ -2190,7 +2957,12 @@
                                         </a>
                                     </div>
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b788d35bc4ed91%3A0xfe233888d6fb9825!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Santa%20Rosa%20de%20Viterbo!5e0!3m2!1spt-BR!2sbr!4v1751050139651!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <a href="https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">Falar com a Loja de Santa Rosa-SP</a>
+                                    <a href="https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento" class="places-button">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt=""
+                                        aria-hidden="true">
+                                        Falar com a Loja de Santa Rosa-SP
+                                    </a>
                                 </div>
                             </div>
                             <div class="places-placeholder"></div>
@@ -2207,7 +2979,7 @@
         <div class="feedback-background">
             <div class="maxwidth">
                 <h3 class="title">O que dizem os nossos clientes</h3>
-                <p class="description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade.</p>
+                <p class="description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade</p>
                 <div class="feedback-carousel-container">
                     <div class="feedback-carousel">
                         <div class="feedback-card">
@@ -2396,7 +3168,7 @@
         <div class="FAQ-background">
             <div class="maxwidth">
                 <h3 class="title">Dúvidas frequentes</h3>
-                <p class="description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time.</p>
+                <p class="description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time</p>
                 <div class="faq-dropdown" id="faq">
                     <div class="faq-item open">
                         <button class="faq-question">
@@ -2509,14 +3281,17 @@
     </section>
     <footer id="footer">
         <div class="footer-background">
-            <div class="maxwidth">
+            <div class="footer-maxwidth">
                 <div class="footer-flex">
                     <div class="footer-text">
                         <h3 class="title">Adquira suas peças com quem <br>entende do assunto</h3>
-                        <p class="description">Atendimento imediato via WhatsApp, retirada rápida e produtos com garantia.</p>
+                        <p class="description">Atendimento imediato via WhatsApp,<br> retirada rápida e produtos com garantia</p>
                         <p class="description">Clique no botão abaixo e fale com nosso time!</p>
                         <a href="https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento">
-                            <button class="footer-button">Quero falar com a Sermi agora</button>
+                            <button class="footer-button">
+                                <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" aria-hidden="true">
+                                Quero falar com a Sermi agora
+                            </button>
                         </a>
                         <div class="footer-socials">
                             <div class="footer-socials-div">
@@ -2534,7 +3309,6 @@
                         </div>
                     </div>
                     <div class="footer-placeholder">
-                        <img src="img/celular.png" alt="">
                     </div>
                 </div>
             </div>
