@@ -27,6 +27,8 @@
 
     :root {
     --sarmi-red: #BA2C2F;
+    --botão-wpp: #2CBA52;
+    --botão-wpp-hover: #2CBA52c1;
     }
 
     .red {
@@ -48,12 +50,12 @@
         align-items: center;
         gap: 100px;
         padding: 20px 0;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 1);
         border-bottom: 2px solid var(--sarmi-red);
         position: fixed;
         top: 0;
         left: 0;
-        height: 80px;
+        height: 100px;
         width: 100%;
         z-index: 10000;
     }
@@ -73,8 +75,8 @@
 
     .category-link {
         font-size: 1rem;
-        font-weight: 700;
-        color: #404040;
+        font-weight: 500;
+        color: black;
         text-transform: uppercase;
     }
 
@@ -195,10 +197,10 @@
     .hero-background {
         width: 100%;
         position: relative;
-        background-image: url('img/banner.png');
+        background-image: url('img/Faxada2.png');
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right;
+        background-size: cover;
+        background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -213,7 +215,7 @@
         content:"";
         position:absolute;
         inset:0;
-        background: linear-gradient(to right, white 40%, transparent 50%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 40%, transparent 60%);
         pointer-events: none;
         z-index:0;
     }
@@ -228,6 +230,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+        padding-top: 100px;
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -250,14 +253,15 @@
     }
 
     .hero-button {
-        background: #2CBA52;
+        background: var(--botão-wpp);
         color: white;
         font-size: 1.2rem;
         font-weight: 700;
         padding: 16px 15px;
         width: 100%;
         border: none;
-        box-shadow: 2px 2px 10px #2CBA52;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
         cursor: pointer;
         text-align: center;
         margin-top: 25px;
@@ -279,7 +283,7 @@
     }
 
     .hero-button:hover {
-        background-color: #2cba52c1;
+        background-color: var(--botão-wpp-hover);
     }
 
     .placeholder {
@@ -409,6 +413,7 @@
         min-width: 380px;
         height: 200px;
         background-image: url('/img/Carro-ativo.png');
+        border-radius: 5px;
         background-size: cover;
         background-position: right;
         padding: 30px 0 50px 40px;
@@ -419,7 +424,9 @@
         min-width: 380px;
         height: 200px;
         background-image: url('/img/Van.png');
+        border-radius: 5px;
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: right;
         padding: 30px 0 50px 40px;
     }
@@ -429,6 +436,7 @@
         min-width: 380px;
         height: 200px;
         background-image: url('/img/Caminhao.png');
+        border-radius: 5px;
         background-size: cover;
         background-position: right;
         padding: 30px 0 50px 40px;
@@ -458,14 +466,15 @@
     }
 
     .vehicle-block-button {
-        background: #2CBA52;
+        background: var(--botão-wpp);
         color: white;
         font-size: 1rem;
         font-weight: 700;
         padding: 16px 15px;
         width: 70%;
         border: none;
-        box-shadow: 2px 2px 10px #2CBA52;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
         cursor: pointer;
         text-align: center;
         margin-top: 25px;
@@ -507,6 +516,7 @@
         font-size: 1.2rem;
         font-weight: 600;
         transition: all .2s ease;
+        border-radius: 5px;
     }
 
     .vehicle-category-car:hover,
@@ -535,7 +545,6 @@
         background-color: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(5px);
         border-radius: 10px;
-        margin: 0 10px;
         padding: 50px;
     }
 
@@ -563,14 +572,15 @@
     .vehicle-block-car-active-products-block button,
     .vehicle-block-van-active-products-block button,
     .vehicle-block-truck-active-products-block button{
-        background: #2CBA52;
+        background: var(--botão-wpp);
         color: white;
         font-size: 1rem;
         font-weight: 700;
         padding: 16px 15px;
         width: 100%;
         border: none;
-        box-shadow: 2px 2px 10px #2CBA52;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
         cursor: pointer;
         text-align: center;
         margin-top: 25px;
@@ -780,6 +790,10 @@
         position: relative; 
     }
 
+    .about-us-video iframe{
+        border-radius: 20px; 
+    }
+
     @media (max-width: 1025px) {
         .about-us-text {
              width: 100%;
@@ -955,14 +969,15 @@
     }
 
     .places-button {
-        background: #2CBA52;
+        background: var(--botão-wpp);
         color: white;
         font-size: 1rem;
         font-weight: 700;
         padding: 16px 15px;
         width: 100%;
         border: none;
-        box-shadow: 2px 2px 10px #2CBA52;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
         cursor: pointer;
         text-align: center;
         margin-bottom: 25px;
@@ -1074,7 +1089,7 @@
         flex: 0 0 400px;
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(5px);
-        border-radius: 4px;
+        border-radius: 5px;
         color: white;
         padding: 50px 24px 50px;
     }
@@ -1157,6 +1172,7 @@
         border: none;
         cursor: pointer;
         position: relative;
+        border-radius: 5px 5px 0 0;
     }
 
     .faq-question .arrow{
@@ -1181,6 +1197,7 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height .35s ease, padding .35s ease;
+        border-radius: 0 0 5px 5px;
     }
 
     .faq-item.open .faq-answer{
@@ -1236,12 +1253,18 @@
         height: 100%;
     }
     
-    .footer-text .title, 
-    .footer-text .description {
+    .footer-text .title {
         color: #404040;
         margin-bottom: 50px;
         text-align: start;
     }
+
+    .footer-text .description {
+        color: #404040;
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
 
     .footer-description{
         margin-bottom: 30px !important;
@@ -1260,7 +1283,7 @@
     }
 
     .footer-button {
-        background: #2CBA52;
+        background: var(--botão-wpp);
         color: white;
         font-size: 1rem;
         font-weight: 700;
@@ -1268,7 +1291,8 @@
         width: 100%;
         max-width: 500px;
         border: none;
-        box-shadow: 2px 2px 10px #2CBA52;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
         cursor: pointer;
         text-align: center;
         margin-top: 25px;
