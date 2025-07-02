@@ -48,12 +48,12 @@
         align-items: center;
         gap: 100px;
         padding: 20px 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         border-bottom: 2px solid var(--sarmi-red);
         position: fixed;
         top: 0;
         left: 0;
-        height: 100px;
+        height: 80px;
         width: 100%;
         z-index: 10000;
     }
@@ -68,13 +68,13 @@
 
     .header-category img{
         cursor: pointer;
-        height: 160px;
+        height: 120px;
     }
 
     .category-link {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #121212;
         text-transform: uppercase;
     }
 
@@ -2977,7 +2977,7 @@
                             </div>
                             <div class="places-blocks-container santa-rosa">
                                 <div class="places-card">
-                                    <p class="title-place-name santa-rosa-title">LOJA 5 - Santa Rosa de Viterbo</p>
+                                    <p class="title-place-name santa-rosa-title">LOJA 5 - Sta. R. de Viterbo</p>
                                     <div class="svg"> 
                                         <a href="https://maps.app.goo.gl/zh42xVsGGzRAUg5P6">
                                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -3544,26 +3544,7 @@
                 scrollBtn.style.opacity = '0';
                 scrollBtn.style.pointerEvents = 'none';
             }
-        }
-
-        window.addEventListener('scroll', toggleScrollBtn);
-        toggleScrollBtn();
-    
-        document.querySelectorAll('.category-link').forEach(link=>{
-            link.addEventListener('click', e=>{
-                /* impede o salto instantâneo do navegador */
-                e.preventDefault();
-
-                /* id de destino vem do hash (#about-us, #places …) */
-                const targetId = link.hash.slice(1);           // remove o “#”
-                const targetEl = document.getElementById(targetId);
-
-                /* se existir, faz scroll suave */
-                if (targetEl){
-                targetEl.scrollIntoView({behavior:'smooth'});
-                }
-            });
-        });
-    })();
+            }
+        })();
     </script>
 </body>
