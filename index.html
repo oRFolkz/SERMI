@@ -360,14 +360,14 @@
         }
         .title {
             font-size: 1.6rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: white;
             font-weight: 800;
         }
         .description {
             font-size: .8rem;
-            letter-spacing: 2px;
-            line-height: 20px;
+            letter-spacing: 1px;
+            line-height: 25px;
             color: white;
             font-weight: 400;
         }
@@ -380,7 +380,7 @@
             width: 100%;
         }
         .hero-background {
-            background-position: -500px 0;
+            background-position: -400px 0;
         }
     }
 
@@ -827,7 +827,7 @@
 
         .about-us-text .title,
         .about-us-text .description {
-            margin-bottom: 20px;
+            margin: 0 20px 20px 20px; 
         }
 
         .about-us-video iframe{
@@ -1030,7 +1030,7 @@
     @media (max-width: 425px) {
         .places-background .title,
         .places-background .description {
-            margin-right: 2rem;
+            margin: 0 20px 20px 20px;
         }
 
         .places-background .title,
@@ -1038,9 +1038,10 @@
             margin-bottom: 20px;
         }
 
-        p.title-place-name {
-            margin-right: 1rem;
+        .title-place-name {
+            font-size: 1.5rem;
         }
+
         p.santa-rosa-title {
             margin-right: 0;
         }
@@ -1134,8 +1135,7 @@
 
         .feedback-background .title,
         .feedback-background .description {
-            margin-bottom: 20px;
-            margin-right: 20px;
+            margin: 0 20px 20px 20px;
         }
 
         .feedback-background .description {
@@ -1479,8 +1479,7 @@
         color: white;
         transition:transform .25s;
         cursor:pointer;
-
-        opacity:0;
+        opacity: 0;
         pointer-events:none;
         transition:opacity .3s, transform .25s;
     }
@@ -3552,17 +3551,17 @@
     /* Scroll suave ao topo */
         document.querySelector('.scroll-top').addEventListener('click', e=>{
             e.preventDefault();
-            window.scrollTo({top:0, behavior:'smooth'});
+            window.scrollTo({top:750, behavior:'smooth'});
         });
 
     /* -------------------- MOSTRA/ESCONDE DEPENDENDO DA ROLAGEM -------------------- */
-        const scrollBtn  = document.querySelector('.scroll-top');
-        const root       = document.documentElement;
+    const scrollBtn  = document.querySelector('.scroll-top');
+    const root       = document.documentElement;
 
         function toggleScrollBtn(){
             const scrolled  = root.scrollTop || document.body.scrollTop;  
             const total     = root.scrollHeight - root.clientHeight;      
-            const halfway   = total / 6;                                  
+            const halfway   = total / 8;                                 
 
             if (scrolled > halfway){
                 scrollBtn.style.opacity = '1';
@@ -3571,7 +3570,11 @@
                 scrollBtn.style.opacity = '0';
                 scrollBtn.style.pointerEvents = 'none';
             }
-            }
-        })();
+        }
+
+        window.addEventListener('scroll', toggleScrollBtn);
+        // Executa uma vez ao carregar para garantir o estado correto
+        toggleScrollBtn();
+    })();
     </script>
 </body>
