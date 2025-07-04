@@ -3447,25 +3447,43 @@
         window.activateCategory = activateCategory;
 
     /* ---------- UTILITÁRIO DE AUTO-CARROSSEL (reaproveitável) ---------- */
-        function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}){
-        let isPaused = false;
+        function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}) {
+            let isPaused = false;
+            let animationFrameId;
 
-        const loop = () =>{
-            if (!isPaused){
-            track.scrollLeft += speed;
-            if (track.scrollLeft >= track.scrollWidth - track.clientWidth){
-                track.scrollLeft = 0;
-            }
-            }
-            requestAnimationFrame(loop);
-        };
-        requestAnimationFrame(loop);
+            // Pausar quando a aba não está visível (economiza bateria!)
+            document.addEventListener('visibilitychange', () => {
+                isPaused = document.hidden;
+            });
 
-        if (pauseOnHover){
-            ['mouseenter','focusin'].forEach(e=>track.addEventListener(e,()=>isPaused=true));
-            ['mouseleave','focusout' ].forEach(e=>track.addEventListener(e,()=>isPaused=false));
+            // Pausar ao tocar no mobile
+            track.addEventListener('touchstart', () => isPaused = true);
+            track.addEventListener('touchend',   () => isPaused = false);
+
+            // Pausar ao passar mouse ou foco (desktop)
+            if (pauseOnHover) {
+                ['mouseenter','focusin'].forEach(e => track.addEventListener(e, () => isPaused = true));
+                ['mouseleave','focusout' ].forEach(e => track.addEventListener(e, () => isPaused = false));
+            }
+
+            // O loop principal
+            function loop() {
+                if (!isPaused) {
+                    track.scrollLeft += speed;
+                    if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+                        track.scrollLeft = 0;
+                    }
+                }
+                animationFrameId = requestAnimationFrame(loop);
+            }
+
+            // Start o loop
+            loop();
+
+            // Opcional: retornar função para cancelar a animação se precisar
+            return () => cancelAnimationFrame(animationFrameId);
         }
-        }
+
 
     /* ========================================================= *
     *     I N I C I A   C O M P O N E N T E S   D O   S I T E    *
@@ -3528,7 +3546,7 @@
     /* ===== CARROSSEL #2  – FEEDBACK (auto-scroll infinito) ===== */
         const feedback = document.querySelector('.feedback-carousel');
         if (feedback){
-            setupAutoCarousel(feedback, {speed:1.3});
+            setupAutoCarousel(feedback, {speed:1.3, pauseOnHover:true});
         }
 
     /* ===== FAQ (abre/fecha um por vez) ===== */
@@ -3551,7 +3569,7 @@
     /* Scroll suave ao topo */
         document.querySelector('.scroll-top').addEventListener('click', e=>{
             e.preventDefault();
-            window.scrollTo({top:750, behavior:'smooth'});
+            window.scrollTo({top:780, behavior:'smooth'});
         });
 
     /* -------------------- MOSTRA/ESCONDE DEPENDENDO DA ROLAGEM -------------------- */
