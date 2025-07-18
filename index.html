@@ -1,0 +1,3650 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERMI Auto peças | Landing Page</title>
+    <meta name="description" content="Landing page oficial da Sermi Auto Peças – Peças de confiança para carros, vans, pickups e caminhões">
+    <meta name="author" content="Nexgenius">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/logo.webp" type="image/x-icon">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5GKN8TP9');</script>
+    <!-- End Google Tag Manager -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :root {
+    --sarmi-red: #BA2C2F;
+    --botão-wpp: #2CBA52;
+    --botão-wpp-hover: #2CBA52c1;
+    }
+
+    .red {
+        color: #fb2e32;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* LINKS */
+    /* LINKS */
+    /* LINKS */
+
+    .header-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 20px 0;
+        background-color: rgba(255, 255, 255, 1);
+        border-bottom: 2px solid var(--sarmi-red);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    .header-hamburger {
+        display: none;
+    }
+    
+    .burger-icon-open {
+        display: none;
+    }
+
+    .header-category img{
+        cursor: pointer;
+        height: 120px;
+    }
+
+    .category-link {
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .category-link:hover {
+        color: var(--sarmi-red);
+    }
+
+    @media (max-width: 1440px){
+        .header-category {
+            gap: 50px;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 1200px){
+        .header-category {
+            gap: 40px;
+        }
+
+        .category-link {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 1060px){
+        .header-category {
+            gap: 20px;
+        }
+
+        .category-link {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 800px){
+        .header-category {
+            display: none;
+        }
+
+        .burger-icon-open {
+            display: flex;
+            position: fixed;
+            top: 15px;
+            left: 25px;
+            z-index: 200;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .close-burger {
+            border: none;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: inherit;
+        }
+
+        .close-burger svg{
+            width: 25px;
+            height: 25px;
+        }
+
+        .header-hamburger{
+            position: fixed;     
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            top: 0;
+            left: 0;
+            width: 80%;
+            padding-left: 20px;
+            padding-top: 20px;
+            max-width: 180px;
+            height: 100%;
+            box-shadow: 10px 10px 20px black;
+            background: #fff;
+            transform: translateX(-100%);
+            transition: transform .35s ease, opacity .35s ease;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2000;
+        }
+
+        .header-hamburger.active{
+            transform:translateX(0);
+            opacity:1;
+            pointer-events:auto;
+        }
+
+        .burger-icon-open,
+        .close-burger{
+            transition:opacity .3s ease;
+        }
+
+        .burger-icon-open.hidden,
+        .close-burger.hidden{
+            opacity:0;
+            pointer-events:none;
+        }
+
+        .header-hamburger .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .header-hamburger img{
+            width: 60%;
+        }
+
+    }
+
+    /* HERO */
+    /* HERO */
+    /* HERO */
+
+    .hero-background {
+        width: 100%;
+        position: relative;
+        background-image: url('img/Faxada.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 100% 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .maxwidth {
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    .hero-background::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 45%, transparent 100%);
+        pointer-events: none;
+        z-index:0;
+    }
+
+    .hero-info {
+        width: 45%;
+        height: 800px;
+        background-color: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 100px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        line-height: 35px;
+        color: white;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .hero-button {
+        background: var(--botão-wpp);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 16px 15px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .whatsapp-img {
+        width: 32px;
+        height: 32px;
+        filter: invert(1);
+        pointer-events: none;
+    }
+
+    .hero-button:hover {
+        background-color: var(--botão-wpp-hover);
+    }
+
+    .placeholder {
+        width: 40%;
+    }
+
+
+    @media (max-width:1560px){
+        .maxwidth {
+            max-width: 95%;
+        }
+        .hero-info {
+            width: 50%;
+        }
+        .placeholder {
+            width: 50%;
+        }
+        .hero-background {
+            background-size: cover;
+            background-position: 50% 50px;
+        }
+    }
+
+    @media (max-width:1100px){
+        .hero-info {
+            width: 70%;
+        }
+        .placeholder {
+            width: 30%;
+        }
+        .hero-background {
+            background-position: 0 0;
+        }
+        .hero-background::before{
+            background: linear-gradient(to right, rgb(0, 0, 0, 0.5) 100%, transparent 100%);
+        }
+    }
+
+    @media (max-width:780px){
+        .hero-info {
+            width: 80%;
+        }
+        .placeholder {
+            width: 30%;
+        }
+        .title {
+            font-size: 2.3rem;
+        }
+        .description {
+            font-size: 1.2rem;
+        }
+        .hero-background {
+            background-position: -500px 0;
+        }
+    }
+
+    @media (max-width:600px){
+        .hero-info {
+            height: auto;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .title {
+            font-size: 1.5rem;
+        }
+        .description {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width:430px){
+        .maxwidth {
+            max-width: 95%;
+        }
+        .title {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 800;
+        }
+        .description {
+            font-size: .8rem;
+            letter-spacing: 1px;
+            line-height: 25px;
+            color: white;
+            font-weight: 400;
+        }
+        .hero-button {
+            font-size: .8rem;
+            gap: 0;
+        }
+
+        .hero-info {
+            width: 100%;
+        }
+        .hero-background {
+            background-position: -400px 0;
+        }
+    }
+
+    /* TIPOS DE VEÍCULOS */
+    /* TIPOS DE VEÍCULOS */
+    /* TIPOS DE VEÍCULOS */
+
+    .vehicle-type-background {
+        background: linear-gradient(#BA2C2F, #6C0608);
+        padding: 50px 0;
+    }
+
+    .vehicle-type-background .title,
+    .vehicle-type-background .description {
+        margin-bottom: 50px;
+    }
+
+    .vehicle-block-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        overflow: hidden;
+    }
+
+    .vehicle-block-car {
+        width: 33%;
+        min-width: 380px;
+        height: 200px;
+        background-image: url('/img/Carro-ativo.png');
+        border-radius: 5px;
+        background-size: cover;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-van {
+        width: 33%;
+        min-width: 380px;
+        height: 200px;
+        background-image: url('/img/Van.png');
+        border-radius: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-truck {
+        width: 33%;
+        min-width: 380px;
+        height: 200px;
+        background-image: url('/img/Caminhao.png');
+        border-radius: 5px;
+        background-size: cover;
+        background-position: right;
+        padding: 30px 0 50px 40px;
+    }
+
+    .vehicle-block-title-car {
+        color: white;
+        font-size: 2rem;
+    }
+    .vehicle-block-title-van {
+        color: black;
+        font-size: 2rem;
+    }
+    .vehicle-block-title-truck {
+        color: black;
+        font-size: 2rem;
+    }
+
+    @keyframes bounce {
+    0%   { transform: translateY(0);}
+    50%  { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+    }
+
+    .vehicle-bounce {
+    animation: bounce 0.6s cubic-bezier(.57,1.5,.56,1) 1;
+    }
+
+    .vehicle-block-button {
+        background: var(--botão-wpp);
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 15px;
+        width: 70%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+    }   
+
+    .vehicle-block-button a{
+        pointer-events: auto;
+    }
+
+    .vehicle-block-button:hover {
+        background-color: #16d048;
+    }
+    
+    .vehicle-block-car-active, 
+    .vehicle-block-van-active, 
+    .vehicle-block-truck-active {
+        display: block;
+    }
+
+    .vehicle-block-car-active-flex, 
+    .vehicle-block-van-active-flex,
+    .vehicle-block-truck-active-flex {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .vehicle-category-car,
+    .vehicle-category-van,
+    .vehicle-category-truck {
+        padding: 20px;
+        background-color:white;
+        border: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all .2s ease;
+        border-radius: 5px;
+    }
+
+    .vehicle-category-car:hover,
+    .vehicle-category-van:hover,
+    .vehicle-category-truck:hover {
+        background-color:var(--sarmi-red);
+        color: white;
+        cursor: pointer;
+    }
+
+    .vehicle-category-car.active,
+    .vehicle-category-van.active,
+    .vehicle-category-truck.active {
+        background-color:var(--sarmi-red);
+        color: white;
+    }
+
+
+    .vehicle-block-car-active-products,
+    .vehicle-block-van-active-products,
+    .vehicle-block-truck-active-products {
+        display: none;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        padding: 50px;
+    }
+
+    .vehicle-block-car-active-products-block,
+    .vehicle-block-van-active-products-block,
+    .vehicle-block-truck-active-products-block {
+        width: 30%;
+        min-width: 330px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .vehicle-block-car-active-products-block img,
+    .vehicle-block-van-active-products-block img,
+    .vehicle-block-truck-active-products-block img{
+        width: 200px;
+        height: 150px;
+        background-color: white;
+    }
+    .vehicle-block-car-active-products-block h3,
+    .vehicle-block-van-active-products-block h3,
+    .vehicle-block-truck-active-products-block h3{
+        color: white;
+    }
+    .vehicle-block-car-active-products-block button,
+    .vehicle-block-van-active-products-block button,
+    .vehicle-block-truck-active-products-block button{
+        background: var(--botão-wpp);
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 15px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    button .whatsapp-img {
+        width: 32px;
+        height: 32px;
+        filter: invert(1);
+        background-color: transparent;
+        pointer-events: none;
+    }
+
+    @media (max-width: 1500px) {
+        .vehicle-block-car-active-products-block h3 {
+            font-size: 1rem;
+        }
+        .vehicle-block-car-active-products-block button {
+            font-size: .8rem;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .vehicle-block-flex {
+            gap: 20px
+        }
+        
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            min-width: 300px;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .vehicle-block-flex {
+            justify-content: start;
+        }
+        
+        .vehicle-block-car, 
+        .vehicle-block-van, 
+        .vehicle-block-truck {
+            min-width: 250px;
+        }
+
+        .vehicle-block-title-car,
+        .vehicle-block-title-van,
+        .vehicle-block-title-truck {
+            font-size: 1.5rem;
+        }
+    
+        .vehicle-block-button {
+            font-size: .8rem;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            min-width: 100%;
+            padding: 50px;
+        }
+
+        .vehicle-block-button {
+            width: 50%;
+        }
+
+        .vehicle-block-button a{
+            pointer-events: auto;
+        }
+
+        .vehicle-block-flex {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .vehicle-block-flex{
+            gap: 10px;
+        }
+        .vehicle-type-background .title,
+        .vehicle-type-background .description {
+            margin-right: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 20px;
+        }
+        .vehicle-block-car-active-flex, 
+        .vehicle-block-van-active-flex,
+        .vehicle-block-truck-active-flex {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            margin-right: 0;
+        }
+
+        .vehicle-category-car, 
+        .vehicle-category-van, 
+        .vehicle-category-truck {
+            font-size: .8rem;
+        }
+
+        .vehicle-block-car-active-products, 
+        .vehicle-block-van-active-products, 
+        .vehicle-block-truck-active-products {
+            margin: 0;
+        }
+        
+        .vehicle-block-car,
+        .vehicle-block-van,
+        .vehicle-block-truck {
+            padding: 30px;
+        }
+
+        .vehicle-block-title-car,
+        .vehicle-block-title-van,
+        .vehicle-block-title-truck {
+            font-size: 1.8rem;
+        }
+    }
+
+        @media (max-width: 500px) {
+            .vehicle-block-car-active-products-block, 
+            .vehicle-block-van-active-products-block, 
+            .vehicle-block-truck-active-products-block {
+                flex-direction: column;
+                margin: auto;
+            }
+
+            .vehicle-block-car-active-products-block div, 
+            .vehicle-block-van-active-products-block div, 
+            .vehicle-block-truck-active-products-block div{
+                width: 200px;
+                margin: auto;
+            }
+            .vehicle-block-car-active-products, 
+            .vehicle-block-van-active-products, 
+            .vehicle-block-truck-active-products {
+                padding: 50px 0;
+            }
+
+            .vehicle-block-car-active-products-block a, 
+            .vehicle-block-van-active-products-block a, 
+            .vehicle-block-truck-active-products-block a{
+                padding: 0 20px;
+            }
+
+            .vehicle-block-car,
+            .vehicle-block-van,
+            .vehicle-block-truck {
+                padding: 30px;
+            }
+            .vehicle-block-title-car,
+            .vehicle-block-title-van,
+            .vehicle-block-title-truck {
+                font-size: 1.5rem;
+            }
+            .vehicle-block-button {
+                font-size: 1rem;
+                width: 80%;
+            }
+            .vehicle-block-car-active-products-block button {
+                font-size: .8rem;
+            }
+    }
+
+
+    /* ABOUT-US */
+    /* ABOUT-US */
+    /* ABOUT-US */
+
+    .about-us-background {
+        background: linear-gradient(to left,#E89999, white);
+        padding: 50px 0;
+    }
+
+    .about-us-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-us-text {
+        width: 50%;
+    }
+
+    .about-us-text .title,
+    .about-us-text .description {
+        margin-bottom: 50px;
+        text-align: start;
+    }
+
+    .about-us-text h3, 
+    .about-us-text p {
+        color: #404040;
+    }
+
+    .about-us-video {
+        width: 40%;
+        position: relative; 
+    }
+
+    .about-us-video iframe{
+        border-radius: 20px; 
+    }
+
+    @media (max-width: 1025px) {
+        .about-us-text {
+             width: 100%;
+        }
+
+        .about-us-text .title, 
+        .about-us-text .description {
+            text-align: center;
+        }
+
+        .about-us-video {
+             width: 95%;
+             margin: auto;
+        }
+
+        .about-us-video iframe{
+            width: 100%;
+            height: 500px;
+        }
+
+        .about-us-flex {
+            align-items: start;
+            flex-direction: column;
+        }
+
+    }
+
+    @media (max-width: 425px) {
+        .about-us-flex {
+            align-items: start;
+            flex-direction: column;
+        }
+
+        .about-us-text .title,
+        .about-us-text .description {
+            margin: 0 20px 20px 20px; 
+        }
+
+        .about-us-video iframe{
+            height: 200px;
+        }
+    }
+
+    /* LOJAS */
+    /* LOJAS */
+    /* LOJAS */
+
+    .places-background {
+        padding: 50px 0;
+        background: linear-gradient(to bottom,var(--sarmi-red),#5B0B0D);
+    }
+
+    .places-background .title,
+    .places-background .description {
+        margin-bottom: 50px;
+    }
+
+    .places-carousel-container {
+        width: 1500px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .places-carousel {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+    }
+
+    .places-carousel::-webkit-scrollbar{
+        display: none;
+    }
+
+    .carousel-item {
+        min-width: 240px;
+        height: 140px;
+        background: #eee;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .places-placeholder {
+        max-width: 500px;
+        flex: 0 0 400px;
+    }
+
+    .places-blocks-container {
+        max-width: 500px;
+        flex: 0 0 400px;
+    }
+
+    .places-carousel-wrapper{
+        position:relative
+    }
+
+    .places-arrow{
+        position: absolute; 
+        top: 50%; 
+        translate: 0 -50%;
+        width: 60px; 
+        height: 60px; 
+        border: none; 
+        border-radius: 10px;
+        background: var(--sarmi-red);
+        font-size: 28px; 
+        line-height: 1; 
+        cursor: pointer; 
+        z-index: 5;
+    }
+
+    .places-arrow.left{
+        left:14px;
+    }
+
+    .places-arrow.right{
+        right:14px;
+    }
+
+    .places-arrow.left svg,
+    .places-arrow.right svg{
+        margin-top: .3rem;
+        height: 30px;
+    }
+
+    .places-arrow:hover{
+        opacity: 80%;
+    }
+
+    .places-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 38px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        width: 100%;
+        color: white;
+    }
+
+    .title-place-name {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .svg p{
+        width: 80%;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+
+    .svg a{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .svg svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .google-maps {
+        align-self: center;
+    }
+
+    .places-button {
+        background: var(--botão-wpp);
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px 15px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+     @media (max-width: 580px) {
+        .places-placeholder {
+            display: none;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .places-blocks-container {
+            max-width: 300px;
+        }
+
+        .santa-rosa {
+            margin-right: 200px;
+        }
+
+        .places-card {
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .svg svg{
+            width: 30px;
+            height: 30px;
+        }
+
+        .svg p{
+            font-size: .8rem;
+        }
+
+        .places-card iframe {
+            width: 100%;
+        }
+
+        .places-button {
+            font-size: .9rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .places-background .title,
+        .places-background .description {
+            margin: 0 20px 20px 20px;
+        }
+
+        .places-background .title,
+        .places-background .description {
+            margin-bottom: 20px;
+        }
+
+        .title-place-name {
+            font-size: 1.5rem;
+        }
+
+        p.santa-rosa-title {
+            margin-right: 0;
+        }
+    }
+
+    /* FEEDBACK */
+    /* FEEDBACK */
+    /* FEEDBACK */
+
+    .feedback-background {
+        padding: 50px 0;
+        background: linear-gradient(to left,#E89999, white);;
+    }
+
+    .feedback-background .title,
+    .feedback-background .description {
+        margin-bottom: 50px;
+    }
+
+    .feedback-background .title,
+    .feedback-background .description {
+        color: #404040;
+    }
+
+    .feedback-carousel-container{
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .feedback-carousel{
+        display: flex; 
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: auto !important;
+        scroll-behavior: auto !important;
+        overscroll-behavior-x: contain;
+    }
+
+    .feedback-carousel::-webkit-scrollbar{
+        display: none
+    }
+
+    .feedback-card{
+        flex: 0 0 400px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        border-radius: 5px;
+        color: white;
+        padding: 50px 24px 50px;
+    }
+
+    .feedback-card h4{
+        margin: 12px 0 8px;
+        font-weight: 600; 
+        font-size: 1.2rem;
+    }
+
+    .feedback-card p{
+        margin: 0; 
+        font-size: 1rem; 
+        line-height: 1.4; 
+        color: white;
+    }
+
+    .avatar{
+        width: 64px; 
+        height: 64px;
+        border-radius: 50%;
+        background: white;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .avatar svg{width:36px;height:36px}
+        .stars{display:flex;margin-bottom:12px}
+        .stars svg{
+        width:18px;height:18px;
+        fill:#f8b200; margin-right:4px;
+    }
+
+    .stars svg:last-child{
+        margin-right:0
+    }
+
+    @media (max-width: 425px) {
+        .feedback-card {
+            flex: 0 0 300px;
+        }
+
+        .feedback-background .title,
+        .feedback-background .description {
+            margin: 0 20px 20px 20px;
+        }
+
+        .feedback-background .description {
+            font-weight: 300;
+        }
+    }
+
+    /* === */
+
+    .FAQ-background {
+        padding: 50px 0;
+        background: linear-gradient(to bottom,#BA2C2F, #C25C5E);
+    }
+
+    .FAQ-background .title,
+    .FAQ-background .description {
+            margin-bottom: 50px;
+    }
+
+    .faq-item{
+        border-bottom: 3px solid transparent;
+    }
+
+    .faq-question{
+        width:100%;
+        padding:16px 56px 16px 24px;
+        background:black;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: left;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .faq-question .arrow{
+        position: absolute;
+        right: 24px; 
+        top: 50%; 
+        translate: 0 -50%;
+        width: 14px; 
+        height: 14px;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        transform: rotate(45deg);
+        transition: transform .25s;
+    }
+
+    .faq-answer{
+        background:#404040;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease, padding .35s ease;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .faq-item.open .faq-answer{
+        padding: 20px 24px 24px;
+        max-height: 700px;
+    }
+
+    .faq-item.open .arrow{
+        transform: rotate(-135deg);
+    }
+
+    @media (max-width: 1500px) {
+        .faq-question,
+        .faq-answer {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .faq-question {
+            font-size: 1rem;
+        }
+        .faq-answer {
+            font-size: .8rem;
+            line-height: 25px;
+        }
+        .FAQ-background .title,
+        .FAQ-background .description {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* FOOTER */
+    /* FOOTER */
+    /* FOOTER */
+
+    .footer-background {
+        background-color: white;
+        background-image: url('./img/Loja.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+    }
+
+    .footer-background:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, rgb(255, 255, 255) 60%, transparent);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .footer-text .title {
+        color: #404040;
+        margin-bottom: 50px;
+        text-align: start;
+    }
+
+    .footer-text .description {
+        color: #404040;
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
+
+    .footer-description{
+        margin-bottom: 30px !important;
+        margin-top: 30px !important;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: start;
+    }
+
+    .footer-text {
+        z-index: 100;
+        width: 70%;
+        padding: 50px 0;
+    }
+
+    .footer-button {
+        background: var(--botão-wpp);
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 16px ;
+        width: 100%;
+        max-width: 500px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px var(--botão-wpp);
+        cursor: pointer;
+        text-align: center;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: all 1s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-socials-div p{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        line-height: 35px;
+        color: #292929;
+        font-weight: 300;
+        margin-top: 50px;
+    }
+
+    .footer-socials-div svg {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+
+    .footer-socials-div svg .youtube {
+        width: 120px;
+        height: 120px;
+    } 
+
+    .footer-placeholder{
+        width: 50%;
+    }
+
+    
+    @media (max-width:1500px){
+        .footer-background {
+            max-width: 100%;
+        }
+        .footer-background {
+            background-size: cover;
+            margin-left: 3%;
+        }
+    }
+
+    @media (max-width: 1400px){
+        .footer-background:before {
+            background: linear-gradient(to right, rgb(255, 255, 255) 40%, transparent);
+        }
+        .footer-background {
+           background-position: 350px 0;
+        }
+    }
+
+    @media (max-width: 1100px){
+        .footer-background {
+           background-size: cover;
+        }
+        .footer-background {
+           background-position: 250px 0;
+        }
+    }
+
+    @media (max-width: 900px){
+        .footer-socials-div .description {
+            margin-bottom: 0;
+        }
+
+        .footer-socials-div svg {
+            margin-bottom: 120px;
+        }
+        .footer-background {
+           background-position: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-flex {
+            flex-direction: column;
+            padding-bottom: 100px;
+        }
+
+        .footer-text {
+            width: 80%;
+        }
+
+        .footer-button {
+            font-size: 1rem;
+            gap: 10px;
+        }
+        .footer-text .title, 
+        .footer-text .description {
+            margin-bottom: 20px;
+        }
+
+        .footer-socials-div .description {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .footer-background:before {
+            background: linear-gradient(to right, rgb(255, 255, 255) 100%, transparent);
+        }
+
+        .footer-background {
+            background-size: cover;
+            margin-left: 4%;
+        }
+        .footer-text {
+            width: 95%;
+        }
+
+        .footer-text .title, 
+        .footer-text .description,
+        .footer-socials-div {
+            text-align: center;
+        }
+
+        .footer-socials-div .description,
+        .footer-text .description {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-socials-div svg {
+            margin-bottom: 0px;
+        }
+    }
+
+    /* BOTÕES */
+    /* BOTÕES */
+    /* BOTÕES */
+
+    .whatsapp-float{
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        width:80px;
+        height:80px;
+        background:#25D366;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:0 5px 10px #25d36596;
+        z-index:1000;
+    }
+
+    .whatsapp-float img{
+        width:42px;
+        height:42px;
+        filter:invert(1);
+        pointer-events:none;
+    }
+
+    @keyframes buzz {
+        0%,85%  { transform:translate(0); }
+        88%,94% { transform:translate(-2px,0); }
+        91%,97% { transform:translate( 2px,0); }
+        100%    { transform:translate(0); }
+    }
+
+    .whatsapp-float{
+        animation:buzz 3s infinite;
+        cursor:pointer;
+    }
+
+    .scroll-top{
+        position:fixed;
+        bottom:20px;
+        left:20px;
+        width:80px;
+        height:80px;
+        background:rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:1000;
+        color: white;
+        transition:transform .25s;
+        cursor:pointer;
+        opacity: 0;
+        pointer-events:none;
+        transition:opacity .3s, transform .25s;
+    }
+
+    .scroll-top:hover{ 
+        transform:scale(1.05); 
+    }
+
+    @media (max-width: 425px) {
+        .whatsapp-float {
+            width: 60px;
+            height: 60px;
+        }
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+            filter: invert(1);
+            pointer-events: none;
+        }
+        .scroll-top {
+            width: 60px;
+            height: 60px;
+        } 
+   }
+
+</style>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GKN8TP9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section id="header">
+        <div class="header-category">
+            <img src="img/logo.webp" alt="LOGO">
+            <a class="category-link" href="#vehicle-type">Escolha sua peça</a>
+            <a class="category-link" href="#about-us">Sobre nós</a>
+            <a class="category-link" href="#places">Lojas</a>
+            <a class="category-link" href="#feedback">Depoimentos</a>
+            <a class="category-link" href="#FAQ">Perguntas e respostas</a>
+        </div>
+        <div class="burger-icon-open" aria-label="Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M3 12h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M3 18h18" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="header-hamburger">
+            <div class="close-burger" aria-label="Abrir menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11083)"> <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#BA2C2F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11083"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>
+            </div>
+            <img src='./img/logo.webp' alt="LOGO" class="logo">
+            <nav class="nav-links">
+                <a class="category-link" href="#vehicle-type">Escolha sua peça</a>
+                <a class="category-link" href="#about-us">Sobre nós</a>
+                <a class="category-link" href="#places">Lojas</a>
+                <a class="category-link" href="#feedback">Depoimentos</a>
+                <a class="category-link" href="#faq">Perguntas e respostas</a>
+            </nav>
+        </div>
+         <div class="hero-background">
+                <div class="maxwidth">
+                <div class="hero-info">
+                    <h1 class="title">A peça certa para o seu veículo está na <span class="red"><br>Sermi Auto Peças!</span></h1>
+                    <p class="description">Compre direto nas nossas lojas físicas com atendimento especializado, retirada imediata e peças de confiança para o seu carro, utilitário ou caminhão</p>
+                    <a href="" class="hero-button wpp-default" id="GA-track-wpp">
+                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                    alt="Whatsapp"
+                    aria-hidden="true">
+                    Fale com um consultor no WhatsApp</a>
+                </div>
+                <div class="placeholder"></div>
+            </div>
+        </div>
+    </section>
+    <section id="vehicle-type">
+        <div class="vehicle-type-background">
+            <div class="maxwidth">
+                <h3 class="title">Escolha o seu tipo de veículo e<br>encontre a peça que você precisa</h3>
+                <p class="description">Trabalhamos com produtos para automóveis, utilitários e caminhões<br>Clique abaixo para falar conosco via WhatsApp</p>
+                <div class="vehicle-block-flex">
+                    <div class="vehicle-block-car">
+                        <h4 class="vehicle-block-title-car">Automóveis e Pick'ups</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('car')">
+                            Clique e confira os modelos
+                        </button>
+                    </div>
+                    <!--<div class="vehicle-block-van">
+                        <h4 class="vehicle-block-title-van">Vans e Pickups</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('van')">
+                            <a  href="#mobile-ancora-van">Clique e confira os modelos</a>
+                        </button>
+                    </div> -->
+                    <div class="vehicle-block-truck">
+                        <h4 class="vehicle-block-title-truck">Vans e Caminhões</h4>
+                        <button class="vehicle-block-button" onclick="carFunction('truck')">
+                            Clique e confira os modelos
+                        </button>
+                    </div>
+                </div>
+                <div class="vehicle-block-car-active" style="display: block;">
+                    <div class="vehicle-block-car-active-flex" id="mobile-ancora-car">
+                        <button class="vehicle-category-car active" onclick="activateCategory(1, this)">
+                            Correias e Tensionadores
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(2, this)">
+                            Filtros e Fluidos
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(6, this)" >
+                            Aditivos
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(3, this)">
+                            Freio e Suspensão
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(4, this)">
+                            Motor e Transmissão
+                        </button>
+                        <button class="vehicle-category-car" onclick="activateCategory(5, this)">
+                            Elétrica e Injeção Eletrônica
+                        </button>
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-1" style="display: flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/CorreiasPoly-V.png" alt="Correias Poly-V">
+                            <div>
+                                <h3>Correias Poly-V</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Correias Poly-V')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="WhatsApp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/CorreiasdeAlternador.png" alt="Correias de Alternador">
+                            <div>
+                                <h3>Correias de Alternador</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Correias de Alternador')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/CorreiasdeDistribuicao.png" alt="Correias de Distribuição">
+                            <div>
+                                <h3>Correias de Distribuição</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Correias de Distribuição')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/EsticadoresdeCorreia.png" alt="Esticadores de Correia">
+                            <div>
+                                <h3>Esticadores de Correia</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Esticadores de Correia')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/TensordeCorreiaDentada.png" alt="Tensor de Correia Dentada">
+                            <div>
+                                <h3>Tensor de Correia Dentada</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Tensor de Correia Dentada')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/TensionadoresHidraulicos.png" alt="Tensionadores Hidráulicos">
+                            <div>
+                                <h3>Tensor Alternador</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Tensionadores Hidráulicos')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/KitsdeCorreia.png" alt="Kits de Correia">
+                            <div>
+                                <h3>Kits de Correia</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Correia')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/Filtros de Ar.png" alt="Filtros de Ar">
+                            <div>
+                                <h3>Filtros de Ar</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Filtros de Ar')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/Filtros de Óleo.png" alt="Filtros de Óleo">
+                            <div>
+                                <h3>Filtros de Óleo</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Filtros de Óleo')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/FiltrosdeCombustivel.png" alt="Filtros de Combustível">
+                            <div>
+                                <h3>Filtros de Combustível</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Filtros de Combustível')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/FiltrosdeCabine.png" alt="Filtros de Cabine">
+                            <div>
+                                <h3>Filtros de Cabine</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Filtros de Cabine')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/LubrificantesSinteticos.png" alt="Lubrificantes Sintéticos">
+                            <div>
+                                <h3>Óleo de Motor</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lubrificantes Sintéticos')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/FluidodeFreio.png" alt="Fluido de Freio">
+                            <div>
+                                <h3>Fluido de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Fluido de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+<!--                         <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/AditivosparaRadiador.png" alt="Aditivos para Radiador">
+                            <div>
+                                <h3>Aditivos para Radiador</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Aditivos para Radiador')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/PastilhasdeFreio.png" alt="Pastilhas de Freio">
+                            <div>
+                                <h3>Pastilhas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Pastilhas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/DiscosdeFreio.png" alt="Discos de Freio">
+                            <div>
+                                <h3>Discos de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Discos de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/LonasdeFreio.png" alt="Lonas de Freio">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lonas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/CilindrosMestre.png" alt="Cilindros Mestre">
+                            <div>
+                                <h3>Cilindros Mestre</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Cilindros Mestre')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/Amortecedores.png" alt="Amortecedores">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Amortecedores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/CoxinseBuchas.png" alt="Coxins e Buchas">
+                            <div>
+                                <h3>Coxins e Buchas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Coxins e Buchas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/KitsSuspensao.png" alt="Kits Suspensão">
+                            <div>
+                                <h3>Kits Suspensão</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits Suspensão')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-4">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/KitsdeEmbreagem.png" alt="Kits de Embreagem">
+                            <div>
+                                <h3>Kits de Embreagem</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Embreagem')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/JuntaseRetentores.png" alt="Juntas e Retentores">
+                            <div>
+                                <h3>Juntas e Retentores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Juntas e Retentores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/PistoeseAneis.png" alt="Pistões e Anéis">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Pistões e Anéis')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/KitsdeReparodeCambio.png" alt="Kits de Reparo de Câmbio">
+                            <div>
+                                <h3>Kits de Reparo de Câmbio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Reparo de Câmbio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/BombasdeAgua.png" alt="Bombas d'Água">
+                            <div>
+                                <h3>Bombas d'Água</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Bombas de Água')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/ValvulasTermostaticas.png" alt="Válvulas Termostáticas">
+                            <div>
+                                <h3>Válvulas Termostáticas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Válvulas Termostáticas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/LampadasAutomotivas.png" alt="Lâmpadas Automotivas">
+                            <div>
+                                <h3>Lâmpadas Automotivas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lâmpadas Automotivas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/ReguladoresdeVoltagem.png" alt="Reguladores de Voltagem">
+                            <div>
+                                <h3>Reguladores de Voltagem</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Reguladores de Voltagem')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-car-active-products" id="products-car-6">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/AditivosparaCombustiveis.png" alt="Palhetas Limpadoras">
+                            <div>
+                                <h3>Aditivos para Combustíveis</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Palhetas Limpadoras')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+<!--                         <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/AditivoLimpaBico.png" alt="Travas e Fechaduras">
+                            <div>
+                                <h3>Aditivo Limpa Bico</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Travas e Fechaduras')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div> -->
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/AditivosparaMotores.png" alt="Retrovisores">
+                            <div>
+                                <h3>Aditivos para Motores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Retrovisores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/car/AditivosparaRadiador.png" alt="Travas e Fechaduras">
+                            <div>
+                                <h3>Aditivos para Radiador</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Travas e Fechaduras')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                 <div class="vehicle-block-van-active" style="display: none">
+                <div class="vehicle-block-van-active-flex" id="mobile-ancora-van">
+                    <button class="vehicle-category-van active" onclick="activateCategory(1, this)">
+                        Freios e Rodagem
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(2, this)">
+                        Suspensão e Direção
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(3, this)">
+                        Sistema de Transmissão
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(4, this)">
+                        Motor
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(5, this)">
+                        Elétrica
+                    </button>
+                    <button class="vehicle-category-van" onclick="activateCategory(6, this)">
+                        Acessórios e Segurança
+                    </button>
+                </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-1" style="display:flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/LonasdeFreio.png" alt="">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lonas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/SapatasdeFreio.png" alt="Sapatas de Freio">
+                            <div>
+                                <h3>Sapatas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Sapatas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/CamarasdeFreio.png" alt="Câmaras de Freio">
+                            <div>
+                                <h3>Câmaras de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Câmaras de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/KitsdeRolamentodeRoda.png" alt="Kits de Rolamento de Roda">
+                            <div>
+                                <h3>Kits de Rolamento de Roda</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Rolamento de Roda')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Engraxadeiras.png" alt="Engraxadeiras">
+                            <div>
+                                <h3>Engraxadeiras</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Engraxadeiras')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/BarrasdeDirecao.png" alt="Barras de Direção">
+                            <div>
+                                <h3>Barras de Direção</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Barras de Direção')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/PivosdeSuspensao.png" alt="Pivôs de Suspensão">
+                            <div>
+                                <h3>Pivôs de Suspensão</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Pivôs de Suspensão')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/CoxinsdeMotor.png" alt="Coxins de Motor">
+                            <div>
+                                <h3>Coxins de Motor</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Coxins de Motor')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/KitsdeBuchas.png" alt="Kits de Buchas">
+                            <div>
+                                <h3>Kits de Buchas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Buchas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Amortecedores.png" alt="Amortecedores">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Amortecedores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/KitsdeEmbreagem.png" alt="Kits de Embreagem">
+                            <div>
+                                <h3>Kits de Embreagem</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Embreagem')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/EixoCardan.png" alt="Eixo Cardan">
+                            <div>
+                                <h3>Eixo Cardan</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Comprar via whatsapp')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Engrenagens.png" alt="Engrenagens">
+                            <div>
+                                <h3>Engrenagens</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Engrenagens')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/KitsdeReparodeCaixa.png" alt="Kits de Reparo de Caixa">
+                            <div>
+                                <h3>Kits de Reparo de Caixa</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Reparo de Caixa')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/RetentoresdeEixo.png" alt="Retentores de Eixo">
+                            <div>
+                                <h3>Retentores de Eixo</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Retentores de Eixo')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-4">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/PistoeseAneis.png" alt="Pistões e Anéis">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Pistões e Anéis')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/KitsdeJuntas.png" alt="Kits de Juntas">
+                            <div>
+                                <h3>Kits de Juntas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Juntas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/ValvulaseBalancins.png" alt="Válvulas e Balancins">
+                            <div>
+                                <h3>Válvulas e Balancins</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Válvulas e Balancins')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/BombasdeOleo.png" alt="Bombas de Óleo">
+                            <div>
+                                <h3>Bombas de Óleo</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Bombas de Óleo')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/BombasdeAgua.png" alt="Bombas de Água">
+                            <div>
+                                <h3>Bombas de Água</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Bombas de Água')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Alternadores.png" alt="Alternadores">
+                            <div>
+                                <h3>Alternadores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/MotoresdePartida.png" alt="Motores de Partida">
+                            <div>
+                                <h3>Motores de Partida</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Motores de Partida')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/ReguladoresdeVoltagem.png" alt="Reguladores de Voltagem">
+                            <div>
+                                <h3>Reguladores de Voltagem</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Reguladores de Voltagem')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/LanternaseFarois.png" alt="Lanternas e Faróis">
+                            <div>
+                                <h3>Lanternas e Faróis</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lanternas e Faróis')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/ChicotesEletricos.png" alt="Chicotes Elétricos">
+                            <div>
+                                <h3>Chicotes Elétricos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Chicotes Elétricos')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-van-active-products" id="products-van-6">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/PalhetasdePara-brisa.png" alt="Palhetas de Para-brisa">
+                            <div>
+                                <h3>Palhetas de Para-brisa</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Palhetas de Para-brisa')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Retrovisores.png" alt="Retrovisores">
+                            <div>
+                                <h3>Retrovisores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Retrovisores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/Extintores.png" alt="Extintores">
+                            <div>
+                                <h3>Extintores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Extintores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/TriangulodeSeguranca.png" alt="Triângulo de Segurança">
+                            <div>
+                                <h3>Triângulo de Segurança</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Triângulo de Segurança')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/vans/EngatesRapidos.png" alt="Engates Rápidos">
+                            <div>
+                                <h3>Engates Rápidos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Engates Rápidos')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="vehicle-block-truck-active" style="display: none">
+                <div class="vehicle-block-truck-active-flex" id="mobile-ancora-truck">
+                    <button class="vehicle-category-truck active" onclick="activateCategory(1, this)">
+                        Sistema de Freio
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(2, this)">
+                        Motor
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(3, this)">
+                        Câmbio / Diferencial
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(4, this)">
+                        Suspensão e Direção
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(5, this)">
+                        Eixo Traseiro e Cubos
+                    </button>
+                    <button class="vehicle-category-truck" onclick="activateCategory(6, this)">
+                        Rodas e Parafusos
+                    </button>
+                </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-1" style="display: flex">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Lonas de Freio.png" alt="Lonas de Freio">
+                            <div>
+                                <h3>Lonas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Lonas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Sapatas de Freio.png" alt="Sapatas de Freio">
+                            <div>
+                                <h3>Sapatas de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Sapatas de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Válvulas de Freio a Ar.png" alt="Válvulas de Freio a Ar">
+                            <div>
+                                <h3>Válvulas de Freio a Ar</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Válvulas de Freio a Ar')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Câmaras de Freio.png" alt="Câmaras de Freio">
+                            <div>
+                                <h3>Câmaras de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Câmaras de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/DiscodeFreio.png" alt="Câmaras de Freio">
+                            <div>
+                                <h3>Discos de Freio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Câmaras de Freio')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Engraxadeiras.png" alt="Engraxadeiras">
+                            <div>
+                                <h3>Engraxadeiras</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Engraxadeiras')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-2">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Pistões e Anéis.png" alt="Pistões e Anéis">
+                            <div>
+                                <h3>Pistões e Anéis</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Pistões e Anéis')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Kits de Juntas.png" alt="Kits de Juntas">
+                            <div>
+                                <h3>Kits de Juntas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Juntas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Bombas de Combustível.png" alt="Bombas de Combustível">
+                            <div>
+                                <h3>Bombas de Combustível</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Bombas de Combustível')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Válvulas Termostáticas.png" alt="Válvulas Termostáticas">
+                            <div>
+                                <h3>Válvulas Termostáticas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Válvulas Termostáticas')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Kits de Turbina.png" alt="Kits de Turbina">
+                            <div>
+                                <h3>Kits de Turbina</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Turbina')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/BombaCombustivel.png" alt="Kits de Turbina">
+                            <div>
+                                <h3>Bombas de Combustivel</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Turbina')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-3">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Retentores.png" alt="Engrenagens">
+                            <div>
+                                <h3>Retentores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Engrenagens')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Rolamento.png" alt="Kits de Reparação de Caixa">
+                            <div>
+                                <h3>Rolamentos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Reparação de Caixa')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Engrenagens.png" alt="Kits de Reparação de Caixa">
+                            <div>
+                                <h3>Engrenagem</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Reparação de Caixa')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/KitsBuchas.png" alt="Kits de Embreagem">
+                            <div>
+                                <h3>Kits de Buchas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Embreagem')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Buchas.png" alt="Retentores de Eixo">
+                            <div>
+                                <h3>Buchas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Retentores de Eixo')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Coxins.png" alt="Cruzetas e Cardans">
+                            <div>
+                                <h3>Coxins</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Cruzetas e Cardans')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-4">
+                        <div class="vehicle-block-car-active-products-block">
+                            <img src="./img/category/truck/Amortecedores.png" alt="Amortecedores">
+                            <div>
+                                <h3>Amortecedores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Amortecedores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="Whatsapp" aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/BuchasEstabilizadora.png" alt="Coxins de Motor">
+                            <div>
+                                <h3>Buchas Estabilizadoras</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Coxins de Motor')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Kits de Suspensão.png" alt="Kits de Suspensão">
+                            <div>
+                                <h3>Kits de Suspensão</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Kits de Suspensão')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/TerminalDirecao.png" alt="Amortecedores">
+                            <div>
+                                <h3>Terminal de Direção</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Amortecedores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Barras de Direção.png" alt="Barras de Direção">
+                            <div>
+                                <h3>Barras de Direção</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Barras de Direção')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Pivos.png" alt="Coxins de Motor">
+                            <div>
+                                <h3>Pivos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Coxins de Motor')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-5">
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/SemiEixos.png" alt="Palhetas de Para-brisa">
+                            <div>
+                                <h3>Semi Eixos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Palhetas de Para-brisa')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Porcas.png" alt="Retrovisores">
+                            <div>
+                                <h3>Porcas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Retrovisores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Travas.png" alt="Extintores">
+                            <div>
+                                <h3>Travas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Extintores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Arruelas.png" alt="Macacos Hidráulicos">
+                            <div>
+                                <h3>Arruelas</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Macacos Hidráulicos')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Retentores.png" alt="Triângulo de Segurança">
+                            <div>
+                                <h3>Retentores</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Triângulo de Segurança')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/Cubos.png" alt="Triângulo de Segurança">
+                            <div>
+                                <h3>Cubos</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Triângulo de Segurança')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-block-truck-active-products" id="products-truck-6">
+                    <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/ParafusoRoda.png" alt="Alternadores">
+                            <div>
+                                <h3>Parafuso Roda</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/PorcaRoda.png" alt="Alternadores">
+                            <div>
+                                <h3>Porca de Roda</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/ParafusoRodaCompleto.png" alt="Alternadores">
+                            <div>
+                                <h3>Conjunto Parafuso Roda</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/RodasAco.png" alt="Alternadores">
+                            <div>
+                                <h3>Rodas de Aço</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='vehicle-block-car-active-products-block'>
+                            <img src="./img/category/truck/RodasAlu.png" alt="Alternadores">
+                            <div>
+                                <h3>Rodas de Aluminio</h3>
+                                <button id="GA-track-wpp" onclick="wppDirectLink('Alternadores')">
+                                    <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                    alt="Whatsapp"
+                                    aria-hidden="true">
+                                    <span>Comprar via whatsapp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="about-us-background">
+            <div class="maxwidth">
+                <div class="about-us-flex">
+                    <div class="about-us-text">
+                        <h3 class="title">Conheça a Sermi Auto Peças</h3>
+                        <p class="description">Com mais de 37 anos no mercado, a Sermi é referência em peças automotivas na região. 
+                        Atendemos oficinas, frotistas e consumidores finais com peças confiáveis, variedade em estoque e preços justos. 
+                        Estamos presentes em várias cidades com lojas físicas prontas para te atender
+                        </p>
+                    </div>
+                    <div class="about-us-video">
+                        <iframe
+                            width="100%"
+                            height="340"
+                            src="https://www.youtube.com/embed/SOqKW7aLisA?enablejsapi=1&mute=1"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="places">
+        <div class="places-background">
+            <div class="maxwidth">
+                <h3 class="title">Encontre a Sermi mais perto de você!</h3>
+                <p class="description">Temos lojas em Cravinhos, Araraquara, Sertãozinho, Tambaú e Santa Rosa de Viterbo<br> Clique na loja mais próxima e fale com um consultor</p>
+                <div class="places-carousel-container">
+                    <section class="places-carousel-wrapper">
+                        <button class="places-arrow left"  aria-label="Anterior">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0z"></path></g></svg>
+                        </button>
+                        <div class="places-carousel">
+                            <div class="places-blocks-container Cravinhos">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 1 - Cravinhos</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/5wvjjyurJRLcZKt56">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Hilário Pessarelo, N° 97</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a class="wpp-loja1" href="" id="GA-track-wpp">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99401-7495</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja1@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja1@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d4ba8c9447%3A0x5c96b03421302439!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Cravinhos!5e0!3m2!1spt-BR!2sbr!4v1751049503339!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="" class="places-button wpp-loja1" id="GA-track-wpp">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        aria-hidden="true">
+                                        Falar com a Loja de Cravinhos-SP
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container Araraquara">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 2 - Araraquara</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/xyc25rW6MVhYi2eZ7">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Maurício Galli, N° 3385 - Jardim Imperador</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a class="wpp-loja2" href="" id="GA-track-wpp">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99401-7930</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja2@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja2@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361865!2d-48.03027740301674!3d-20.531177418147017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f6d493816efb%3A0x9e8c73176e072126!2sSermi%20-%20Loja%20de%20Autope%C3%A7as%20em%20Araraquara%20-%20PitStop!5e0!3m2!1spt-BR!2sbr!4v1751049743813!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="" class="places-button wpp-loja2" id="GA-track-wpp">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        aria-hidden="true">
+                                        Falar com a Loja de Araraquara-SP
+                                    </a>
+                                </div>
+                            </div>
+<!--                             <div class="places-blocks-container Sertãozinho">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 3 - Sertãozinho</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/veo1EwD9wLwy1xER6">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>Não achei o endereço</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a class="wpp-loja3" href="" id="GA-track-wpp">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99166-1772</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja6@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja6@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31791811.201448027!2d-73.0634021869907!3d-13.422456123522103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b99994fa4a3c5b%3A0xac039d8f5fcab0b6!2sSermi%20-%20Auto%20Pe%C3%A7as%20em%20Sert%C3%A3ozinho!5e0!3m2!1spt-BR!2sbr!4v1751049902406!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="" class="places-button wpp-loja3" id="GA-track-wpp">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        aria-hidden="true">
+                                        Falar com a Loja de Sertãozinho-SP
+                                    </a>
+                                </div>
+                            </div> -->
+                            <div class="places-blocks-container Tambaú">
+                                <div class="places-card">
+                                    <p class="title-place-name">LOJA 3 - Tambaú</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/wUKtJwpSaHC3veFT7">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>Av. Jose Gatto, N° 1845</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a class="wpp-loja4" href="" id="GA-track-wpp">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 19 99191-1812</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja3@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja3@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b7efbf2cfcffe7%3A0xf2eb844b5d77b8f5!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Tamba%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1751049944814!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="" class="places-button wpp-loja4" id="GA-track-wpp">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        aria-hidden="true">
+                                        Falar com a Loja de Tambaú-SP
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="places-blocks-container santa-rosa">
+                                <div class="places-card">
+                                    <p class="title-place-name santa-rosa-title">LOJA 4 - Sta. R. de Viterbo</p>
+                                    <div class="svg"> 
+                                        <a href="https://maps.app.goo.gl/zh42xVsGGzRAUg5P6">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            <p>R. Luís Bigneli, N° 58 - Jardim Primavera</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a class="wpp-loja5" href="" id="GA-track-wpp">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                            <p>(55) 16 99179-5794</p>
+                                        </a>
+                                    </div>
+                                    <div class="svg">
+                                        <a href="mailto:sermiloja4@sermi.com.br">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg>
+                                            <p>sermiloja4@sermi.com.br</p>
+                                        </a>
+                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956516.0930361876!2d-48.03027740301675!3d-20.53117741814702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b788d35bc4ed91%3A0xfe233888d6fb9825!2sSermi%20-%20Loja%20de%20Auto%20Pe%C3%A7as%20em%20Santa%20Rosa%20de%20Viterbo!5e0!3m2!1spt-BR!2sbr!4v1751050139651!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="" class="places-button wpp-loja5" id="GA-track-wpp">
+                                        <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        aria-hidden="true">
+                                        Falar com a Loja de Santa Rosa-SP
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="places-placeholder"></div>
+                        </div>
+                        <button class="places-arrow right" aria-label="Próximo">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0z"></path></g></svg>
+                        </button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback">
+        <div class="feedback-background">
+            <div class="maxwidth">
+                <h3 class="title">O que dizem os nossos clientes</h3>
+                <p class="description">Veja como a Sermi ajudou milhares de motoristas e oficinas a <br>encontrarem a peça certa com atendimento de qualidade</p>
+                <div class="feedback-carousel-container">
+                    <div class="feedback-carousel">
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXUfQLBD7B98Pk3yGSLHxjocbbOMDRAmjEyB0bluni5wkdUuDTb=w65-h65-p-rp-mo-ba4-br100">
+                            </div>
+                            <h4>Antônio Maria Coutinho</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Já é a terceira compra que faço a distância (resido em Santa Catarina) e foi atendida plenamente. O servico de atualização do pedido é constante de forma automática, nao precisamos ficar acessando site para checar. Muito bom recomendo.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjU9s5Ophazmu07unzWnGsNRtSiMzba-m02goxiOUkv79009LGYe=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>kenji kikunaga</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Recomendo a loja, entrega feita no prazo e produto ok. Voltarei a comprar peças futuramente.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWhdQJrFC3v1V0GVUoUE-TK-g583JI-dgeAZ4nZQrM9JyWVmNN7=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Marceloalberto Lemesdasilva</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Atendimento excelente muito prestativo e atenciosos, bons preços, produto de qualidade e boas condições de pagamento
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjUnMatM6t-gJtnHwM1twxWgGo-PhcqS4QegFOOm7zXsy45iptxy=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Ingrid Barreto</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Fui super bem atendida e a entrega foi surreal de tão rápida. Achei incrível!
+                                Nota 1000 para a entrega e o atendimento + para a disponibilidade dos produtos, toda vez que eu preciso de algo para meu caminhão acho aqui👍
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJpTz-FmbJqBRZWLYF377Hv5oCmLrduHeysgHUluZWAdy-khg=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>rita siqueira</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                otimo atendimento...entrega super rapida...acompanhamento pelo waths nota 10 tb...super recomendo e ja virei cliente
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVElPfX0AmyW9eXVTXtjsYoB7ykYqjJBTYDH_k8E6lqAd3l_Pg=w65-h65-p-rp-mo-br100">
+                            </div>
+                            <h4>Castelhanos Turismo .Ilhabela</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Ótimo atendimento e a entrega, tudo nos conformes.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW934awyvVXM21bVQ4GtEgWnM54KFk5hOPFlNhrWHinqG_nLIY=w65-h65-p-rp-mo-ba3-br100">
+                            </div>
+                            <h4>Alger Brazil</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Excelente atendimento, profissionalismo, respeito e seriedade. Entrega perfeita e qualidade dos produtos. Super recomendo.
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocLAJVb876d7I-3_-dcdWCcD2IO3XlD3sQXyZ86rnqlbC0PW2g=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>EB</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Compra online foi entregue conforme e no prazo
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJ_Y3_KQvvApP9gQdPHhb05yT4BVe1amAQmg_gPNHE31LnNMw=w72-h72-p-rp-mo-ba2-br100">
+                            </div>
+                            <h4>Ruberlei Pires Ferreira Pires</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Minha primeira compra atendimento nota 10 entrega no prazo muito satisfeito Sermi nota 1000
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocJTGlEnuCYiS5EYx5An6NpgkV8DXhjPBs8ql0rpnnvODwnpyQ=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>Valmir de Menezes Costa</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Tanto o atendimento quanto o compromisso com o cliente e a eficiência na entrega merecem 05 estrelas
+                            </p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="avatar">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW9iqY-IUw-D7To5vT7UYQHs-uTNC_Rpd3s0SVp__tuKGDv15WC_A=w72-h72-p-rp-mo-br100">
+                            </div>
+                            <h4>Vinicius Luz</h4>
+                            <div class="stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9 9 8.5"/></svg>
+                            </div>
+                            <p>
+                                Ótima experiência  , comprei a peça na quinta feira após o almoço  sábado de manhã já estava na minha casa , fizeram um atendimento de primeira via whats app
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="FAQ">
+        <div class="FAQ-background">
+            <div class="maxwidth">
+                <h3 class="title">Dúvidas frequentes</h3>
+                <p class="description">Confira as respostas para as perguntas mais comuns antes de chamar nosso time</p>
+                <div class="faq-dropdown" id="faq">
+                    <div class="faq-item open">
+                        <button class="faq-question">
+                            Vocês têm as peças em estoque para pronta entrega?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Trabalhamos com uma grande variedade de peças disponíveis para pronta entrega nas nossas lojas físicas. Recomendamos sempre entrar em contato pelo WhatsApp para confirmar a disponibilidade antes de se deslocar.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês vendem peças originais ou são todas genéricas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Trabalhamos com peças originais e também com peças de reposição de alta qualidade, sempre com garantia e procedência. Na hora da compra, nossos consultores podem orientar sobre a melhor opção para o seu veículo.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês oferecem serviço de instalação das peças?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Não. A Sermi é especializada na venda de peças e acessórios. Recomendamos que você procure seu mecânico de confiança ou uma oficina de sua preferência para realizar a instalação.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Posso comprar no atacado para minha oficina?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Atendemos tanto consumidores finais quanto oficinas e profissionais da área. Temos condições especiais e descontos progressivos para compras em maior quantidade. Fale com a gente pelo WhatsApp e saiba mais.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quais são as formas de pagamento aceitas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Aceitamos diversas formas de pagamento: dinheiro, cartão de débito e PIX e parcelamento no cartão de crédito. Consulte nossas condições!
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Qual é o prazo para pagamento?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            O pagamento deve ser feito no ato de entrega das peças, seja no balcão da nossa loja ou na entrega através do nosso sistema de delivery.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como faço para ter certeza de que a peça é a correta para o meu veículo?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Nossos consultores são especialistas e podem ajudar você a identificar a peça certa com base na marca, modelo e ano do seu veículo. Basta entrar em contato pelo WhatsApp ou visitar uma de nossas lojas.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês fazem entrega em domicílio?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Conseguimos entregar na sua residência ou empresa! Você pode reservar o produto pelo WhatsApp e retirar em nossa loja ou solicitar entrega. Consulte-nos!
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Vocês oferecem garantia nas peças vendidas?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Todas as peças vendidas têm garantia contra defeitos de fabricação, conforme o fabricante. Nosso time está pronto para te ajudar com qualquer dúvida relacionada a garantias.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Tenho uma dúvida que não está aqui. Como faço para falar com vocês?
+                        <span class="arrow"></span>
+                        </button>
+                        <div class="faq-answer">
+                            É só clicar no botão de WhatsApp aqui na página e falar direto com um de nossos consultores! Estamos prontos para te ajudar a escolher a peça certa e garantir a melhor experiência de compra.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="fixed-buttons">
+        <a  href=""
+            class="whatsapp-float wpp-default"
+            id="GA-track-wpp"
+            target="_blank"
+            rel="noopener"
+            aria-label="Fale conosco no WhatsApp">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                alt="Whatsapp"
+                aria-hidden="true">
+        </a>
+        <a href="#" class="scroll-top" aria-label="Voltar ao topo">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" fill="currentColor"/>
+            </svg>
+        </a>
+    </section>
+    <footer id="footer">
+        <div class="footer-background">
+            <div class="maxwidth">
+                <div class="footer-flex">
+                    <div class="footer-text">
+                        <h3 class="title">Adquira suas peças com quem <br>entende do assunto</h3>
+                        <p class="description">Atendimento imediato via WhatsApp,<br> retirada rápida e produtos com garantia</p>
+                        <p class="description footer-description">Clique no botão abaixo e fale com nosso time!</p>
+                        <a class="wpp-default" href="">
+                            <button class="footer-button" id="GA-track-wpp">
+                                <img class="whatsapp-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="Whatsapp" aria-hidden="true">
+                                Quero falar com a Sermi agora
+                            </button>
+                        </a>
+                        <div class="footer-socials">
+                            <div class="footer-socials-div">
+                                <p class="description footer-description">Siga a SERMI nas redes</p>
+                                <a href="" class="wpp-default" id="GA-track-wpp">
+                                    <svg fill="#BA2C2F" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"></path><path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"></path></g></svg>
+                                </a>
+                                <a href="https://www.instagram.com/sermiautopecas/">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#BA2C2F"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#BA2C2F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#BA2C2F"></path> </g></svg>
+                                </a>
+                                <a href="https://www.youtube.com/@sermipecassermi4620">
+                                    <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#BA2C2F" d="M6.6 0h-0.9l-0.6 2.3-0.6-2.3h-1c0.2 0.6 0.4 1.1 0.6 1.7 0.3 0.8 0.5 1.5 0.5 1.9v2.4h0.9v-2.4l1.1-3.6zM9 4.5v-1.5c0-0.5-0.1-0.8-0.3-1.1s-0.5-0.4-0.9-0.4c-0.4 0-0.7 0.2-0.9 0.5-0.2 0.2-0.3 0.5-0.3 1v1.6c0 0.5 0.1 0.8 0.3 1 0.2 0.3 0.5 0.4 0.9 0.4s0.7-0.2 0.9-0.5c0.2-0.1 0.3-0.5 0.3-1zM8.2 4.7c0 0.4-0.1 0.6-0.4 0.6s-0.4-0.2-0.4-0.6v-1.9c0-0.4 0.1-0.6 0.4-0.6s0.4 0.2 0.4 0.6v1.9zM12 6v-4.5h-0.8v3.4c-0.2 0.3-0.3 0.4-0.5 0.4-0.1 0-0.2-0.1-0.2-0.2 0 0 0-0.1 0-0.3v-3.3h-0.8v3.5c0 0.3 0 0.5 0.1 0.7 0 0.2 0.2 0.3 0.5 0.3s0.6-0.2 0.9-0.5v0.5h0.8z"></path> <path fill="#BA2C2F" d="M12.4 10.5c-0.3 0-0.4 0.2-0.4 0.6v0.4h0.8v-0.4c0-0.4-0.1-0.6-0.4-0.6z"></path> <path fill="#BA2C2F" d="M9.5 10.5c-0.1 0-0.3 0.1-0.4 0.2v2.7c0.1 0.1 0.3 0.2 0.4 0.2 0.2 0 0.3-0.2 0.3-0.6v-1.9c0-0.4-0.1-0.6-0.3-0.6z"></path> <path fill="#BA2C2F" d="M14.4 8.3c-0.2-0.7-0.8-1.3-1.4-1.3-1.6-0.2-3.3-0.2-5-0.2s-3.3 0-5 0.2c-0.6 0-1.2 0.6-1.4 1.3-0.2 1-0.2 2.1-0.2 3.1s0 2.1 0.2 3.1c0.2 0.7 0.7 1.2 1.4 1.3 1.7 0.2 3.3 0.2 5 0.2s3.3 0 5-0.2c0.7-0.1 1.3-0.6 1.4-1.3 0.2-1 0.2-2.1 0.2-3.1s0-2.1-0.2-3.1zM5.2 9.2h-1v5.1h-0.9v-5.1h-0.9v-0.9h2.8v0.9zM7.6 14.3h-0.8v-0.5c-0.3 0.4-0.6 0.5-0.9 0.5s-0.4-0.1-0.5-0.3c0-0.1-0.1-0.3-0.1-0.7v-3.5h0.8v3.2c0 0.2 0 0.3 0 0.3 0 0.1 0.1 0.2 0.2 0.2 0.2 0 0.3-0.1 0.5-0.4v-3.3h0.8v4.5zM10.6 12.9c0 0.4 0 0.7-0.1 0.9-0.1 0.3-0.3 0.5-0.6 0.5s-0.6-0.2-0.8-0.5v0.4h-0.8v-5.9h0.8v1.9c0.3-0.3 0.5-0.5 0.8-0.5s0.5 0.2 0.6 0.5c0.1 0.2 0.1 0.5 0.1 0.9v1.8zM13.6 12.2h-1.6v0.8c0 0.4 0.1 0.6 0.4 0.6 0.2 0 0.3-0.1 0.4-0.3 0 0 0-0.2 0-0.5h0.8v0.1c0 0.3 0 0.4 0 0.5 0 0.2-0.1 0.3-0.2 0.5-0.2 0.3-0.5 0.5-1 0.5-0.4 0-0.7-0.2-1-0.5-0.2-0.2-0.3-0.6-0.3-1v-1.5c0-0.5 0.1-0.8 0.2-1 0.2-0.3 0.5-0.5 1-0.5 0.4 0 0.7 0.2 0.9 0.5 0.2 0.2 0.2 0.6 0.2 1v0.8z"></path> </g></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-placeholder">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function wppDirectLink(variavel) {
+            const base = "https://api.whatsapp.com/send?phone=5516994017495&text=";
+            const textoFinal = encodeURIComponent("Olá, vim pelo site e queria saber mais sobre " + variavel);
+            const link = base + textoFinal;
+            window.open(link, '_blank');
+        }
+    (() => {
+    /* ---------- FUNÇÕES GLOBAIS (cards de veículos) ---------- */
+
+
+        const wppLinks = {
+            default: "https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento",
+            loja1: "https://api.whatsapp.com/send?phone=5516994017495&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento",
+            loja2: "https://api.whatsapp.com/send?phone=5516994017930&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento",
+            loja3: "https://api.whatsapp.com/send?phone=5516991661772&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento",
+            loja4: "https://api.whatsapp.com/send?phone=5519991911812&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento",
+            loja5: "https://api.whatsapp.com/send?phone=5516991795794&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20atendimento"
+        };
+
+        // Função para aplicar os links
+        function aplicarLinksWpp() {
+            document.querySelectorAll('.wpp-default').forEach(el => el.href = wppLinks.default);
+            document.querySelectorAll('.wpp-loja1').forEach(el => el.href = wppLinks.loja1);
+            document.querySelectorAll('.wpp-loja2').forEach(el => el.href = wppLinks.loja2);
+            document.querySelectorAll('.wpp-loja3').forEach(el => el.href = wppLinks.loja3);
+            document.querySelectorAll('.wpp-loja4').forEach(el => el.href = wppLinks.loja4);
+            document.querySelectorAll('.wpp-loja5').forEach(el => el.href = wppLinks.loja5);
+        }
+
+        // Chame ao carregar o site (ou sempre que atualizar as variáveis)
+        aplicarLinksWpp();
+
+        function carFunction(type){                         // 'car' | 'van' | 'truck'
+        const vehicles = {
+            car  : { block: document.querySelector('.vehicle-block-car'),
+                    title: document.querySelector('.vehicle-block-title-car'),
+                    image:"url('/img/Carro-ativo.png')",
+                    imageDefault:"url('/img/Carro.png')" },
+            truck: { block: document.querySelector('.vehicle-block-truck'),
+                    title: document.querySelector('.vehicle-block-title-truck'),
+                    image:"url('/img/Caminhao-ativo.png')",
+                    imageDefault:"url('/img/Caminhao.png')" }
+            };
+    /* 1 ▸ reseta os três cards */
+        Object.values(vehicles).forEach(v=>{
+            v.block.style.backgroundImage = v.imageDefault;
+            v.title.style.color           = 'black';
+            v.block.classList.remove('vehicle-bounce');
+        });
+
+    /* 2 ▸ ativa o card escolhido */
+        const v = vehicles[type];
+        v.block.style.backgroundImage = v.image;
+        v.title.style.color           = 'white';
+        void v.block.offsetWidth;            // reinicia animação CSS
+        v.block.classList.add('vehicle-bounce');
+
+    /* 3 ▸ mostra apenas o container de produtos do veículo selecionado */
+        document.querySelectorAll(
+            '.vehicle-block-car-active, .vehicle-block-truck-active'
+        ).forEach(sec => sec.style.display = 'none');
+
+        const activeSec = document.querySelector(`.vehicle-block-${type}-active`);
+        if (activeSec) activeSec.style.display = 'block';
+        }
+
+    /* ---------- FILTROS DE PRODUTOS (genérico) ---------- */
+    /* Ex. onclick="activateCategory(2, this)" (classe define o veículo)       */
+        function activateCategory(num, btn){
+    /* 1 ▸ identifica se é car, van ou truck pela classe do botão */
+        const vClass  = [...btn.classList].find(c => c.startsWith('vehicle-category-'));
+        if (!vClass) return;                                  // segurança
+        const vehicle = vClass.replace('vehicle-category-',''); // 'car' | 'van' | 'truck'
+
+    /* 2 ▸ highlight apenas no botão atual */
+        document.querySelectorAll('.vehicle-category-' + vehicle)
+                .forEach(el => el.classList.toggle('active', el === btn));
+
+    /* 3 ▸ oculta todos os grids do mesmo veículo */
+        document.querySelectorAll('.vehicle-block-' + vehicle + '-active-products')
+                .forEach(div => div.style.display = 'none');
+
+    /* 4 ▸ exibe o grid correspondente */
+        const target = document.getElementById(`products-${vehicle}-${num}`);
+        if (target) target.style.display = 'flex';
+        }
+
+    /* exporta para usar em atributos HTML */
+        window.carFunction      = carFunction;
+        window.activateCategory = activateCategory;
+
+    /* ---------- UTILITÁRIO DE AUTO-CARROSSEL (reaproveitável) ---------- */
+        function setupAutoCarousel(track, {speed=1, pauseOnHover=false}={}) {
+            let isPaused = false;
+            let animationFrameId;
+
+            // Pausar quando a aba não está visível (economiza bateria!)
+            document.addEventListener('visibilitychange', () => {
+                isPaused = document.hidden;
+            });
+
+            // Pausar ao tocar no mobile
+            track.addEventListener('touchstart', () => isPaused = true);
+            track.addEventListener('touchend',   () => isPaused = false);
+
+            // Pausar ao passar mouse ou foco (desktop)
+            if (pauseOnHover) {
+                ['mouseenter','focusin'].forEach(e => track.addEventListener(e, () => isPaused = true));
+                ['mouseleave','focusout' ].forEach(e => track.addEventListener(e, () => isPaused = false));
+            }
+
+            // O loop principal
+            function loop() {
+                if (!isPaused) {
+                    track.scrollLeft += speed;
+                    if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+                        track.scrollLeft = 0;
+                    }
+                }
+                animationFrameId = requestAnimationFrame(loop);
+            }
+
+            // Start o loop
+            loop();
+
+            // Opcional: retornar função para cancelar a animação se precisar
+            return () => cancelAnimationFrame(animationFrameId);
+        }
+
+
+    /* ========================================================= *
+    *     I N I C I A   C O M P O N E N T E S   D O   S I T E    *
+    * ========================================================= */
+        document.addEventListener('DOMContentLoaded', () => {
+
+    /* ===== HAMBURGER ===== */
+        const burgerOpen  = document.querySelector('.burger-icon-open');
+        const burgerClose = document.querySelector('.close-burger');
+        const header      = document.querySelector('.header-hamburger');
+
+    /* abrir */
+        burgerOpen.addEventListener('click', () => {
+            header.classList.add('active');
+            burgerOpen.classList.add('hidden');     // fade-out ≡
+            setTimeout(()=> burgerClose.classList.remove('hidden'), 200);
+        });
+
+    /* fechar */
+        burgerClose.addEventListener('click', () => {
+            header.classList.remove('active');
+            burgerClose.classList.add('hidden');    // fade-out X
+            setTimeout(()=> burgerOpen.classList.remove('hidden'), 200);
+        });
+
+    /* ===== CARROSSEL #1  – PLACES (setas, sem drag/hover-pause) ===== */
+        const wrapper = document.querySelector('.places-carousel-wrapper');
+        if (wrapper){
+            const track   = wrapper.querySelector('.places-carousel');
+            const btnPrev = wrapper.querySelector('.places-arrow.left');
+            const btnNext = wrapper.querySelector('.places-arrow.right');
+
+            const GAP  = parseInt(getComputedStyle(track).gap) || 0;
+            const CARD = track.querySelector('.places-blocks-container');
+            let STEP   = 0;
+
+            function calcStep(){
+            const cardW  = CARD.offsetWidth + GAP;
+            const visible = Math.floor(track.clientWidth / cardW) || 1;
+            STEP = cardW * visible;               /* rola um “bloco visível” */
+            }
+            calcStep();
+            window.addEventListener('resize', calcStep);
+
+            const maxScroll = () => track.scrollWidth - track.clientWidth;
+
+            btnNext.addEventListener('click', () => {
+            const atEnd = track.scrollLeft + STEP >= maxScroll() - 4;
+            track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + STEP,
+                            behavior:'smooth' });
+            });
+
+            btnPrev.addEventListener('click', () => {
+            const atStart = track.scrollLeft <= 4;
+            track.scrollTo({ left: atStart ? maxScroll() : track.scrollLeft - STEP,
+                            behavior:'smooth' });
+            });
+        }
+
+    /* ===== CARROSSEL #2  – FEEDBACK (auto-scroll infinito) ===== */
+        const feedback = document.querySelector('.feedback-carousel');
+        if (feedback){
+            setupAutoCarousel(feedback, {speed:1.3, pauseOnHover:true});
+        }
+
+    /* ===== FAQ (abre/fecha um por vez) ===== */
+        const faq = document.querySelector('#faq');
+        if (faq){
+            faq.addEventListener('click', e=>{
+            const btn = e.target.closest('.faq-question');
+            if (!btn) return;
+
+            const item = btn.parentElement;              /* .faq-item */
+            const open = faq.querySelector('.faq-item.open');
+
+            if (open && open!==item) open.classList.remove('open');
+            item.classList.toggle('open');
+            });
+        }
+
+        });
+
+    /* Scroll suave ao topo */
+        document.querySelector('.scroll-top').addEventListener('click', e=>{
+            e.preventDefault();
+            window.scrollTo({top:780, behavior:'smooth'});
+        });
+
+    /* -------------------- MOSTRA/ESCONDE DEPENDENDO DA ROLAGEM -------------------- */
+    const scrollBtn  = document.querySelector('.scroll-top');
+    const root       = document.documentElement;
+
+        function toggleScrollBtn(){
+            const scrolled  = root.scrollTop || document.body.scrollTop;  
+            const total     = root.scrollHeight - root.clientHeight;      
+            const halfway   = total / 8;                                 
+
+            if (scrolled > halfway){
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.pointerEvents = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', toggleScrollBtn);
+        // Executa uma vez ao carregar para garantir o estado correto
+        toggleScrollBtn();
+    })();
+    </script>
+</body>
